@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "created": "2026-09-28",
+  "counts": {
+    "raw": 24,
+    "exact_duplicates": 6,
+    "strict_remaining": 18,
+    "related_excluded": 1,
+    "prepared": 17,
+    "product_defects": 13,
+    "candidates": 4
+  },
+  "commits": {
+    "ros_gz": "0fa70cb7c15f7500c495190020dd6292188c8e54",
+    "navigation2": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501",
+    "robot_localization": "3efa714fb9c1ff40966327b7bed7053b2570be4d",
+    "moveit2": "002f40e58ebf5322c89468f5049867791e5f67fd"
+  },
+  "issues": [
+    {
+      "id": "GZ-S1",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-S1-step-completion",
+      "title": "StepSimulation returns before requested iterations complete",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "GZ-S2",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-S2-step-while-playing",
+      "title": "StepSimulation accepts requests while simulation is playing",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "GZ-N1",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-N1-renamed-response-name",
+      "title": "SpawnEntity reports the requested name after creating a renamed entity",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "GZ-E1",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-E1-missing-set-ok",
+      "title": "SetEntityState returns RESULT_OK for a missing entity",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "GZ-F1",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-F1-set-frame-id",
+      "title": "SetEntityState ignores pose frame_id, including missing frames",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "GZ-T1",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-T1-static-nonzero-twist",
+      "title": "SetEntityState accepts non-zero twist for a static entity",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "GZ-C1",
+      "component": "ros_gz",
+      "path": "ros_gz/GZ-C1-duplicate-error-code",
+      "title": "SpawnEntity duplicate-name rejection loses NAME_NOT_UNIQUE",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "BR-I1",
+      "component": "ros_gz",
+      "path": "ros_gz/BR-I1-image-row-padding",
+      "title": "Image bridge ignores legal row padding in both directions",
+      "classification": "reproduced product defect",
+      "result": "3/3 both directions",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "BR-L1",
+      "component": "ros_gz",
+      "path": "ros_gz/BR-L1-laserscan-endpoint",
+      "title": "ROS-to-Gazebo LaserScan conversion drops the endpoint sample",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "0fa70cb7c15f7500c495190020dd6292188c8e54"
+    },
+    {
+      "id": "NAV-M2",
+      "component": "navigation2",
+      "path": "navigation2/NAV-M2-scale-roundtrip",
+      "title": "Scale map save/load changes intermediate occupancy values",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501"
+    },
+    {
+      "id": "NAV-C1",
+      "component": "navigation2",
+      "path": "navigation2/NAV-C1-get-costmap-atomicity",
+      "title": "GetCostmap can return a partially updated master costmap",
+      "classification": "reproduced product defect",
+      "result": "3/3 deterministic",
+      "commit": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501"
+    },
+    {
+      "id": "NAV-V1",
+      "component": "navigation2",
+      "path": "navigation2/NAV-V1-dynamic-scale-velocities",
+      "title": "scale_velocities reads back true but behavior remains false",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501"
+    },
+    {
+      "id": "NAV-W1",
+      "component": "navigation2",
+      "path": "navigation2/NAV-W1-fractional-timeout",
+      "title": "InputAtWaypoint truncates fractional timeout above one second",
+      "classification": "reproduced product defect",
+      "result": "3/3",
+      "commit": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501"
+    },
+    {
+      "id": "NAV-1",
+      "component": "navigation2",
+      "path": "navigation2/NAV-1-dead-service-future",
+      "title": "Lifecycle manager can wait indefinitely for a crashed node response",
+      "classification": "reproduced high-confidence implementation candidate",
+      "result": "3/3",
+      "commit": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501"
+    },
+    {
+      "id": "RL-F1",
+      "component": "robot_localization",
+      "path": "robot_localization/RL-F1-invalid-frame-set-pose",
+      "title": "set_pose transform failure overwrites valid filter state",
+      "classification": "reproduced robustness candidate",
+      "result": "6/6 variants; 6/6 controls",
+      "commit": "3efa714fb9c1ff40966327b7bed7053b2570be4d"
+    },
+    {
+      "id": "RL-N1",
+      "component": "robot_localization",
+      "path": "robot_localization/RL-N1-nan-set-pose",
+      "title": "set_pose NaN permanently contaminates odometry",
+      "classification": "reproduced robustness candidate",
+      "result": "12/12 variants; 12/12 controls",
+      "commit": "3efa714fb9c1ff40966327b7bed7053b2570be4d"
+    },
+    {
+      "id": "MVI-T1",
+      "component": "moveit2",
+      "path": "moveit2/MVI-T1-empty-touch-links",
+      "title": "Direct ApplyPlanningScene with empty touch_links causes self-collision",
+      "classification": "reproduced contract candidate",
+      "result": "3/3 variants; 3/3 controls",
+      "commit": "002f40e58ebf5322c89468f5049867791e5f67fd"
+    }
+  ],
+  "provenance": "PROVENANCE.json"
+}

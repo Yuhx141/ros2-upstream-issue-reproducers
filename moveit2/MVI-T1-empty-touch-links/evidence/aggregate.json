@@ -1,0 +1,300 @@
+{
+  "commit": "002f40e58ebf5322c89468f5049867791e5f67fd",
+  "library": "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4",
+  "library_sha256": "6577ac685781eec73d80c76d392d186268b0e07957299a63680884855fb04e89",
+  "runs": 6,
+  "counts": {
+    "empty/candidate": 3,
+    "explicit/pass": 3
+  },
+  "results": [
+    {
+      "run": "empty-r1",
+      "status": "candidate",
+      "healthy": true,
+      "boundary": {
+        "world": {
+          "accepted": true,
+          "ids": [
+            "p3_transfer"
+          ],
+          "near": false,
+          "far": true
+        },
+        "attached": {
+          "accepted": true,
+          "world": [],
+          "attached": [
+            "p3_transfer"
+          ],
+          "touch_links": [],
+          "near": false,
+          "far": false
+        },
+        "detached": {
+          "accepted": true,
+          "world": [
+            "p3_transfer"
+          ],
+          "attached": [],
+          "touch_links": [],
+          "near": false,
+          "far": true
+        }
+      },
+      "planning": {
+        "code": 99999,
+        "message": "",
+        "points": 0,
+        "joint_names": []
+      },
+      "errors": [],
+      "loaded_planning_scene": [
+        "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4"
+      ],
+      "server_alive_before_cleanup": true
+    },
+    {
+      "run": "empty-r2",
+      "status": "candidate",
+      "healthy": true,
+      "boundary": {
+        "world": {
+          "accepted": true,
+          "ids": [
+            "p3_transfer"
+          ],
+          "near": false,
+          "far": true
+        },
+        "attached": {
+          "accepted": true,
+          "world": [],
+          "attached": [
+            "p3_transfer"
+          ],
+          "touch_links": [],
+          "near": false,
+          "far": false
+        },
+        "detached": {
+          "accepted": true,
+          "world": [
+            "p3_transfer"
+          ],
+          "attached": [],
+          "touch_links": [],
+          "near": false,
+          "far": true
+        }
+      },
+      "planning": {
+        "code": 99999,
+        "message": "",
+        "points": 0,
+        "joint_names": []
+      },
+      "errors": [],
+      "loaded_planning_scene": [
+        "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4"
+      ],
+      "server_alive_before_cleanup": true
+    },
+    {
+      "run": "empty-r3",
+      "status": "candidate",
+      "healthy": true,
+      "boundary": {
+        "world": {
+          "accepted": true,
+          "ids": [
+            "p3_transfer"
+          ],
+          "near": false,
+          "far": true
+        },
+        "attached": {
+          "accepted": true,
+          "world": [],
+          "attached": [
+            "p3_transfer"
+          ],
+          "touch_links": [],
+          "near": false,
+          "far": false
+        },
+        "detached": {
+          "accepted": true,
+          "world": [
+            "p3_transfer"
+          ],
+          "attached": [],
+          "touch_links": [],
+          "near": false,
+          "far": true
+        }
+      },
+      "planning": {
+        "code": 99999,
+        "message": "",
+        "points": 0,
+        "joint_names": []
+      },
+      "errors": [],
+      "loaded_planning_scene": [
+        "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4"
+      ],
+      "server_alive_before_cleanup": true
+    },
+    {
+      "run": "explicit-r1",
+      "status": "pass",
+      "healthy": true,
+      "boundary": {
+        "world": {
+          "accepted": true,
+          "ids": [
+            "p3_transfer"
+          ],
+          "near": false,
+          "far": true
+        },
+        "attached": {
+          "accepted": true,
+          "world": [],
+          "attached": [
+            "p3_transfer"
+          ],
+          "touch_links": [
+            "slider"
+          ],
+          "near": true,
+          "far": true
+        },
+        "detached": {
+          "accepted": true,
+          "world": [
+            "p3_transfer"
+          ],
+          "attached": [],
+          "touch_links": [],
+          "near": false,
+          "far": true
+        }
+      },
+      "planning": {
+        "code": 1,
+        "message": "",
+        "points": 101,
+        "joint_names": [
+          "slide"
+        ]
+      },
+      "errors": [],
+      "loaded_planning_scene": [
+        "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4"
+      ],
+      "server_alive_before_cleanup": true
+    },
+    {
+      "run": "explicit-r2",
+      "status": "pass",
+      "healthy": true,
+      "boundary": {
+        "world": {
+          "accepted": true,
+          "ids": [
+            "p3_transfer"
+          ],
+          "near": false,
+          "far": true
+        },
+        "attached": {
+          "accepted": true,
+          "world": [],
+          "attached": [
+            "p3_transfer"
+          ],
+          "touch_links": [
+            "slider"
+          ],
+          "near": true,
+          "far": true
+        },
+        "detached": {
+          "accepted": true,
+          "world": [
+            "p3_transfer"
+          ],
+          "attached": [],
+          "touch_links": [],
+          "near": false,
+          "far": true
+        }
+      },
+      "planning": {
+        "code": 1,
+        "message": "",
+        "points": 101,
+        "joint_names": [
+          "slide"
+        ]
+      },
+      "errors": [],
+      "loaded_planning_scene": [
+        "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4"
+      ],
+      "server_alive_before_cleanup": true
+    },
+    {
+      "run": "explicit-r3",
+      "status": "pass",
+      "healthy": true,
+      "boundary": {
+        "world": {
+          "accepted": true,
+          "ids": [
+            "p3_transfer"
+          ],
+          "near": false,
+          "far": true
+        },
+        "attached": {
+          "accepted": true,
+          "world": [],
+          "attached": [
+            "p3_transfer"
+          ],
+          "touch_links": [
+            "slider"
+          ],
+          "near": true,
+          "far": true
+        },
+        "detached": {
+          "accepted": true,
+          "world": [
+            "p3_transfer"
+          ],
+          "attached": [],
+          "touch_links": [],
+          "near": false,
+          "far": true
+        }
+      },
+      "planning": {
+        "code": 1,
+        "message": "",
+        "points": 101,
+        "joint_names": [
+          "slide"
+        ]
+      },
+      "errors": [],
+      "loaded_planning_scene": [
+        "<test-workspace>/install/moveit2/moveit_core/lib/libmoveit_planning_scene.so.2.12.4"
+      ],
+      "server_alive_before_cleanup": true
+    }
+  ]
+}

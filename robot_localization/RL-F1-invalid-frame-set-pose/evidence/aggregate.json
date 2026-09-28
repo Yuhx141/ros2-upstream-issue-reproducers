@@ -1,0 +1,1422 @@
+{
+  "commit": "3efa714fb9c1ff40966327b7bed7053b2570be4d",
+  "runs": 30,
+  "counts": {
+    "ekf/current-invalid-frame/uncertain": 3,
+    "ekf/nan-covariance/uncertain": 3,
+    "ekf/nan-set-pose/uncertain": 3,
+    "ekf/valid-covariance/pass": 3,
+    "ekf/valid-set-pose/pass": 3,
+    "ukf/current-invalid-frame/uncertain": 3,
+    "ukf/nan-covariance/uncertain": 3,
+    "ukf/nan-set-pose/uncertain": 3,
+    "ukf/valid-covariance/pass": 3,
+    "ukf/valid-set-pose/pass": 3
+  },
+  "results": [
+    {
+      "run": "ekf-current-invalid-frame-r1",
+      "filter": "ekf",
+      "scenario": "current-invalid-frame",
+      "status": "uncertain",
+      "signatures": [
+        "invalid_frame_state_changed"
+      ],
+      "mismatches": [
+        "invalid-frame request changed state"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004030817127684811,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.02836518411514807,
+          "last_x": 0.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004106576676484965,
+          "last_x": 3.023650140118575
+        }
+      ]
+    },
+    {
+      "run": "ekf-current-invalid-frame-r2",
+      "filter": "ekf",
+      "scenario": "current-invalid-frame",
+      "status": "uncertain",
+      "signatures": [
+        "invalid_frame_state_changed"
+      ],
+      "mismatches": [
+        "invalid-frame request changed state"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0040201691769528565,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.034066299599449804,
+          "last_x": 0.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 25,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004078933251849442,
+          "last_x": 3.0234744864207195
+        }
+      ]
+    },
+    {
+      "run": "ekf-current-invalid-frame-r3",
+      "filter": "ekf",
+      "scenario": "current-invalid-frame",
+      "status": "uncertain",
+      "signatures": [
+        "invalid_frame_state_changed"
+      ],
+      "mismatches": [
+        "invalid-frame request changed state"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.00402336783957748,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.028334105088126255,
+          "last_x": 0.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.003914728608187931,
+          "last_x": 3.023382394488085
+        }
+      ]
+    },
+    {
+      "run": "ekf-nan-covariance-r1",
+      "filter": "ekf",
+      "scenario": "nan-covariance",
+      "status": "uncertain",
+      "signatures": [
+        "nan_covariance_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after set_pose",
+        "valid sensor did not reach x=3 after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 24,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0039431923184884456,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 20,
+          "nonfinite_count": 20,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ekf-nan-covariance-r2",
+      "filter": "ekf",
+      "scenario": "nan-covariance",
+      "status": "uncertain",
+      "signatures": [
+        "nan_covariance_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after set_pose",
+        "valid sensor did not reach x=3 after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004020449038460862,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ekf-nan-covariance-r3",
+      "filter": "ekf",
+      "scenario": "nan-covariance",
+      "status": "uncertain",
+      "signatures": [
+        "nan_covariance_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after set_pose",
+        "valid sensor did not reach x=3 after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004020965706315402,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 20,
+          "output_count": 20,
+          "nonfinite_count": 20,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ekf-nan-set-pose-r1",
+      "filter": "ekf",
+      "scenario": "nan-set-pose",
+      "status": "uncertain",
+      "signatures": [
+        "nan_set_pose_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after NaN set_pose",
+        "EKF did not recover after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0040246383745646845,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 20,
+          "nonfinite_count": 20,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ekf-nan-set-pose-r2",
+      "filter": "ekf",
+      "scenario": "nan-set-pose",
+      "status": "uncertain",
+      "signatures": [
+        "nan_set_pose_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after NaN set_pose",
+        "EKF did not recover after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 24,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0026746872969753057,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 5,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ekf-nan-set-pose-r3",
+      "filter": "ekf",
+      "scenario": "nan-set-pose",
+      "status": "uncertain",
+      "signatures": [
+        "nan_set_pose_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after NaN set_pose",
+        "EKF did not recover after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004019498154071762,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 5,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ekf-valid-covariance-r1",
+      "filter": "ekf",
+      "scenario": "valid-covariance",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004025389968489935,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.03560571028528413,
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.00409914640696815,
+          "last_x": 2.987885204860265
+        }
+      ]
+    },
+    {
+      "run": "ekf-valid-covariance-r2",
+      "filter": "ekf",
+      "scenario": "valid-covariance",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0034567485669171863,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.041271047880017384,
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004106098249264735,
+          "last_x": 2.9871565649960754
+        }
+      ]
+    },
+    {
+      "run": "ekf-valid-covariance-r3",
+      "filter": "ekf",
+      "scenario": "valid-covariance",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004020335000436895,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.04406001882677292,
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004102950995111638,
+          "last_x": 2.98703708496593
+        }
+      ]
+    },
+    {
+      "run": "ekf-valid-set-pose-r1",
+      "filter": "ekf",
+      "scenario": "valid-set-pose",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.003954752594815616,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.04107880396328816,
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004096022307354209,
+          "last_x": 1.9814680032771061
+        }
+      ]
+    },
+    {
+      "run": "ekf-valid-set-pose-r2",
+      "filter": "ekf",
+      "scenario": "valid-set-pose",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0039530235715861,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.041152064429785765,
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.00410129564052111,
+          "last_x": 1.981394620233752
+        }
+      ]
+    },
+    {
+      "run": "ekf-valid-set-pose-r3",
+      "filter": "ekf",
+      "scenario": "valid-set-pose",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.002846472472270937,
+          "last_x": 2.0
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.04119345463433577,
+          "last_x": 5.0
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.004105452675547872,
+          "last_x": 1.9808738874327287
+        }
+      ]
+    },
+    {
+      "run": "ukf-current-invalid-frame-r1",
+      "filter": "ukf",
+      "scenario": "current-invalid-frame",
+      "status": "uncertain",
+      "signatures": [
+        "invalid_frame_state_changed"
+      ],
+      "mismatches": [
+        "invalid-frame request changed state"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010300350880221357,
+          "last_x": 1.9999999993363482
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.031137186246204818,
+          "last_x": 1.5009333694609285e-14
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 24,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.00902299729920759,
+          "last_x": 3.0119643588342098
+        }
+      ]
+    },
+    {
+      "run": "ukf-current-invalid-frame-r2",
+      "filter": "ukf",
+      "scenario": "current-invalid-frame",
+      "status": "uncertain",
+      "signatures": [
+        "invalid_frame_state_changed"
+      ],
+      "mismatches": [
+        "invalid-frame request changed state"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.01027413188245281,
+          "last_x": 1.9999999996322804
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.034049699932223704,
+          "last_x": 2.131329337588184e-14
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 20,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010530023629461236,
+          "last_x": 3.0143359601735837
+        }
+      ]
+    },
+    {
+      "run": "ukf-current-invalid-frame-r3",
+      "filter": "ukf",
+      "scenario": "current-invalid-frame",
+      "status": "uncertain",
+      "signatures": [
+        "invalid_frame_state_changed"
+      ],
+      "mismatches": [
+        "invalid-frame request changed state"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010298742485653212,
+          "last_x": 1.9999999994917361
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.025583007798915924,
+          "last_x": 1.307038469720743e-14
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.01053446998836007,
+          "last_x": 3.0142601642366107
+        }
+      ]
+    },
+    {
+      "run": "ukf-nan-covariance-r1",
+      "filter": "ukf",
+      "scenario": "nan-covariance",
+      "status": "uncertain",
+      "signatures": [
+        "nan_covariance_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after set_pose",
+        "valid sensor did not reach x=3 after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010294138906739556,
+          "last_x": 1.9999999999152174
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 27,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ukf-nan-covariance-r2",
+      "filter": "ukf",
+      "scenario": "nan-covariance",
+      "status": "uncertain",
+      "signatures": [
+        "nan_covariance_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after set_pose",
+        "valid sensor did not reach x=3 after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 24,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.008725482171062266,
+          "last_x": 2.0000000001630984
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 24,
+          "output_count": 20,
+          "nonfinite_count": 20,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ukf-nan-covariance-r3",
+      "filter": "ukf",
+      "scenario": "nan-covariance",
+      "status": "uncertain",
+      "signatures": [
+        "nan_covariance_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after set_pose",
+        "valid sensor did not reach x=3 after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.008822701645315938,
+          "last_x": 2.000000000680564
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 5,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ukf-nan-set-pose-r1",
+      "filter": "ukf",
+      "scenario": "nan-set-pose",
+      "status": "uncertain",
+      "signatures": [
+        "nan_set_pose_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after NaN set_pose",
+        "EKF did not recover after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 27,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.008768942155406962,
+          "last_x": 1.999999999755295
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 5,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ukf-nan-set-pose-r2",
+      "filter": "ukf",
+      "scenario": "nan-set-pose",
+      "status": "uncertain",
+      "signatures": [
+        "nan_set_pose_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after NaN set_pose",
+        "EKF did not recover after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.00992101199716822,
+          "last_x": 2.000000000176168
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 5,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 26,
+          "output_count": 21,
+          "nonfinite_count": 21,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ukf-nan-set-pose-r3",
+      "filter": "ukf",
+      "scenario": "nan-set-pose",
+      "status": "uncertain",
+      "signatures": [
+        "nan_set_pose_nonfinite_odometry"
+      ],
+      "mismatches": [
+        "nonfinite odometry after NaN set_pose",
+        "EKF did not recover after set_pose"
+      ],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.008808747386245767,
+          "last_x": 2.000000000485505
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 6,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 19,
+          "nonfinite_count": 19,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": "nan",
+          "last_x": "nan"
+        }
+      ]
+    },
+    {
+      "run": "ukf-valid-covariance-r1",
+      "filter": "ukf",
+      "scenario": "valid-covariance",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.01029844853844487,
+          "last_x": 1.9999999999717515
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.04124260343697663,
+          "last_x": 4.999999999592546
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010536689885304146,
+          "last_x": 2.9925201026502557
+        }
+      ]
+    },
+    {
+      "run": "ukf-valid-covariance-r2",
+      "filter": "ukf",
+      "scenario": "valid-covariance",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 23,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.0075791890025432886,
+          "last_x": 2.000000000477476
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.03836419033143784,
+          "last_x": 5.0000000052386895
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 25,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010116421691067932,
+          "last_x": 2.9928387550860185
+        }
+      ]
+    },
+    {
+      "run": "ukf-valid-covariance-r3",
+      "filter": "ukf",
+      "scenario": "valid-covariance",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 25,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.007579068805089599,
+          "last_x": 2.0000000003321916
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.04119268820284262,
+          "last_x": 4.999999989697244
+        },
+        {
+          "name": "recovered",
+          "input_x": 3.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 25,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.007556466996989697,
+          "last_x": 2.995751518222735
+        }
+      ]
+    },
+    {
+      "run": "ukf-valid-set-pose-r1",
+      "filter": "ukf",
+      "scenario": "valid-set-pose",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010294768399100911,
+          "last_x": 2.0000000002819047
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 5,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.038347907152590816,
+          "last_x": 4.999999990686774
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010537516645171842,
+          "last_x": 1.988687216616991
+        }
+      ]
+    },
+    {
+      "run": "ukf-valid-set-pose-r2",
+      "filter": "ukf",
+      "scenario": "valid-set-pose",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 20,
+          "output_count": 19,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010294843449503831,
+          "last_x": 1.999999999844654
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.04410979468769649,
+          "last_x": 4.999999997671694
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 20,
+          "output_count": 20,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010519980053816335,
+          "last_x": 1.9888100264680706
+        }
+      ]
+    },
+    {
+      "run": "ukf-valid-set-pose-r3",
+      "filter": "ukf",
+      "scenario": "valid-set-pose",
+      "status": "pass",
+      "signatures": [],
+      "mismatches": [],
+      "errors": [],
+      "phases": [
+        {
+          "name": "baseline",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 22,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.009518089083828188,
+          "last_x": 2.000000000320038
+        },
+        {
+          "name": "after_set_pose",
+          "sent": 0,
+          "output_count": 6,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.041336099302592876,
+          "last_x": 4.999999997147825
+        },
+        {
+          "name": "recovered",
+          "input_x": 2.0,
+          "frame": "odom",
+          "covariance_x": 0.01,
+          "sent": 21,
+          "output_count": 21,
+          "nonfinite_count": 0,
+          "negative_cov_count": 0,
+          "last_pose_cov_x": 0.010519923285167267,
+          "last_x": 1.9898731491252248
+        }
+      ]
+    }
+  ]
+}

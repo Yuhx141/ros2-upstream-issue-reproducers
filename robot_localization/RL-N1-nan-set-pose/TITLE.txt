@@ -1,0 +1,1 @@
+[robot_localization] set_pose NaN permanently contaminates odometry

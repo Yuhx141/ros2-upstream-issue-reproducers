@@ -1,0 +1,1 @@
+[nav2_velocity_smoother] scale_velocities reads back true but behavior remains false

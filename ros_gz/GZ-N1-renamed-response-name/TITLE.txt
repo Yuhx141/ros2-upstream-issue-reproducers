@@ -1,0 +1,1 @@
+[ros_gz_sim] SpawnEntity reports the requested name after creating a renamed entity

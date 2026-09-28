@@ -1,0 +1,1 @@
+[ros_gz_sim] SpawnEntity duplicate-name rejection loses NAME_NOT_UNIQUE

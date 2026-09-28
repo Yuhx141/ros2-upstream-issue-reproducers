@@ -1,0 +1,3141 @@
+{
+  "schema": "p3-nav2-upper-semantic-v1",
+  "records": [
+    {
+      "item": 17,
+      "title": "Behavior Server action semantics",
+      "status": "observed",
+      "pass": true,
+      "classification": "pass",
+      "checks": [
+        {
+          "name": "wait_duration_feedback",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "elapsed": 0.25903295299997353,
+            "feedback": [
+              0.249984206,
+              0.199861732,
+              0.149879226,
+              0.099876873,
+              0.049878173,
+              -0.00012038700000005509
+            ]
+          },
+          "expected": "succeeded, 0.25s ±0.12, decreasing feedback"
+        },
+        {
+          "name": "wait_cancel",
+          "pass": true,
+          "actual": 5,
+          "expected": 5
+        },
+        {
+          "name": "drive_distance_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": 0.3093186988091952
+          },
+          "expected": "success, +0.3m ±0.06"
+        },
+        {
+          "name": "backup_distance_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": -0.20252582139765468
+          },
+          "expected": "success, -0.2m ±0.06"
+        },
+        {
+          "name": "spin_angle_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": 0.5033013809338113
+          },
+          "expected": "success, +0.5rad ±0.08"
+        },
+        {
+          "name": "collision_abort",
+          "pass": true,
+          "actual": {
+            "status": 6,
+            "error": 723
+          },
+          "expected": "aborted, COLLISION_AHEAD=723"
+        },
+        {
+          "name": "time_allowance_abort",
+          "pass": true,
+          "actual": {
+            "status": 6,
+            "error": 721
+          },
+          "expected": "aborted, TIMEOUT=721"
+        }
+      ],
+      "observations": {
+        "wait_elapsed": 0.25903295299997353,
+        "wait_feedback": [
+          0.249984206,
+          0.199861732,
+          0.149879226,
+          0.099876873,
+          0.049878173,
+          -0.00012038700000005509
+        ],
+        "drive_delta": 0.3093186988091952,
+        "backup_delta": -0.20252582139765468,
+        "spin_delta": 0.5033013809338113,
+        "drive_commands": [
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "backup_commands": [
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "spin_commands": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.9796828580716429
+          ],
+          [
+            0.0,
+            0.8039181601047062
+          ],
+          [
+            0.0,
+            0.6228031176916536
+          ],
+          [
+            0.0,
+            0.4338844837616053
+          ],
+          [
+            0.0,
+            0.22311975984263255
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "repetition": 0
+    },
+    {
+      "item": 18,
+      "title": "Waypoint Follower sequence and task semantics",
+      "status": "observed",
+      "pass": false,
+      "classification": "violation",
+      "checks": [
+        {
+          "name": "continue_after_navigation_failure",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "received": [
+              1.0,
+              2.0,
+              3.0
+            ],
+            "missed": [
+              [
+                1,
+                42
+              ]
+            ]
+          },
+          "expected": "succeeded; visits all; missed [(1,42)]"
+        },
+        {
+          "name": "dynamic_stop_on_failure",
+          "pass": true,
+          "actual": {
+            "parameter": [
+              [
+                true,
+                ""
+              ]
+            ],
+            "status": 6,
+            "received": [
+              1.0,
+              2.0
+            ]
+          },
+          "expected": "parameter accepted; aborts at second waypoint"
+        },
+        {
+          "name": "input_task_success",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "missed": []
+          },
+          "expected": "succeeded with no missed waypoint"
+        },
+        {
+          "name": "input_timeout_error_code",
+          "pass": true,
+          "actual": {
+            "0.2": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 0.2027973030000112,
+              "post_nav_elapsed": 0.2010359979999521
+            },
+            "1.0": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 1.208451756000045,
+              "post_nav_elapsed": 1.2064099560000159
+            },
+            "1.2": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 1.2021786000000247,
+              "post_nav_elapsed": 1.2007267689999708
+            }
+          },
+          "expected": "all aborted with task executor failed=601"
+        },
+        {
+          "name": "fractional_timeout_0_2",
+          "pass": true,
+          "actual": 0.2010359979999521,
+          "expected": "0.2 seconds within scheduler tolerance [.15,.55]"
+        },
+        {
+          "name": "fractional_timeout_1_0",
+          "pass": true,
+          "actual": 1.2064099560000159,
+          "expected": "1.0 seconds within scheduler tolerance [.85,1.35]"
+        },
+        {
+          "name": "fractional_timeout_1_2",
+          "pass": false,
+          "actual": {
+            "elapsed": 1.2007267689999708,
+            "delta_from_1.0": -0.005683187000045109
+          },
+          "expected": "1.2 seconds and at least 0.12s longer than 1.0"
+        }
+      ],
+      "observations": {
+        "timeouts": {
+          "0.2": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 0.2027973030000112,
+            "post_nav_elapsed": 0.2010359979999521
+          },
+          "1.0": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 1.208451756000045,
+            "post_nav_elapsed": 1.2064099560000159
+          },
+          "1.2": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 1.2021786000000247,
+            "post_nav_elapsed": 1.2007267689999708
+          }
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "item": 19,
+      "title": "Lifecycle Manager and BT Navigator semantics",
+      "status": "observed",
+      "pass": false,
+      "classification": "violation",
+      "checks": [
+        {
+          "name": "lifecycle_startup",
+          "pass": true,
+          "actual": [
+            true,
+            "active",
+            "active"
+          ],
+          "expected": [
+            true,
+            "active",
+            "active"
+          ]
+        },
+        {
+          "name": "lifecycle_pause",
+          "pass": true,
+          "actual": [
+            true,
+            "inactive",
+            "inactive"
+          ],
+          "expected": [
+            true,
+            "inactive",
+            "inactive"
+          ]
+        },
+        {
+          "name": "lifecycle_resume",
+          "pass": true,
+          "actual": [
+            true,
+            "active",
+            "active"
+          ],
+          "expected": [
+            true,
+            "active",
+            "active"
+          ]
+        },
+        {
+          "name": "lifecycle_reset",
+          "pass": true,
+          "actual": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ],
+          "expected": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ]
+        },
+        {
+          "name": "bond_early_crash_detection",
+          "pass": false,
+          "actual": {
+            "startup": [
+              true,
+              "active",
+              "active"
+            ],
+            "pre_cleanup_manager_log": "[INFO] [1790567723.635664264] [lifecycle_manager]: Creating\n[INFO] [1790567723.638025016] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567724.463606378] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567724.463652711] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.472677026] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.480997057] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.582626857] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567724.582666591] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.684708330] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567724.684740029] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567724.684744160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n",
+            "crash": {
+              "killed_pid": 30365,
+              "process_dead": true,
+              "survivor_state": "active",
+              "elapsed": 2.0107938610000247
+            },
+            "manager_active": true,
+            "manager_log": "[INFO] [1790567723.635664264] [lifecycle_manager]: Creating\n[INFO] [1790567723.638025016] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567724.463606378] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567724.463652711] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.472677026] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.480997057] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.582626857] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567724.582666591] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.684708330] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567724.684740029] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567724.684744160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567726.884817538] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from behavior_server.\u001b[0m\u001b[0m\n[ERROR] [1790567726.884846587] [lifecycle_manager]: CRITICAL FAILURE: SERVER behavior_server IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567726.884865928] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567726.884868471] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567726.884870908] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567726.893577274] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567726.893619727] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+          },
+          "expected": "crash immediately after formation is reported within 2s"
+        },
+        {
+          "name": "bond_settled_crash_detection",
+          "pass": true,
+          "actual": {
+            "startup": [
+              true,
+              "active",
+              "active"
+            ],
+            "pre_cleanup_manager_log": "[INFO] [1790567731.933759452] [lifecycle_manager]: Creating\n[INFO] [1790567731.935923558] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567732.757270362] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567732.757320231] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.766183351] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.774346469] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.875984306] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567732.876021434] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.978301666] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567732.978341692] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567732.978345729] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578518688] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567734.578568390] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567734.578586478] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578588973] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567734.578591033] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n",
+            "crash": {
+              "killed_pid": 30478,
+              "process_dead": true,
+              "survivor_state": "active",
+              "elapsed": 12.010431642999947
+            },
+            "manager_active": null,
+            "manager_log": "[INFO] [1790567731.933759452] [lifecycle_manager]: Creating\n[INFO] [1790567731.935923558] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567732.757270362] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567732.757320231] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.766183351] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.774346469] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.875984306] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567732.876021434] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.978301666] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567732.978341692] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567732.978345729] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578518688] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567734.578568390] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567734.578586478] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578588973] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567734.578591033] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567746.683807671] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567746.683882494] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+          },
+          "expected": "after one-second settling, crash is reported within the observation window"
+        },
+        {
+          "name": "bond_crash_reset_completion",
+          "pass": false,
+          "actual": {
+            "survivor_state": "active",
+            "manager_active_response": null,
+            "elapsed": 12.010431642999947
+          },
+          "expected": "surviving node unconfigured and manager inactive within 12s"
+        },
+        {
+          "name": "bt_success_failure",
+          "pass": true,
+          "actual": {
+            "success": [
+              4,
+              0
+            ],
+            "failure": [
+              6,
+              0
+            ]
+          },
+          "expected": "success [4,0], failure [6,0]"
+        },
+        {
+          "name": "bt_error_propagation",
+          "pass": true,
+          "actual": [
+            6,
+            207
+          ],
+          "expected": [
+            6,
+            207
+          ]
+        },
+        {
+          "name": "bt_recovery_retry",
+          "pass": true,
+          "actual": {
+            "success": [
+              4,
+              0
+            ],
+            "failure": [
+              6,
+              0
+            ],
+            "error": [
+              6,
+              207
+            ],
+            "recovery": [
+              4,
+              0
+            ],
+            "counts": {
+              "5.0": 1,
+              "6.0": 2
+            },
+            "feedback": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "wait_calls": [
+              0.1,
+              0.8,
+              0.8
+            ],
+            "cancel": [
+              5,
+              0
+            ],
+            "preempt_old": [
+              6,
+              0
+            ],
+            "preempt_new": [
+              4,
+              0
+            ]
+          },
+          "expected": "two planner calls, one recovery, succeeds"
+        },
+        {
+          "name": "bt_cancel",
+          "pass": true,
+          "actual": [
+            5,
+            0
+          ],
+          "expected": [
+            5,
+            0
+          ]
+        },
+        {
+          "name": "bt_same_tree_preemption",
+          "pass": true,
+          "actual": {
+            "old": [
+              6,
+              0
+            ],
+            "new": [
+              4,
+              0
+            ]
+          },
+          "expected": "old aborted, replacement succeeds"
+        }
+      ],
+      "observations": {
+        "sequence": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pause": [
+            true,
+            "inactive",
+            "inactive"
+          ],
+          "resume": [
+            true,
+            "active",
+            "active"
+          ],
+          "reset": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ],
+          "manager_log": "[INFO] [1790567751.719288482] [lifecycle_manager]: Creating\n[INFO] [1790567751.721396569] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567752.547287325] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567752.547381073] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567752.556753921] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567752.563332153] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567752.665166353] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567752.665228845] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567752.767364218] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567752.767427759] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567752.767441706] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567752.790581611] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567752.790658943] [lifecycle_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567752.790662407] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567752.902697346] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567753.014895933] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes have been paused\u001b[0m\u001b[0m\n[INFO] [1790567753.044139690] [lifecycle_manager]: \u001b[34m\u001b[1mResuming managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567753.044174869] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567753.145962807] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567753.146012180] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567753.248012532] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567753.248074161] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567753.248080241] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567753.279002539] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567753.279053504] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567753.279056477] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567753.391259401] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567753.503436233] [lifecycle_manager]: \u001b[34m\u001b[1mCleaning up waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567753.505924660] [lifecycle_manager]: \u001b[34m\u001b[1mCleaning up behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567753.507272491] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes have been reset\u001b[0m\u001b[0m\n[INFO] [1790567753.760085820] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567753.760148858] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n[INFO] [1790567753.760874229] [lifecycle_manager]: Destroying lifecycle_manager\n"
+        },
+        "early_crash": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pre_cleanup_manager_log": "[INFO] [1790567723.635664264] [lifecycle_manager]: Creating\n[INFO] [1790567723.638025016] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567724.463606378] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567724.463652711] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.472677026] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.480997057] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.582626857] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567724.582666591] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.684708330] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567724.684740029] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567724.684744160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n",
+          "crash": {
+            "killed_pid": 30365,
+            "process_dead": true,
+            "survivor_state": "active",
+            "elapsed": 2.0107938610000247
+          },
+          "manager_active": true,
+          "manager_log": "[INFO] [1790567723.635664264] [lifecycle_manager]: Creating\n[INFO] [1790567723.638025016] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567724.463606378] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567724.463652711] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.472677026] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.480997057] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567724.582626857] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567724.582666591] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567724.684708330] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567724.684740029] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567724.684744160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567726.884817538] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from behavior_server.\u001b[0m\u001b[0m\n[ERROR] [1790567726.884846587] [lifecycle_manager]: CRITICAL FAILURE: SERVER behavior_server IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567726.884865928] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567726.884868471] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567726.884870908] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567726.893577274] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567726.893619727] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+        },
+        "settled_crash": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pre_cleanup_manager_log": "[INFO] [1790567731.933759452] [lifecycle_manager]: Creating\n[INFO] [1790567731.935923558] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567732.757270362] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567732.757320231] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.766183351] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.774346469] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.875984306] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567732.876021434] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.978301666] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567732.978341692] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567732.978345729] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578518688] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567734.578568390] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567734.578586478] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578588973] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567734.578591033] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n",
+          "crash": {
+            "killed_pid": 30478,
+            "process_dead": true,
+            "survivor_state": "active",
+            "elapsed": 12.010431642999947
+          },
+          "manager_active": null,
+          "manager_log": "[INFO] [1790567731.933759452] [lifecycle_manager]: Creating\n[INFO] [1790567731.935923558] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567732.757270362] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567732.757320231] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.766183351] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.774346469] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567732.875984306] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567732.876021434] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567732.978301666] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567732.978341692] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567732.978345729] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578518688] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567734.578568390] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567734.578586478] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567734.578588973] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567734.578591033] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567746.683807671] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567746.683882494] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+        },
+        "bt": {
+          "success": [
+            4,
+            0
+          ],
+          "failure": [
+            6,
+            0
+          ],
+          "error": [
+            6,
+            207
+          ],
+          "recovery": [
+            4,
+            0
+          ],
+          "counts": {
+            "5.0": 1,
+            "6.0": 2
+          },
+          "feedback": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "wait_calls": [
+            0.1,
+            0.8,
+            0.8
+          ],
+          "cancel": [
+            5,
+            0
+          ],
+          "preempt_old": [
+            6,
+            0
+          ],
+          "preempt_new": [
+            4,
+            0
+          ]
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "item": 20,
+      "title": "AMCL pose, frame, update gate, and map semantics",
+      "status": "observed",
+      "pass": true,
+      "classification": "pass",
+      "checks": [
+        {
+          "name": "inactive_initial_pose_applied_on_activate",
+          "pass": true,
+          "actual": [
+            1.0,
+            1.0
+          ],
+          "expected": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "stationary_scan_gated",
+          "pass": true,
+          "actual": [
+            1,
+            1
+          ],
+          "expected": "pose publication count unchanged"
+        },
+        {
+          "name": "non_global_initial_pose_rejected",
+          "pass": true,
+          "actual": [
+            1.0,
+            1.0
+          ],
+          "expected": "unchanged [1,1] after odom-frame request"
+        },
+        {
+          "name": "active_global_initial_pose_applied",
+          "pass": true,
+          "actual": [
+            2.0,
+            1.0
+          ],
+          "expected": [
+            2.0,
+            1.0
+          ]
+        },
+        {
+          "name": "translation_below_gate",
+          "pass": true,
+          "actual": [
+            3,
+            3
+          ],
+          "expected": "pose publication count unchanged for 0.1m < 0.25m"
+        },
+        {
+          "name": "translation_above_gate_kinematics",
+          "pass": true,
+          "actual": {
+            "count": 4,
+            "pose": [
+              2.392026631136492,
+              1.079467732318025
+            ]
+          },
+          "expected": {
+            "count": 4,
+            "pose": [
+              2.392026631136497,
+              1.0794677323180244
+            ]
+          }
+        },
+        {
+          "name": "map_update_rebuilds_sensor_path",
+          "pass": true,
+          "actual": [
+            4,
+            5,
+            [
+              2.392026631136492,
+              1.079467732318025
+            ]
+          ],
+          "expected": "one no-motion update on replacement map, pose preserved"
+        }
+      ],
+      "observations": {
+        "initial_pose": [
+          1.0,
+          1.0
+        ],
+        "stationary": [
+          1,
+          1
+        ],
+        "wrong_frame": [
+          1.0,
+          1.0
+        ],
+        "reset_pose": [
+          2.0,
+          1.0
+        ],
+        "below_gate": [
+          3,
+          3
+        ],
+        "above_gate_count": 4,
+        "above_pose": [
+          2.392026631136492,
+          1.079467732318025
+        ],
+        "expected_above": [
+          2.392026631136497,
+          1.0794677323180244
+        ],
+        "map_update": [
+          4,
+          5,
+          [
+            2.392026631136492,
+            1.079467732318025
+          ]
+        ]
+      },
+      "repetition": 0
+    },
+    {
+      "item": 17,
+      "title": "Behavior Server action semantics",
+      "status": "observed",
+      "pass": true,
+      "classification": "pass",
+      "checks": [
+        {
+          "name": "wait_duration_feedback",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "elapsed": 0.2540622880000001,
+            "feedback": [
+              0.249981934,
+              0.199916679,
+              0.149912448,
+              0.099917771,
+              0.049906016,
+              -7.296800000000658e-05
+            ]
+          },
+          "expected": "succeeded, 0.25s ±0.12, decreasing feedback"
+        },
+        {
+          "name": "wait_cancel",
+          "pass": true,
+          "actual": 5,
+          "expected": 5
+        },
+        {
+          "name": "drive_distance_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": 0.3099671002188651
+          },
+          "expected": "success, +0.3m ±0.06"
+        },
+        {
+          "name": "backup_distance_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": -0.20247336129557048
+          },
+          "expected": "success, -0.2m ±0.06"
+        },
+        {
+          "name": "spin_angle_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": 0.5075804831726404
+          },
+          "expected": "success, +0.5rad ±0.08"
+        },
+        {
+          "name": "collision_abort",
+          "pass": true,
+          "actual": {
+            "status": 6,
+            "error": 723
+          },
+          "expected": "aborted, COLLISION_AHEAD=723"
+        },
+        {
+          "name": "time_allowance_abort",
+          "pass": true,
+          "actual": {
+            "status": 6,
+            "error": 721
+          },
+          "expected": "aborted, TIMEOUT=721"
+        }
+      ],
+      "observations": {
+        "wait_elapsed": 0.2540622880000001,
+        "wait_feedback": [
+          0.249981934,
+          0.199916679,
+          0.149912448,
+          0.099917771,
+          0.049906016,
+          -7.296800000000658e-05
+        ],
+        "drive_delta": 0.3099671002188651,
+        "backup_delta": -0.20247336129557048,
+        "spin_delta": 0.5075804831726404,
+        "drive_commands": [
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "backup_commands": [
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "spin_commands": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.980125249138953
+          ],
+          [
+            0.0,
+            0.8426788685869461
+          ],
+          [
+            0.0,
+            0.6138677628563819
+          ],
+          [
+            0.0,
+            0.4684656010877608
+          ],
+          [
+            0.0,
+            0.24514616323103247
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "repetition": 1
+    },
+    {
+      "item": 18,
+      "title": "Waypoint Follower sequence and task semantics",
+      "status": "observed",
+      "pass": false,
+      "classification": "violation",
+      "checks": [
+        {
+          "name": "continue_after_navigation_failure",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "received": [
+              1.0,
+              2.0,
+              3.0
+            ],
+            "missed": [
+              [
+                1,
+                42
+              ]
+            ]
+          },
+          "expected": "succeeded; visits all; missed [(1,42)]"
+        },
+        {
+          "name": "dynamic_stop_on_failure",
+          "pass": true,
+          "actual": {
+            "parameter": [
+              [
+                true,
+                ""
+              ]
+            ],
+            "status": 6,
+            "received": [
+              1.0,
+              2.0
+            ]
+          },
+          "expected": "parameter accepted; aborts at second waypoint"
+        },
+        {
+          "name": "input_task_success",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "missed": []
+          },
+          "expected": "succeeded with no missed waypoint"
+        },
+        {
+          "name": "input_timeout_error_code",
+          "pass": true,
+          "actual": {
+            "0.2": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 0.21337441399998625,
+              "post_nav_elapsed": 0.21150549399999363
+            },
+            "1.0": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 1.2046972539999388,
+              "post_nav_elapsed": 1.2026193880000164
+            },
+            "1.2": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 1.2029934639999738,
+              "post_nav_elapsed": 1.2012477819999958
+            }
+          },
+          "expected": "all aborted with task executor failed=601"
+        },
+        {
+          "name": "fractional_timeout_0_2",
+          "pass": true,
+          "actual": 0.21150549399999363,
+          "expected": "0.2 seconds within scheduler tolerance [.15,.55]"
+        },
+        {
+          "name": "fractional_timeout_1_0",
+          "pass": true,
+          "actual": 1.2026193880000164,
+          "expected": "1.0 seconds within scheduler tolerance [.85,1.35]"
+        },
+        {
+          "name": "fractional_timeout_1_2",
+          "pass": false,
+          "actual": {
+            "elapsed": 1.2012477819999958,
+            "delta_from_1.0": -0.0013716060000206198
+          },
+          "expected": "1.2 seconds and at least 0.12s longer than 1.0"
+        }
+      ],
+      "observations": {
+        "timeouts": {
+          "0.2": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 0.21337441399998625,
+            "post_nav_elapsed": 0.21150549399999363
+          },
+          "1.0": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 1.2046972539999388,
+            "post_nav_elapsed": 1.2026193880000164
+          },
+          "1.2": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 1.2029934639999738,
+            "post_nav_elapsed": 1.2012477819999958
+          }
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "item": 19,
+      "title": "Lifecycle Manager and BT Navigator semantics",
+      "status": "observed",
+      "pass": false,
+      "classification": "violation",
+      "checks": [
+        {
+          "name": "lifecycle_startup",
+          "pass": true,
+          "actual": [
+            true,
+            "active",
+            "active"
+          ],
+          "expected": [
+            true,
+            "active",
+            "active"
+          ]
+        },
+        {
+          "name": "lifecycle_pause",
+          "pass": true,
+          "actual": [
+            true,
+            "inactive",
+            "inactive"
+          ],
+          "expected": [
+            true,
+            "inactive",
+            "inactive"
+          ]
+        },
+        {
+          "name": "lifecycle_resume",
+          "pass": true,
+          "actual": [
+            true,
+            "active",
+            "active"
+          ],
+          "expected": [
+            true,
+            "active",
+            "active"
+          ]
+        },
+        {
+          "name": "lifecycle_reset",
+          "pass": true,
+          "actual": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ],
+          "expected": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ]
+        },
+        {
+          "name": "bond_early_crash_detection",
+          "pass": false,
+          "actual": {
+            "startup": [
+              true,
+              "active",
+              "active"
+            ],
+            "pre_cleanup_manager_log": "[INFO] [1790567772.838715251] [lifecycle_manager]: Creating\n[INFO] [1790567772.840461556] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567773.670073442] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567773.670123144] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.679620834] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.688367979] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.790129383] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567773.790180277] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.892118235] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567773.892155457] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567773.892161026] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n",
+            "crash": {
+              "killed_pid": 32606,
+              "process_dead": true,
+              "survivor_state": "active",
+              "elapsed": 2.010643856999991
+            },
+            "manager_active": true,
+            "manager_log": "[INFO] [1790567772.838715251] [lifecycle_manager]: Creating\n[INFO] [1790567772.840461556] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567773.670073442] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567773.670123144] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.679620834] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.688367979] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.790129383] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567773.790180277] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.892118235] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567773.892155457] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567773.892161026] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567776.092318125] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from behavior_server.\u001b[0m\u001b[0m\n[ERROR] [1790567776.092361643] [lifecycle_manager]: CRITICAL FAILURE: SERVER behavior_server IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567776.092390525] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567776.092395154] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567776.092398484] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567776.109072293] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567776.109136535] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+          },
+          "expected": "crash immediately after formation is reported within 2s"
+        },
+        {
+          "name": "bond_settled_crash_detection",
+          "pass": true,
+          "actual": {
+            "startup": [
+              true,
+              "active",
+              "active"
+            ],
+            "pre_cleanup_manager_log": "[INFO] [1790567781.146770989] [lifecycle_manager]: Creating\n[INFO] [1790567781.148492029] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567781.975437799] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567781.975509447] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567781.982811116] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567781.990664760] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567782.092338815] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567782.092395365] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567782.195052785] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567782.195105011] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567782.195110920] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795316305] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567783.795364252] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567783.795396638] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795400561] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567783.795403721] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n",
+            "crash": {
+              "killed_pid": 32817,
+              "process_dead": true,
+              "survivor_state": "active",
+              "elapsed": 12.010365517000082
+            },
+            "manager_active": null,
+            "manager_log": "[INFO] [1790567781.146770989] [lifecycle_manager]: Creating\n[INFO] [1790567781.148492029] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567781.975437799] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567781.975509447] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567781.982811116] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567781.990664760] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567782.092338815] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567782.092395365] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567782.195052785] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567782.195105011] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567782.195110920] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795316305] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567783.795364252] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567783.795396638] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795400561] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567783.795403721] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567795.899868772] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567795.899935233] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+          },
+          "expected": "after one-second settling, crash is reported within the observation window"
+        },
+        {
+          "name": "bond_crash_reset_completion",
+          "pass": false,
+          "actual": {
+            "survivor_state": "active",
+            "manager_active_response": null,
+            "elapsed": 12.010365517000082
+          },
+          "expected": "surviving node unconfigured and manager inactive within 12s"
+        },
+        {
+          "name": "bt_success_failure",
+          "pass": true,
+          "actual": {
+            "success": [
+              4,
+              0
+            ],
+            "failure": [
+              6,
+              0
+            ]
+          },
+          "expected": "success [4,0], failure [6,0]"
+        },
+        {
+          "name": "bt_error_propagation",
+          "pass": true,
+          "actual": [
+            6,
+            207
+          ],
+          "expected": [
+            6,
+            207
+          ]
+        },
+        {
+          "name": "bt_recovery_retry",
+          "pass": true,
+          "actual": {
+            "success": [
+              4,
+              0
+            ],
+            "failure": [
+              6,
+              0
+            ],
+            "error": [
+              6,
+              207
+            ],
+            "recovery": [
+              4,
+              0
+            ],
+            "counts": {
+              "5.0": 1,
+              "6.0": 2
+            },
+            "feedback": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "wait_calls": [
+              0.1,
+              0.8,
+              0.8
+            ],
+            "cancel": [
+              5,
+              0
+            ],
+            "preempt_old": [
+              6,
+              0
+            ],
+            "preempt_new": [
+              4,
+              0
+            ]
+          },
+          "expected": "two planner calls, one recovery, succeeds"
+        },
+        {
+          "name": "bt_cancel",
+          "pass": true,
+          "actual": [
+            5,
+            0
+          ],
+          "expected": [
+            5,
+            0
+          ]
+        },
+        {
+          "name": "bt_same_tree_preemption",
+          "pass": true,
+          "actual": {
+            "old": [
+              6,
+              0
+            ],
+            "new": [
+              4,
+              0
+            ]
+          },
+          "expected": "old aborted, replacement succeeds"
+        }
+      ],
+      "observations": {
+        "sequence": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pause": [
+            true,
+            "inactive",
+            "inactive"
+          ],
+          "resume": [
+            true,
+            "active",
+            "active"
+          ],
+          "reset": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ],
+          "manager_log": "[INFO] [1790567800.947110687] [lifecycle_manager]: Creating\n[INFO] [1790567800.949210912] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567801.771283856] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567801.771357179] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567801.785619735] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567801.795901432] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567801.907608076] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567801.907641124] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567802.021495558] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567802.021548577] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567802.021556223] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567802.045714656] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567802.045756829] [lifecycle_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567802.045761646] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567802.158699003] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567802.270207201] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes have been paused\u001b[0m\u001b[0m\n[INFO] [1790567802.297925932] [lifecycle_manager]: \u001b[34m\u001b[1mResuming managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567802.297973918] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567802.399986468] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567802.400044200] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567802.501851233] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567802.501892483] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567802.501896623] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567802.529483673] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567802.529512132] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567802.529516686] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567802.642698592] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567802.753903454] [lifecycle_manager]: \u001b[34m\u001b[1mCleaning up waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567802.755953306] [lifecycle_manager]: \u001b[34m\u001b[1mCleaning up behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567802.757446400] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes have been reset\u001b[0m\u001b[0m\n[INFO] [1790567803.013942886] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567803.014014763] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n[INFO] [1790567803.014837102] [lifecycle_manager]: Destroying lifecycle_manager\n"
+        },
+        "early_crash": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pre_cleanup_manager_log": "[INFO] [1790567772.838715251] [lifecycle_manager]: Creating\n[INFO] [1790567772.840461556] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567773.670073442] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567773.670123144] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.679620834] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.688367979] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.790129383] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567773.790180277] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.892118235] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567773.892155457] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567773.892161026] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n",
+          "crash": {
+            "killed_pid": 32606,
+            "process_dead": true,
+            "survivor_state": "active",
+            "elapsed": 2.010643856999991
+          },
+          "manager_active": true,
+          "manager_log": "[INFO] [1790567772.838715251] [lifecycle_manager]: Creating\n[INFO] [1790567772.840461556] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567773.670073442] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567773.670123144] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.679620834] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.688367979] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567773.790129383] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567773.790180277] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567773.892118235] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567773.892155457] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567773.892161026] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567776.092318125] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from behavior_server.\u001b[0m\u001b[0m\n[ERROR] [1790567776.092361643] [lifecycle_manager]: CRITICAL FAILURE: SERVER behavior_server IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567776.092390525] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567776.092395154] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567776.092398484] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567776.109072293] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567776.109136535] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+        },
+        "settled_crash": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pre_cleanup_manager_log": "[INFO] [1790567781.146770989] [lifecycle_manager]: Creating\n[INFO] [1790567781.148492029] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567781.975437799] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567781.975509447] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567781.982811116] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567781.990664760] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567782.092338815] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567782.092395365] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567782.195052785] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567782.195105011] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567782.195110920] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795316305] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567783.795364252] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567783.795396638] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795400561] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567783.795403721] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n",
+          "crash": {
+            "killed_pid": 32817,
+            "process_dead": true,
+            "survivor_state": "active",
+            "elapsed": 12.010365517000082
+          },
+          "manager_active": null,
+          "manager_log": "[INFO] [1790567781.146770989] [lifecycle_manager]: Creating\n[INFO] [1790567781.148492029] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567781.975437799] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567781.975509447] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567781.982811116] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567781.990664760] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567782.092338815] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567782.092395365] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567782.195052785] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567782.195105011] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567782.195110920] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795316305] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567783.795364252] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567783.795396638] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567783.795400561] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567783.795403721] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567795.899868772] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567795.899935233] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+        },
+        "bt": {
+          "success": [
+            4,
+            0
+          ],
+          "failure": [
+            6,
+            0
+          ],
+          "error": [
+            6,
+            207
+          ],
+          "recovery": [
+            4,
+            0
+          ],
+          "counts": {
+            "5.0": 1,
+            "6.0": 2
+          },
+          "feedback": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "wait_calls": [
+            0.1,
+            0.8,
+            0.8
+          ],
+          "cancel": [
+            5,
+            0
+          ],
+          "preempt_old": [
+            6,
+            0
+          ],
+          "preempt_new": [
+            4,
+            0
+          ]
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "item": 20,
+      "title": "AMCL pose, frame, update gate, and map semantics",
+      "status": "observed",
+      "pass": true,
+      "classification": "pass",
+      "checks": [
+        {
+          "name": "inactive_initial_pose_applied_on_activate",
+          "pass": true,
+          "actual": [
+            1.0,
+            1.0
+          ],
+          "expected": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "stationary_scan_gated",
+          "pass": true,
+          "actual": [
+            1,
+            1
+          ],
+          "expected": "pose publication count unchanged"
+        },
+        {
+          "name": "non_global_initial_pose_rejected",
+          "pass": true,
+          "actual": [
+            1.0,
+            1.0
+          ],
+          "expected": "unchanged [1,1] after odom-frame request"
+        },
+        {
+          "name": "active_global_initial_pose_applied",
+          "pass": true,
+          "actual": [
+            2.0,
+            1.0
+          ],
+          "expected": [
+            2.0,
+            1.0
+          ]
+        },
+        {
+          "name": "translation_below_gate",
+          "pass": true,
+          "actual": [
+            3,
+            3
+          ],
+          "expected": "pose publication count unchanged for 0.1m < 0.25m"
+        },
+        {
+          "name": "translation_above_gate_kinematics",
+          "pass": true,
+          "actual": {
+            "count": 4,
+            "pose": [
+              2.392026631136492,
+              1.079467732318025
+            ]
+          },
+          "expected": {
+            "count": 4,
+            "pose": [
+              2.392026631136497,
+              1.0794677323180244
+            ]
+          }
+        },
+        {
+          "name": "map_update_rebuilds_sensor_path",
+          "pass": true,
+          "actual": [
+            4,
+            5,
+            [
+              2.392026631136492,
+              1.079467732318025
+            ]
+          ],
+          "expected": "one no-motion update on replacement map, pose preserved"
+        }
+      ],
+      "observations": {
+        "initial_pose": [
+          1.0,
+          1.0
+        ],
+        "stationary": [
+          1,
+          1
+        ],
+        "wrong_frame": [
+          1.0,
+          1.0
+        ],
+        "reset_pose": [
+          2.0,
+          1.0
+        ],
+        "below_gate": [
+          3,
+          3
+        ],
+        "above_gate_count": 4,
+        "above_pose": [
+          2.392026631136492,
+          1.079467732318025
+        ],
+        "expected_above": [
+          2.392026631136497,
+          1.0794677323180244
+        ],
+        "map_update": [
+          4,
+          5,
+          [
+            2.392026631136492,
+            1.079467732318025
+          ]
+        ]
+      },
+      "repetition": 1
+    },
+    {
+      "item": 17,
+      "title": "Behavior Server action semantics",
+      "status": "observed",
+      "pass": true,
+      "classification": "pass",
+      "checks": [
+        {
+          "name": "wait_duration_feedback",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "elapsed": 0.2528855599999815,
+            "feedback": [
+              0.249982396,
+              0.199906059,
+              0.14990932,
+              0.099919067,
+              0.049838908,
+              -0.00013882300000001013
+            ]
+          },
+          "expected": "succeeded, 0.25s ±0.12, decreasing feedback"
+        },
+        {
+          "name": "wait_cancel",
+          "pass": true,
+          "actual": 5,
+          "expected": 5
+        },
+        {
+          "name": "drive_distance_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": 0.30983580021691043
+          },
+          "expected": "success, +0.3m ±0.06"
+        },
+        {
+          "name": "backup_distance_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": -0.20266039075300313
+          },
+          "expected": "success, -0.2m ±0.06"
+        },
+        {
+          "name": "spin_angle_direction",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "delta": 0.5088151999631696
+          },
+          "expected": "success, +0.5rad ±0.08"
+        },
+        {
+          "name": "collision_abort",
+          "pass": true,
+          "actual": {
+            "status": 6,
+            "error": 723
+          },
+          "expected": "aborted, COLLISION_AHEAD=723"
+        },
+        {
+          "name": "time_allowance_abort",
+          "pass": true,
+          "actual": {
+            "status": 6,
+            "error": 721
+          },
+          "expected": "aborted, TIMEOUT=721"
+        }
+      ],
+      "observations": {
+        "wait_elapsed": 0.2528855599999815,
+        "wait_feedback": [
+          0.249982396,
+          0.199906059,
+          0.14990932,
+          0.099919067,
+          0.049838908,
+          -0.00013882300000001013
+        ],
+        "drive_delta": 0.30983580021691043,
+        "backup_delta": -0.20266039075300313,
+        "spin_delta": 0.5088151999631696,
+        "drive_commands": [
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.20000000298023224,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "backup_commands": [
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            -0.15000000596046448,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "spin_commands": [
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.9807609356004878
+          ],
+          [
+            0.0,
+            0.8045877732604289
+          ],
+          [
+            0.0,
+            0.6149704697452962
+          ],
+          [
+            0.0,
+            0.3712614641607782
+          ],
+          [
+            0.0,
+            0.2
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "repetition": 2
+    },
+    {
+      "item": 18,
+      "title": "Waypoint Follower sequence and task semantics",
+      "status": "observed",
+      "pass": false,
+      "classification": "violation",
+      "checks": [
+        {
+          "name": "continue_after_navigation_failure",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "received": [
+              1.0,
+              2.0,
+              3.0
+            ],
+            "missed": [
+              [
+                1,
+                42
+              ]
+            ]
+          },
+          "expected": "succeeded; visits all; missed [(1,42)]"
+        },
+        {
+          "name": "dynamic_stop_on_failure",
+          "pass": true,
+          "actual": {
+            "parameter": [
+              [
+                true,
+                ""
+              ]
+            ],
+            "status": 6,
+            "received": [
+              1.0,
+              2.0
+            ]
+          },
+          "expected": "parameter accepted; aborts at second waypoint"
+        },
+        {
+          "name": "input_task_success",
+          "pass": true,
+          "actual": {
+            "status": 4,
+            "missed": []
+          },
+          "expected": "succeeded with no missed waypoint"
+        },
+        {
+          "name": "input_timeout_error_code",
+          "pass": true,
+          "actual": {
+            "0.2": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 0.2027839040000572,
+              "post_nav_elapsed": 0.20139993700001924
+            },
+            "1.0": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 1.2046850379999796,
+              "post_nav_elapsed": 1.2025435140000127
+            },
+            "1.2": {
+              "status": 6,
+              "missed": [
+                [
+                  0,
+                  601
+                ]
+              ],
+              "total_elapsed": 1.2055155010000362,
+              "post_nav_elapsed": 1.2040370510000002
+            }
+          },
+          "expected": "all aborted with task executor failed=601"
+        },
+        {
+          "name": "fractional_timeout_0_2",
+          "pass": true,
+          "actual": 0.20139993700001924,
+          "expected": "0.2 seconds within scheduler tolerance [.15,.55]"
+        },
+        {
+          "name": "fractional_timeout_1_0",
+          "pass": true,
+          "actual": 1.2025435140000127,
+          "expected": "1.0 seconds within scheduler tolerance [.85,1.35]"
+        },
+        {
+          "name": "fractional_timeout_1_2",
+          "pass": false,
+          "actual": {
+            "elapsed": 1.2040370510000002,
+            "delta_from_1.0": 0.0014935369999875547
+          },
+          "expected": "1.2 seconds and at least 0.12s longer than 1.0"
+        }
+      ],
+      "observations": {
+        "timeouts": {
+          "0.2": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 0.2027839040000572,
+            "post_nav_elapsed": 0.20139993700001924
+          },
+          "1.0": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 1.2046850379999796,
+            "post_nav_elapsed": 1.2025435140000127
+          },
+          "1.2": {
+            "status": 6,
+            "missed": [
+              [
+                0,
+                601
+              ]
+            ],
+            "total_elapsed": 1.2055155010000362,
+            "post_nav_elapsed": 1.2040370510000002
+          }
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "item": 19,
+      "title": "Lifecycle Manager and BT Navigator semantics",
+      "status": "observed",
+      "pass": false,
+      "classification": "violation",
+      "checks": [
+        {
+          "name": "lifecycle_startup",
+          "pass": true,
+          "actual": [
+            true,
+            "active",
+            "active"
+          ],
+          "expected": [
+            true,
+            "active",
+            "active"
+          ]
+        },
+        {
+          "name": "lifecycle_pause",
+          "pass": true,
+          "actual": [
+            true,
+            "inactive",
+            "inactive"
+          ],
+          "expected": [
+            true,
+            "inactive",
+            "inactive"
+          ]
+        },
+        {
+          "name": "lifecycle_resume",
+          "pass": true,
+          "actual": [
+            true,
+            "active",
+            "active"
+          ],
+          "expected": [
+            true,
+            "active",
+            "active"
+          ]
+        },
+        {
+          "name": "lifecycle_reset",
+          "pass": true,
+          "actual": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ],
+          "expected": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ]
+        },
+        {
+          "name": "bond_early_crash_detection",
+          "pass": false,
+          "actual": {
+            "startup": [
+              true,
+              "active",
+              "active"
+            ],
+            "pre_cleanup_manager_log": "[INFO] [1790567823.890216827] [lifecycle_manager]: Creating\n[INFO] [1790567823.892144462] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567824.722919331] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567824.723001464] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.731487877] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.738506337] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.839998774] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567824.840035862] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.941776764] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567824.941811384] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567824.941816151] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n",
+            "crash": {
+              "killed_pid": 41242,
+              "process_dead": true,
+              "survivor_state": "active",
+              "elapsed": 2.010601442000052
+            },
+            "manager_active": true,
+            "manager_log": "[INFO] [1790567823.890216827] [lifecycle_manager]: Creating\n[INFO] [1790567823.892144462] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567824.722919331] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567824.723001464] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.731487877] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.738506337] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.839998774] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567824.840035862] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.941776764] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567824.941811384] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567824.941816151] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567827.141913781] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from behavior_server.\u001b[0m\u001b[0m\n[ERROR] [1790567827.141953731] [lifecycle_manager]: CRITICAL FAILURE: SERVER behavior_server IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567827.141969667] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567827.141972406] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567827.141974680] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567827.154151752] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567827.154210046] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+          },
+          "expected": "crash immediately after formation is reported within 2s"
+        },
+        {
+          "name": "bond_settled_crash_detection",
+          "pass": true,
+          "actual": {
+            "startup": [
+              true,
+              "active",
+              "active"
+            ],
+            "pre_cleanup_manager_log": "[INFO] [1790567832.197842795] [lifecycle_manager]: Creating\n[INFO] [1790567832.202646231] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567833.024994367] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567833.025064519] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.033721257] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.042442497] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.144173028] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567833.144228319] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.257066261] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567833.257122569] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567833.257129160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857272883] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567834.857314741] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567834.857340377] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857344393] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567834.857347621] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n",
+            "crash": {
+              "killed_pid": 43607,
+              "process_dead": true,
+              "survivor_state": "active",
+              "elapsed": 12.012527095999985
+            },
+            "manager_active": null,
+            "manager_log": "[INFO] [1790567832.197842795] [lifecycle_manager]: Creating\n[INFO] [1790567832.202646231] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567833.024994367] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567833.025064519] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.033721257] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.042442497] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.144173028] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567833.144228319] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.257066261] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567833.257122569] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567833.257129160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857272883] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567834.857314741] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567834.857340377] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857344393] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567834.857347621] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567846.961247797] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567846.961308501] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+          },
+          "expected": "after one-second settling, crash is reported within the observation window"
+        },
+        {
+          "name": "bond_crash_reset_completion",
+          "pass": false,
+          "actual": {
+            "survivor_state": "active",
+            "manager_active_response": null,
+            "elapsed": 12.012527095999985
+          },
+          "expected": "surviving node unconfigured and manager inactive within 12s"
+        },
+        {
+          "name": "bt_success_failure",
+          "pass": true,
+          "actual": {
+            "success": [
+              4,
+              0
+            ],
+            "failure": [
+              6,
+              0
+            ]
+          },
+          "expected": "success [4,0], failure [6,0]"
+        },
+        {
+          "name": "bt_error_propagation",
+          "pass": true,
+          "actual": [
+            6,
+            207
+          ],
+          "expected": [
+            6,
+            207
+          ]
+        },
+        {
+          "name": "bt_recovery_retry",
+          "pass": true,
+          "actual": {
+            "success": [
+              4,
+              0
+            ],
+            "failure": [
+              6,
+              0
+            ],
+            "error": [
+              6,
+              207
+            ],
+            "recovery": [
+              4,
+              0
+            ],
+            "counts": {
+              "5.0": 1,
+              "6.0": 2
+            },
+            "feedback": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "wait_calls": [
+              0.1,
+              0.8,
+              0.8
+            ],
+            "cancel": [
+              5,
+              0
+            ],
+            "preempt_old": [
+              6,
+              0
+            ],
+            "preempt_new": [
+              4,
+              0
+            ]
+          },
+          "expected": "two planner calls, one recovery, succeeds"
+        },
+        {
+          "name": "bt_cancel",
+          "pass": true,
+          "actual": [
+            5,
+            0
+          ],
+          "expected": [
+            5,
+            0
+          ]
+        },
+        {
+          "name": "bt_same_tree_preemption",
+          "pass": true,
+          "actual": {
+            "old": [
+              6,
+              0
+            ],
+            "new": [
+              4,
+              0
+            ]
+          },
+          "expected": "old aborted, replacement succeeds"
+        }
+      ],
+      "observations": {
+        "sequence": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pause": [
+            true,
+            "inactive",
+            "inactive"
+          ],
+          "resume": [
+            true,
+            "active",
+            "active"
+          ],
+          "reset": [
+            true,
+            "unconfigured",
+            "unconfigured"
+          ],
+          "manager_log": "[INFO] [1790567851.993620587] [lifecycle_manager]: Creating\n[INFO] [1790567851.995322665] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567852.824750618] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567852.824826796] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567852.837234779] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567852.847242377] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567852.949299321] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567852.949339751] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567853.051540573] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567853.051598569] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567853.051606864] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567853.078887368] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567853.078968818] [lifecycle_manager]: \u001b[34m\u001b[1mPausing managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567853.078975314] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567853.191204453] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567853.302563971] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes have been paused\u001b[0m\u001b[0m\n[INFO] [1790567853.330948762] [lifecycle_manager]: \u001b[34m\u001b[1mResuming managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567853.330983466] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567853.432839701] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567853.432875414] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567853.534396033] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567853.534443288] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567853.534447454] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567853.563719942] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567853.563751314] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567853.563754254] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567853.675682407] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567853.787832968] [lifecycle_manager]: \u001b[34m\u001b[1mCleaning up waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567853.790799415] [lifecycle_manager]: \u001b[34m\u001b[1mCleaning up behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567853.793112883] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes have been reset\u001b[0m\u001b[0m\n[INFO] [1790567854.044002892] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567854.044071413] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n[INFO] [1790567854.044825961] [lifecycle_manager]: Destroying lifecycle_manager\n"
+        },
+        "early_crash": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pre_cleanup_manager_log": "[INFO] [1790567823.890216827] [lifecycle_manager]: Creating\n[INFO] [1790567823.892144462] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567824.722919331] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567824.723001464] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.731487877] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.738506337] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.839998774] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567824.840035862] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.941776764] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567824.941811384] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567824.941816151] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n",
+          "crash": {
+            "killed_pid": 41242,
+            "process_dead": true,
+            "survivor_state": "active",
+            "elapsed": 2.010601442000052
+          },
+          "manager_active": true,
+          "manager_log": "[INFO] [1790567823.890216827] [lifecycle_manager]: Creating\n[INFO] [1790567823.892144462] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567824.722919331] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567824.723001464] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.731487877] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.738506337] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567824.839998774] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567824.840035862] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567824.941776764] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567824.941811384] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567824.941816151] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567827.141913781] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from behavior_server.\u001b[0m\u001b[0m\n[ERROR] [1790567827.141953731] [lifecycle_manager]: CRITICAL FAILURE: SERVER behavior_server IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567827.141969667] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567827.141972406] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567827.141974680] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567827.154151752] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567827.154210046] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+        },
+        "settled_crash": {
+          "startup": [
+            true,
+            "active",
+            "active"
+          ],
+          "pre_cleanup_manager_log": "[INFO] [1790567832.197842795] [lifecycle_manager]: Creating\n[INFO] [1790567832.202646231] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567833.024994367] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567833.025064519] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.033721257] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.042442497] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.144173028] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567833.144228319] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.257066261] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567833.257122569] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567833.257129160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857272883] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567834.857314741] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567834.857340377] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857344393] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567834.857347621] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n",
+          "crash": {
+            "killed_pid": 43607,
+            "process_dead": true,
+            "survivor_state": "active",
+            "elapsed": 12.012527095999985
+          },
+          "manager_active": null,
+          "manager_log": "[INFO] [1790567832.197842795] [lifecycle_manager]: Creating\n[INFO] [1790567832.202646231] [lifecycle_manager]: \u001b[34m\u001b[1mCreating and initializing lifecycle service clients\u001b[0m\u001b[0m\n[INFO] [1790567833.024994367] [lifecycle_manager]: \u001b[34m\u001b[1mStarting managed nodes bringup...\u001b[0m\u001b[0m\n[INFO] [1790567833.025064519] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.033721257] [lifecycle_manager]: \u001b[34m\u001b[1mConfiguring waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.042442497] [lifecycle_manager]: \u001b[34m\u001b[1mActivating behavior_server\u001b[0m\u001b[0m\n[INFO] [1790567833.144173028] [lifecycle_manager]: Server behavior_server connected with bond.\n[INFO] [1790567833.144228319] [lifecycle_manager]: \u001b[34m\u001b[1mActivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567833.257066261] [lifecycle_manager]: Server waypoint_follower connected with bond.\n[INFO] [1790567833.257122569] [lifecycle_manager]: \u001b[34m\u001b[1mManaged nodes are active\u001b[0m\u001b[0m\n[INFO] [1790567833.257129160] [lifecycle_manager]: \u001b[34m\u001b[1mCreating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857272883] [lifecycle_manager]: \u001b[34m\u001b[1mHave not received a heartbeat from waypoint_follower.\u001b[0m\u001b[0m\n[ERROR] [1790567834.857314741] [lifecycle_manager]: CRITICAL FAILURE: SERVER waypoint_follower IS DOWN after not receiving a heartbeat for 500 ms. Shutting down related nodes.\n[INFO] [1790567834.857340377] [lifecycle_manager]: \u001b[34m\u001b[1mTerminating bond timer...\u001b[0m\u001b[0m\n[INFO] [1790567834.857344393] [lifecycle_manager]: \u001b[34m\u001b[1mResetting managed nodes...\u001b[0m\u001b[0m\n[INFO] [1790567834.857347621] [lifecycle_manager]: \u001b[34m\u001b[1mDeactivating waypoint_follower\u001b[0m\u001b[0m\n[INFO] [1790567846.961247797] [rclcpp]: signal_handler(SIGINT/SIGTERM)\n[INFO] [1790567846.961308501] [lifecycle_manager]: Running Nav2 LifecycleManager rcl preshutdown (lifecycle_manager)\n"
+        },
+        "bt": {
+          "success": [
+            4,
+            0
+          ],
+          "failure": [
+            6,
+            0
+          ],
+          "error": [
+            6,
+            207
+          ],
+          "recovery": [
+            4,
+            0
+          ],
+          "counts": {
+            "5.0": 1,
+            "6.0": 2
+          },
+          "feedback": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "wait_calls": [
+            0.1,
+            0.8,
+            0.8
+          ],
+          "cancel": [
+            5,
+            0
+          ],
+          "preempt_old": [
+            6,
+            0
+          ],
+          "preempt_new": [
+            4,
+            0
+          ]
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "item": 20,
+      "title": "AMCL pose, frame, update gate, and map semantics",
+      "status": "observed",
+      "pass": true,
+      "classification": "pass",
+      "checks": [
+        {
+          "name": "inactive_initial_pose_applied_on_activate",
+          "pass": true,
+          "actual": [
+            1.0,
+            1.0
+          ],
+          "expected": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "stationary_scan_gated",
+          "pass": true,
+          "actual": [
+            1,
+            1
+          ],
+          "expected": "pose publication count unchanged"
+        },
+        {
+          "name": "non_global_initial_pose_rejected",
+          "pass": true,
+          "actual": [
+            1.0,
+            1.0
+          ],
+          "expected": "unchanged [1,1] after odom-frame request"
+        },
+        {
+          "name": "active_global_initial_pose_applied",
+          "pass": true,
+          "actual": [
+            2.0,
+            1.0
+          ],
+          "expected": [
+            2.0,
+            1.0
+          ]
+        },
+        {
+          "name": "translation_below_gate",
+          "pass": true,
+          "actual": [
+            3,
+            3
+          ],
+          "expected": "pose publication count unchanged for 0.1m < 0.25m"
+        },
+        {
+          "name": "translation_above_gate_kinematics",
+          "pass": true,
+          "actual": {
+            "count": 4,
+            "pose": [
+              2.392026631136492,
+              1.079467732318025
+            ]
+          },
+          "expected": {
+            "count": 4,
+            "pose": [
+              2.392026631136497,
+              1.0794677323180244
+            ]
+          }
+        },
+        {
+          "name": "map_update_rebuilds_sensor_path",
+          "pass": true,
+          "actual": [
+            4,
+            5,
+            [
+              2.392026631136492,
+              1.079467732318025
+            ]
+          ],
+          "expected": "one no-motion update on replacement map, pose preserved"
+        }
+      ],
+      "observations": {
+        "initial_pose": [
+          1.0,
+          1.0
+        ],
+        "stationary": [
+          1,
+          1
+        ],
+        "wrong_frame": [
+          1.0,
+          1.0
+        ],
+        "reset_pose": [
+          2.0,
+          1.0
+        ],
+        "below_gate": [
+          3,
+          3
+        ],
+        "above_gate_count": 4,
+        "above_pose": [
+          2.392026631136492,
+          1.079467732318025
+        ],
+        "expected_above": [
+          2.392026631136497,
+          1.0794677323180244
+        ],
+        "map_update": [
+          4,
+          5,
+          [
+            2.392026631136492,
+            1.079467732318025
+          ]
+        ]
+      },
+      "repetition": 2
+    }
+  ],
+  "counts": {
+    "total": 12,
+    "pass": 6,
+    "violation": 6,
+    "execution_error": 0
+  },
+  "completed_at": "2026-09-28T11:57:41+0800"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "status": "violation",
+  "domain": 213,
+  "source_sha256": "b49601be4d3dca6cdce12c949517f83caa5888b0cba5131bb029702585de5f53",
+  "world_sha256": "8a545ca1867eaf91e33d121a42973bb7a1bdb2e3c237c470505524f4490d6db8",
+  "server_returncode": -15,
+  "loaded_libraries": [
+    "<test-workspace>/install/ros_gz/ros_gz_sim/lib/libgzserver_component.so"
+  ],
+  "loaded_library_sha256": "836f3276163466a8f2e244739db84331e94ac127c5f47e447a537810144198e0",
+  "values": {
+    "spawn_result": 1,
+    "initial_x": 1.0,
+    "valid_set_result": 1,
+    "valid_x": 2.0,
+    "twist_result": 1,
+    "twist_message": "",
+    "requested_twist_x": 1.0,
+    "requested_pose_x": 3.0,
+    "twist_x": 3.0,
+    "server_exit_after": null
+  },
+  "preconditions": [],
+  "errors": []
+}

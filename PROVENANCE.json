@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "platform": "Ubuntu 24.04 x86_64 / ROS 2 Jazzy",
+  "ros_gz": {
+    "source_commit": "0fa70cb7c15f7500c495190020dd6292188c8e54",
+    "built_overlay": "<test-workspace>/install/ros_gz",
+    "gzserver_component_sha256": "836f3276163466a8f2e244739db84331e94ac127c5f47e447a537810144198e0"
+  },
+  "navigation2": {
+    "runtime_release": "1.3.13",
+    "source_reference": "f4108e5b1c2bce804a1aa0c7be6673a8eb4a1501",
+    "packages": {
+      "map_server": "1.3.13-1noble.20260903.025026",
+      "costmap_2d": "1.3.13-1noble.20260903.024922",
+      "velocity_smoother": "1.3.13-1noble.20260903.025045",
+      "waypoint_follower": "1.3.13-1noble.20260903.071402",
+      "lifecycle_manager": "1.3.13-1noble.20260903.024931"
+    }
+  },
+  "robot_localization": {
+    "source_commit": "3efa714fb9c1ff40966327b7bed7053b2570be4d",
+    "ekf_node_sha256": "6154ee6855e584d851404d54abf7777201a55083da3a2c7b972a8ad565b8626f",
+    "ukf_node_sha256": "289baf66248d5163cb4cea63bd83a45f2ea3cf39e507a175e377b0c2ce1e213e",
+    "librl_lib_sha256": "7d683977fd89d312beef42707c5f45cdb3b0fa5aa6f18d914927be0cc0606eea"
+  },
+  "moveit2": {
+    "move_group_runtime_release": "2.12.4",
+    "planning_scene_source_commit": "002f40e58ebf5322c89468f5049867791e5f67fd",
+    "planning_scene_library_sha256": "6577ac685781eec73d80c76d392d186268b0e07957299a63680884855fb04e89",
+    "process_map_verified": true
+  }
+}

@@ -1,0 +1,1 @@
+[ros_gz_bridge] Image bridge ignores legal row padding in both directions

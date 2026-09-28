@@ -1,0 +1,1 @@
+[ros_gz_sim] SetEntityState returns RESULT_OK for a missing entity

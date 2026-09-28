@@ -1,0 +1,1366 @@
+{
+  "boundary_inclusive": 3,
+  "boundary_strict": 0,
+  "completed": 3,
+  "execution_errors": 0,
+  "interface_violations": 0,
+  "load_semantic_failures": 0,
+  "manifest": {
+    "cases": [
+      "scale_roundtrip",
+      "raw_roundtrip",
+      "threshold_boundary",
+      "gray_scale_raw_negate_alpha_origin",
+      "interface_state"
+    ],
+    "git_head": "66a20dc816b99ec4bf8aeea72693c8fc09c47369",
+    "map_io_sha256": "457ab8acdbfc4bbf3552b68c1d2aa7b833de88984a801e25ee55c1341e66aa54",
+    "name": "map-semantic-directed-v2",
+    "package": "ros-jazzy-nav2-map-server 1.3.13-1noble.20260903.025026",
+    "repetitions": 3,
+    "ros_domain_id": null,
+    "schema": 1,
+    "script": "/home/jhy/\u684c\u9762/research/ROS2/.deps/worktrees/p3-runtime-fuzz/experiments/p3/map_semantic_regression.py",
+    "script_sha256": "e0dca2700e057b3a88a3c98cea621e599d16d7ebf0ffb178205d8b6881258d9b",
+    "started_at": "2026-09-28T03:54:34.948696+00:00"
+  },
+  "observed": 3,
+  "raw_roundtrip_failures": 0,
+  "results": [
+    {
+      "duration_s": 2.152669307999986,
+      "interface_state": {
+        "after_missing": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567676,
+            504272356
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567676,
+            504272560
+          ],
+          "width": 2
+        },
+        "checks": {
+          "failed_load_does_not_publish": true,
+          "failed_load_preserves_b": true,
+          "failed_load_rejected": true,
+          "initial_matches_input_a": true,
+          "late_subscriber_gets_b": true,
+          "load_b_success": true,
+          "load_response_equals_get_map": true,
+          "load_response_equals_topic": true
+        },
+        "get_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567676,
+            504272356
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567676,
+            504272560
+          ],
+          "width": 2
+        },
+        "initial": {
+          "data": [
+            0,
+            100,
+            100,
+            0
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567676,
+            496978604
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567676,
+            496979661
+          ],
+          "width": 2
+        },
+        "late_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567676,
+            504272356
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567676,
+            504272560
+          ],
+          "width": 2
+        },
+        "load_b_response": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567676,
+            504272356
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567676,
+            504272560
+          ],
+          "width": 2
+        },
+        "missing_result": 3,
+        "missing_result_is_does_not_exist": false,
+        "post_failure_topic_samples": [],
+        "topic_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567676,
+            504272356
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567676,
+            504272560
+          ],
+          "width": 2
+        },
+        "violation": false
+      },
+      "load_semantics": {
+        "cases": {
+          "raw_gray": {
+            "data_match": true,
+            "expected": [
+              0,
+              1,
+              50,
+              51,
+              52,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "geometry_match": true,
+            "loaded": [
+              0,
+              1,
+              50,
+              51,
+              52,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "success": true
+          },
+          "scale_alpha": {
+            "data_match": true,
+            "expected": [
+              100,
+              0,
+              -1,
+              -1
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              0,
+              -1,
+              -1
+            ],
+            "success": true
+          },
+          "scale_gray": {
+            "data_match": true,
+            "expected": [
+              100,
+              100,
+              100,
+              100,
+              99,
+              50,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              100,
+              100,
+              100,
+              99,
+              50,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "success": true
+          },
+          "scale_negated": {
+            "data_match": true,
+            "expected": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              50,
+              99,
+              100,
+              100,
+              100,
+              100
+            ],
+            "geometry_match": true,
+            "loaded": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              50,
+              99,
+              100,
+              100,
+              100,
+              100
+            ],
+            "success": true
+          },
+          "trinary_gray": {
+            "data_match": true,
+            "expected": [
+              100,
+              100,
+              100,
+              100,
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              100,
+              100,
+              100,
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "success": true
+          }
+        },
+        "pass": true
+      },
+      "pids": {
+        "map_server": 28741,
+        "raw_map_saver": 28714,
+        "scale_map_saver": 28696
+      },
+      "raw_roundtrip": {
+        "exact": true,
+        "loaded": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ],
+        "source": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ]
+      },
+      "repeat": 0,
+      "scale_roundtrip": {
+        "errors": [
+          {
+            "after": 0,
+            "before": 25,
+            "index": 3
+          },
+          {
+            "after": 63,
+            "before": 50,
+            "index": 5
+          },
+          {
+            "after": 100,
+            "before": 65,
+            "index": 6
+          }
+        ],
+        "geometry_ok": true,
+        "loaded": [
+          -1,
+          0,
+          0,
+          0,
+          43,
+          63,
+          100,
+          100,
+          100
+        ],
+        "png_sha256": "77d74b8fd1a2947bf47a54f026a00cb052b3fdc66f335e1c624acf6d21ecc601",
+        "source": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ],
+        "violation": true,
+        "yaml": "image: scale.png\nmode: scale\nresolution: 0.050\norigin: [1.250, -2.500, 0]\nnegate: 0\noccupied_thresh: 0.650\nfree_thresh: 0.250"
+      },
+      "status": "observed",
+      "threshold_boundary": {
+        "inclusive_expected": [
+          100,
+          0,
+          100,
+          0
+        ],
+        "loaded": [
+          100,
+          0,
+          100,
+          0
+        ],
+        "matches_inclusive": true,
+        "matches_strict": false,
+        "pixels": [
+          51,
+          204,
+          50,
+          205
+        ],
+        "strict_expected": [
+          -1,
+          -1,
+          100,
+          0
+        ]
+      }
+    },
+    {
+      "duration_s": 2.0855397750000293,
+      "interface_state": {
+        "after_missing": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567678,
+            608040126
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567678,
+            608040251
+          ],
+          "width": 2
+        },
+        "checks": {
+          "failed_load_does_not_publish": true,
+          "failed_load_preserves_b": true,
+          "failed_load_rejected": true,
+          "initial_matches_input_a": true,
+          "late_subscriber_gets_b": true,
+          "load_b_success": true,
+          "load_response_equals_get_map": true,
+          "load_response_equals_topic": true
+        },
+        "get_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567678,
+            608040126
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567678,
+            608040251
+          ],
+          "width": 2
+        },
+        "initial": {
+          "data": [
+            0,
+            100,
+            100,
+            0
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567678,
+            603247433
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567678,
+            603248318
+          ],
+          "width": 2
+        },
+        "late_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567678,
+            608040126
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567678,
+            608040251
+          ],
+          "width": 2
+        },
+        "load_b_response": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567678,
+            608040126
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567678,
+            608040251
+          ],
+          "width": 2
+        },
+        "missing_result": 3,
+        "missing_result_is_does_not_exist": false,
+        "post_failure_topic_samples": [],
+        "topic_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567678,
+            608040126
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567678,
+            608040251
+          ],
+          "width": 2
+        },
+        "violation": false
+      },
+      "load_semantics": {
+        "cases": {
+          "raw_gray": {
+            "data_match": true,
+            "expected": [
+              0,
+              1,
+              50,
+              51,
+              52,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "geometry_match": true,
+            "loaded": [
+              0,
+              1,
+              50,
+              51,
+              52,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "success": true
+          },
+          "scale_alpha": {
+            "data_match": true,
+            "expected": [
+              100,
+              0,
+              -1,
+              -1
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              0,
+              -1,
+              -1
+            ],
+            "success": true
+          },
+          "scale_gray": {
+            "data_match": true,
+            "expected": [
+              100,
+              100,
+              100,
+              100,
+              99,
+              50,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              100,
+              100,
+              100,
+              99,
+              50,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "success": true
+          },
+          "scale_negated": {
+            "data_match": true,
+            "expected": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              50,
+              99,
+              100,
+              100,
+              100,
+              100
+            ],
+            "geometry_match": true,
+            "loaded": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              50,
+              99,
+              100,
+              100,
+              100,
+              100
+            ],
+            "success": true
+          },
+          "trinary_gray": {
+            "data_match": true,
+            "expected": [
+              100,
+              100,
+              100,
+              100,
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              100,
+              100,
+              100,
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "success": true
+          }
+        },
+        "pass": true
+      },
+      "pids": {
+        "map_server": 28822,
+        "raw_map_saver": 28795,
+        "scale_map_saver": 28777
+      },
+      "raw_roundtrip": {
+        "exact": true,
+        "loaded": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ],
+        "source": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ]
+      },
+      "repeat": 1,
+      "scale_roundtrip": {
+        "errors": [
+          {
+            "after": 0,
+            "before": 25,
+            "index": 3
+          },
+          {
+            "after": 63,
+            "before": 50,
+            "index": 5
+          },
+          {
+            "after": 100,
+            "before": 65,
+            "index": 6
+          }
+        ],
+        "geometry_ok": true,
+        "loaded": [
+          -1,
+          0,
+          0,
+          0,
+          43,
+          63,
+          100,
+          100,
+          100
+        ],
+        "png_sha256": "77d74b8fd1a2947bf47a54f026a00cb052b3fdc66f335e1c624acf6d21ecc601",
+        "source": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ],
+        "violation": true,
+        "yaml": "image: scale.png\nmode: scale\nresolution: 0.050\norigin: [1.250, -2.500, 0]\nnegate: 0\noccupied_thresh: 0.650\nfree_thresh: 0.250"
+      },
+      "status": "observed",
+      "threshold_boundary": {
+        "inclusive_expected": [
+          100,
+          0,
+          100,
+          0
+        ],
+        "loaded": [
+          100,
+          0,
+          100,
+          0
+        ],
+        "matches_inclusive": true,
+        "matches_strict": false,
+        "pixels": [
+          51,
+          204,
+          50,
+          205
+        ],
+        "strict_expected": [
+          -1,
+          -1,
+          100,
+          0
+        ]
+      }
+    },
+    {
+      "duration_s": 2.0864588550000462,
+      "interface_state": {
+        "after_missing": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567680,
+            716433099
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567680,
+            716433234
+          ],
+          "width": 2
+        },
+        "checks": {
+          "failed_load_does_not_publish": true,
+          "failed_load_preserves_b": true,
+          "failed_load_rejected": true,
+          "initial_matches_input_a": true,
+          "late_subscriber_gets_b": true,
+          "load_b_success": true,
+          "load_response_equals_get_map": true,
+          "load_response_equals_topic": true
+        },
+        "get_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567680,
+            716433099
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567680,
+            716433234
+          ],
+          "width": 2
+        },
+        "initial": {
+          "data": [
+            0,
+            100,
+            100,
+            0
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567680,
+            711204141
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567680,
+            711205049
+          ],
+          "width": 2
+        },
+        "late_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567680,
+            716433099
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567680,
+            716433234
+          ],
+          "width": 2
+        },
+        "load_b_response": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567680,
+            716433099
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567680,
+            716433234
+          ],
+          "width": 2
+        },
+        "missing_result": 3,
+        "missing_result_is_does_not_exist": false,
+        "post_failure_topic_samples": [],
+        "topic_b": {
+          "data": [
+            100,
+            0,
+            0,
+            100
+          ],
+          "frame_id": "map",
+          "height": 2,
+          "map_load_time": [
+            1790567680,
+            716433099
+          ],
+          "origin": [
+            1.25,
+            -2.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "resolution": 0.05000000074505806,
+          "stamp": [
+            1790567680,
+            716433234
+          ],
+          "width": 2
+        },
+        "violation": false
+      },
+      "load_semantics": {
+        "cases": {
+          "raw_gray": {
+            "data_match": true,
+            "expected": [
+              0,
+              1,
+              50,
+              51,
+              52,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "geometry_match": true,
+            "loaded": [
+              0,
+              1,
+              50,
+              51,
+              52,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "success": true
+          },
+          "scale_alpha": {
+            "data_match": true,
+            "expected": [
+              100,
+              0,
+              -1,
+              -1
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              0,
+              -1,
+              -1
+            ],
+            "success": true
+          },
+          "scale_gray": {
+            "data_match": true,
+            "expected": [
+              100,
+              100,
+              100,
+              100,
+              99,
+              50,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              100,
+              100,
+              100,
+              99,
+              50,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "success": true
+          },
+          "scale_negated": {
+            "data_match": true,
+            "expected": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              50,
+              99,
+              100,
+              100,
+              100,
+              100
+            ],
+            "geometry_match": true,
+            "loaded": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              50,
+              99,
+              100,
+              100,
+              100,
+              100
+            ],
+            "success": true
+          },
+          "trinary_gray": {
+            "data_match": true,
+            "expected": [
+              100,
+              100,
+              100,
+              100,
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "geometry_match": true,
+            "loaded": [
+              100,
+              100,
+              100,
+              100,
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "success": true
+          }
+        },
+        "pass": true
+      },
+      "pids": {
+        "map_server": 28966,
+        "raw_map_saver": 28876,
+        "scale_map_saver": 28858
+      },
+      "raw_roundtrip": {
+        "exact": true,
+        "loaded": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ],
+        "source": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ]
+      },
+      "repeat": 2,
+      "scale_roundtrip": {
+        "errors": [
+          {
+            "after": 0,
+            "before": 25,
+            "index": 3
+          },
+          {
+            "after": 63,
+            "before": 50,
+            "index": 5
+          },
+          {
+            "after": 100,
+            "before": 65,
+            "index": 6
+          }
+        ],
+        "geometry_ok": true,
+        "loaded": [
+          -1,
+          0,
+          0,
+          0,
+          43,
+          63,
+          100,
+          100,
+          100
+        ],
+        "png_sha256": "77d74b8fd1a2947bf47a54f026a00cb052b3fdc66f335e1c624acf6d21ecc601",
+        "source": [
+          -1,
+          0,
+          1,
+          25,
+          42,
+          50,
+          65,
+          99,
+          100
+        ],
+        "violation": true,
+        "yaml": "image: scale.png\nmode: scale\nresolution: 0.050\norigin: [1.250, -2.500, 0]\nnegate: 0\noccupied_thresh: 0.650\nfree_thresh: 0.250"
+      },
+      "status": "observed",
+      "threshold_boundary": {
+        "inclusive_expected": [
+          100,
+          0,
+          100,
+          0
+        ],
+        "loaded": [
+          100,
+          0,
+          100,
+          0
+        ],
+        "matches_inclusive": true,
+        "matches_strict": false,
+        "pixels": [
+          51,
+          204,
+          50,
+          205
+        ],
+        "strict_expected": [
+          -1,
+          -1,
+          100,
+          0
+        ]
+      }
+    }
+  ],
+  "scale_violations": 3,
+  "started_at": "2026-09-28T03:54:34.948696+00:00",
+  "updated_at": "2026-09-28T03:54:41.555807+00:00"
+}

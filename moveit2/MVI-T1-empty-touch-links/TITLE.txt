@@ -1,0 +1,1 @@
+[moveit_core] Direct ApplyPlanningScene with empty touch_links causes self-collision

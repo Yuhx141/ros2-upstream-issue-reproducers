@@ -1,0 +1,1056 @@
+{
+  "completed_at": "2026-09-28T11:51:15+0800",
+  "counts": {
+    "execution_error": 0,
+    "pass": 0,
+    "total": 9,
+    "violation": 9
+  },
+  "records": [
+    {
+      "checks": {
+        "delete_removes_actual_entity": true,
+        "duplicate_reports_name_not_unique": false,
+        "parent_delete_removes_nested_child": true,
+        "renamed_response_is_actual_unique_name": false,
+        "repeat_delete_reports_not_found": false,
+        "same_name_respawn_has_clean_requested_state": true,
+        "unique_spawn_visible": true
+      },
+      "classification": "violation",
+      "item": 21,
+      "known_families": [
+        "GZ-N1"
+      ],
+      "observations": {
+        "actual_renamed": "p3_parent_0",
+        "after_spawn": [
+          "p3_parent",
+          "p3_parent_0",
+          "sphere"
+        ],
+        "baseline": [
+          "sphere"
+        ],
+        "clean_state": {
+          "position": [
+            7.0,
+            0.0,
+            0.0
+          ],
+          "time": 0.266,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "cleanup_actual_code": 1,
+        "codes": {
+          "delete": 1,
+          "duplicate": 4,
+          "first": 1,
+          "renamed": 1,
+          "repeat_delete": 4
+        },
+        "nested_child_query_after_parent_delete": 4,
+        "nested_child_query_before": 1,
+        "returned_name": "p3_parent"
+      },
+      "pass": false,
+      "repetition": 0,
+      "status": "observed",
+      "title": "Spawn/Delete semantics"
+    },
+    {
+      "checks": {
+        "individual_batch_consistent": true,
+        "known_frame_is_applied": false,
+        "missing_frame_is_rejected": false,
+        "normal_set_round_trip": true,
+        "reset_removes_spawned_entity": true,
+        "reset_returns_new_epoch_state": false
+      },
+      "classification": "violation",
+      "item": 22,
+      "known_families": [
+        "GZ-F1",
+        "GZ-R1"
+      ],
+      "observations": {
+        "after_reset": {
+          "position": [
+            0.0,
+            0.0,
+            1.99999
+          ],
+          "time": 0.339,
+          "velocity": [
+            0.0,
+            0.0,
+            -0.0098
+          ]
+        },
+        "batch": {
+          "position": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "time": 0.338,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        },
+        "before_reset": {
+          "position": [
+            3.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.339,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "missing_frame_code": 1,
+        "normal": {
+          "position": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "time": 0.338,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        },
+        "relative_actual": {
+          "position": [
+            2.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.339,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "relative_code": 1,
+        "relative_expected_world_x": 12.0,
+        "reset_code": 1,
+        "spawned_after_reset_code": 4
+      },
+      "pass": false,
+      "repetition": 0,
+      "status": "observed",
+      "title": "Get/Set Entity State semantics"
+    },
+    {
+      "checks": {
+        "pause_after_play_is_stable": true,
+        "play_has_two_aligned_motion_observations": true,
+        "step_completes_before_response": false,
+        "step_reset_competition_leaves_reset_epoch_stable": false,
+        "three_paused_baseline_samples_stable": true
+      },
+      "classification": "violation",
+      "item": 23,
+      "known_families": [
+        "GZ-S1",
+        "GZ-R1"
+      ],
+      "observations": {
+        "first_after_step": {
+          "position": [
+            0.0,
+            0.0,
+            1.99682
+          ],
+          "time": 0.326,
+          "velocity": [
+            0.0,
+            0.0,
+            -0.0098
+          ]
+        },
+        "moving": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99799
+            ],
+            "time": 0.149,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99749
+            ],
+            "time": 0.25,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          }
+        ],
+        "paused": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.019,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.019,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.019,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "reset_code": 1,
+        "reset_samples": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "time": 0.0,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.98701
+            ],
+            "time": 0.0,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.4998
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.94852
+            ],
+            "time": 0.095,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.9996
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.88455
+            ],
+            "time": 0.095,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.4994
+            ]
+          }
+        ],
+        "settled": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99699
+            ],
+            "time": 0.326,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99699
+            ],
+            "time": 0.326,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99699
+            ],
+            "time": 0.326,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          }
+        ],
+        "step_code": 1,
+        "step_wall_s": 0.003574342999968394
+      },
+      "pass": false,
+      "repetition": 0,
+      "status": "observed",
+      "title": "World control semantics"
+    },
+    {
+      "checks": {
+        "delete_removes_actual_entity": true,
+        "duplicate_reports_name_not_unique": false,
+        "parent_delete_removes_nested_child": true,
+        "renamed_response_is_actual_unique_name": false,
+        "repeat_delete_reports_not_found": false,
+        "same_name_respawn_has_clean_requested_state": true,
+        "unique_spawn_visible": true
+      },
+      "classification": "violation",
+      "item": 21,
+      "known_families": [
+        "GZ-N1"
+      ],
+      "observations": {
+        "actual_renamed": "p3_parent_0",
+        "after_spawn": [
+          "p3_parent",
+          "p3_parent_0",
+          "sphere"
+        ],
+        "baseline": [
+          "sphere"
+        ],
+        "clean_state": {
+          "position": [
+            7.0,
+            0.0,
+            0.0
+          ],
+          "time": 0.149,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "cleanup_actual_code": 1,
+        "codes": {
+          "delete": 1,
+          "duplicate": 4,
+          "first": 1,
+          "renamed": 1,
+          "repeat_delete": 4
+        },
+        "nested_child_query_after_parent_delete": 4,
+        "nested_child_query_before": 1,
+        "returned_name": "p3_parent"
+      },
+      "pass": false,
+      "repetition": 1,
+      "status": "observed",
+      "title": "Spawn/Delete semantics"
+    },
+    {
+      "checks": {
+        "individual_batch_consistent": true,
+        "known_frame_is_applied": false,
+        "missing_frame_is_rejected": false,
+        "normal_set_round_trip": true,
+        "reset_removes_spawned_entity": true,
+        "reset_returns_new_epoch_state": false
+      },
+      "classification": "violation",
+      "item": 22,
+      "known_families": [
+        "GZ-F1",
+        "GZ-R1"
+      ],
+      "observations": {
+        "after_reset": {
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "time": 0.264,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "batch": {
+          "position": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "time": 0.263,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        },
+        "before_reset": {
+          "position": [
+            3.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.264,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "missing_frame_code": 1,
+        "normal": {
+          "position": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "time": 0.263,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        },
+        "relative_actual": {
+          "position": [
+            2.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.264,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "relative_code": 1,
+        "relative_expected_world_x": 12.0,
+        "reset_code": 1,
+        "spawned_after_reset_code": 4
+      },
+      "pass": false,
+      "repetition": 1,
+      "status": "observed",
+      "title": "Get/Set Entity State semantics"
+    },
+    {
+      "checks": {
+        "pause_after_play_is_stable": true,
+        "play_has_two_aligned_motion_observations": true,
+        "step_completes_before_response": false,
+        "step_reset_competition_leaves_reset_epoch_stable": false,
+        "three_paused_baseline_samples_stable": true
+      },
+      "classification": "violation",
+      "item": 23,
+      "known_families": [
+        "GZ-S1",
+        "GZ-R1"
+      ],
+      "observations": {
+        "first_after_step": {
+          "position": [
+            0.0,
+            0.0,
+            1.99683
+          ],
+          "time": 0.338,
+          "velocity": [
+            0.0,
+            0.0,
+            -0.0098
+          ]
+        },
+        "moving": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99799
+            ],
+            "time": 0.141,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99749
+            ],
+            "time": 0.242,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          }
+        ],
+        "paused": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.019,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.019,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.019,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "reset_code": 1,
+        "reset_samples": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99946
+            ],
+            "time": 0.338,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.96981
+            ],
+            "time": 0.338,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.7644
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.91783
+            ],
+            "time": 0.093,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.2642
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.84036
+            ],
+            "time": 0.093,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.764
+            ]
+          }
+        ],
+        "settled": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99699
+            ],
+            "time": 0.326,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99699
+            ],
+            "time": 0.326,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99699
+            ],
+            "time": 0.326,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          }
+        ],
+        "step_code": 1,
+        "step_wall_s": 0.0034544819999382526
+      },
+      "pass": false,
+      "repetition": 1,
+      "status": "observed",
+      "title": "World control semantics"
+    },
+    {
+      "checks": {
+        "delete_removes_actual_entity": true,
+        "duplicate_reports_name_not_unique": false,
+        "parent_delete_removes_nested_child": true,
+        "renamed_response_is_actual_unique_name": false,
+        "repeat_delete_reports_not_found": false,
+        "same_name_respawn_has_clean_requested_state": true,
+        "unique_spawn_visible": true
+      },
+      "classification": "violation",
+      "item": 21,
+      "known_families": [
+        "GZ-N1"
+      ],
+      "observations": {
+        "actual_renamed": "p3_parent_0",
+        "after_spawn": [
+          "p3_parent",
+          "p3_parent_0",
+          "sphere"
+        ],
+        "baseline": [
+          "sphere"
+        ],
+        "clean_state": {
+          "position": [
+            7.0,
+            0.0,
+            0.0
+          ],
+          "time": 0.156,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "cleanup_actual_code": 1,
+        "codes": {
+          "delete": 1,
+          "duplicate": 4,
+          "first": 1,
+          "renamed": 1,
+          "repeat_delete": 4
+        },
+        "nested_child_query_after_parent_delete": 4,
+        "nested_child_query_before": 1,
+        "returned_name": "p3_parent"
+      },
+      "pass": false,
+      "repetition": 2,
+      "status": "observed",
+      "title": "Spawn/Delete semantics"
+    },
+    {
+      "checks": {
+        "individual_batch_consistent": true,
+        "known_frame_is_applied": false,
+        "missing_frame_is_rejected": false,
+        "normal_set_round_trip": true,
+        "reset_removes_spawned_entity": true,
+        "reset_returns_new_epoch_state": true
+      },
+      "classification": "violation",
+      "item": 22,
+      "known_families": [
+        "GZ-F1",
+        "GZ-R1"
+      ],
+      "observations": {
+        "after_reset": {
+          "position": [
+            0.0,
+            0.0,
+            1.99832
+          ],
+          "time": 0.005,
+          "velocity": [
+            0.0,
+            0.0,
+            -0.1764
+          ]
+        },
+        "batch": {
+          "position": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "time": 0.241,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        },
+        "before_reset": {
+          "position": [
+            3.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.242,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "missing_frame_code": 1,
+        "normal": {
+          "position": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "time": 0.241,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        },
+        "relative_actual": {
+          "position": [
+            2.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.242,
+          "velocity": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "relative_code": 1,
+        "relative_expected_world_x": 12.0,
+        "reset_code": 1,
+        "spawned_after_reset_code": 4
+      },
+      "pass": false,
+      "repetition": 2,
+      "status": "observed",
+      "title": "Get/Set Entity State semantics"
+    },
+    {
+      "checks": {
+        "pause_after_play_is_stable": true,
+        "play_has_two_aligned_motion_observations": true,
+        "step_completes_before_response": false,
+        "step_reset_competition_leaves_reset_epoch_stable": false,
+        "three_paused_baseline_samples_stable": true
+      },
+      "classification": "violation",
+      "item": 23,
+      "known_families": [
+        "GZ-S1",
+        "GZ-R1"
+      ],
+      "observations": {
+        "first_after_step": {
+          "position": [
+            0.0,
+            0.0,
+            1.99599
+          ],
+          "time": 0.436,
+          "velocity": [
+            0.0,
+            0.0,
+            -0.0098
+          ]
+        },
+        "moving": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99732
+            ],
+            "time": 0.238,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99666
+            ],
+            "time": 0.339,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          }
+        ],
+        "paused": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.037,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.037,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "time": 0.037,
+            "velocity": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "reset_code": 1,
+        "reset_samples": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99832
+            ],
+            "time": 0.436,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.1764
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.96334
+            ],
+            "time": 0.436,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.8428
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.90736
+            ],
+            "time": 0.087,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.3426
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.82589
+            ],
+            "time": 0.187,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.8424
+            ]
+          }
+        ],
+        "settled": [
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99616
+            ],
+            "time": 0.43,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99616
+            ],
+            "time": 0.43,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          },
+          {
+            "position": [
+              0.0,
+              0.0,
+              1.99616
+            ],
+            "time": 0.43,
+            "velocity": [
+              0.0,
+              0.0,
+              -0.0098
+            ]
+          }
+        ],
+        "step_code": 1,
+        "step_wall_s": 0.0037922120000075665
+      },
+      "pass": false,
+      "repetition": 2,
+      "status": "observed",
+      "title": "World control semantics"
+    }
+  ],
+  "schema": "p3-gazebo-entity-world-semantic-v1"
+}

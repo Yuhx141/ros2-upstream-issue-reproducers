@@ -1,0 +1,294 @@
+{
+  "completed": 3,
+  "control_failures": 0,
+  "execution_errors": 0,
+  "gz_to_ros_padded_violations": 3,
+  "manifest": {
+    "git_head": "66a20dc816b99ec4bf8aeea72693c8fc09c47369",
+    "obligations": [
+      "ros_to_gz_tight_control",
+      "ros_to_gz_padded_pixels",
+      "gz_to_ros_tight_control",
+      "gz_to_ros_padded_pixels"
+    ],
+    "package": "ros-jazzy-ros-gz-bridge 1.0.24-1noble.20260905.070149",
+    "repetitions": 3,
+    "schema": 1,
+    "script_sha256": "8ddcf7674e2f51f1c5da6de5d8d35040cf9b3667216cf30e2f93bf7fa87184af",
+    "source_sha256": "cf6653658f483062a70b1b0e881f3880a47d430736323b4c8d8e726249664024",
+    "started_at": "2026-09-28T03:51:45.627107+00:00"
+  },
+  "results": [
+    {
+      "observation": {
+        "checks": {
+          "gz_to_ros_padded_pixels_preserved": false,
+          "gz_to_ros_tight_control": true,
+          "ros_to_gz_padded_pixels_preserved": false,
+          "ros_to_gz_tight_control": true
+        },
+        "controls_pass": true,
+        "gz_to_ros": {
+          "baseline": {
+            "data": [
+              31,
+              32,
+              33,
+              34
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "baseline_pixels": [
+            31,
+            32,
+            33,
+            34
+          ],
+          "bridge_exit_after_padded": null,
+          "padded": {
+            "data": [
+              41,
+              42,
+              211,
+              212
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "padded_pixels": [
+            41,
+            42,
+            211,
+            212
+          ]
+        },
+        "ros_to_gz": {
+          "baseline": {
+            "data": [
+              11,
+              12,
+              13,
+              14
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "baseline_pixels": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "padded": {
+            "data": [
+              21,
+              22,
+              201,
+              202
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "padded_pixels": [
+            21,
+            22,
+            201,
+            202
+          ]
+        },
+        "violations": [
+          "ros_to_gz_padded_pixels_preserved",
+          "gz_to_ros_padded_pixels_preserved"
+        ]
+      },
+      "repeat": 0,
+      "status": "observed"
+    },
+    {
+      "observation": {
+        "checks": {
+          "gz_to_ros_padded_pixels_preserved": false,
+          "gz_to_ros_tight_control": true,
+          "ros_to_gz_padded_pixels_preserved": false,
+          "ros_to_gz_tight_control": true
+        },
+        "controls_pass": true,
+        "gz_to_ros": {
+          "baseline": {
+            "data": [
+              31,
+              32,
+              33,
+              34
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "baseline_pixels": [
+            31,
+            32,
+            33,
+            34
+          ],
+          "bridge_exit_after_padded": null,
+          "padded": {
+            "data": [
+              41,
+              42,
+              211,
+              212
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "padded_pixels": [
+            41,
+            42,
+            211,
+            212
+          ]
+        },
+        "ros_to_gz": {
+          "baseline": {
+            "data": [
+              11,
+              12,
+              13,
+              14
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "baseline_pixels": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "padded": {
+            "data": [
+              21,
+              22,
+              201,
+              202
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "padded_pixels": [
+            21,
+            22,
+            201,
+            202
+          ]
+        },
+        "violations": [
+          "ros_to_gz_padded_pixels_preserved",
+          "gz_to_ros_padded_pixels_preserved"
+        ]
+      },
+      "repeat": 1,
+      "status": "observed"
+    },
+    {
+      "observation": {
+        "checks": {
+          "gz_to_ros_padded_pixels_preserved": false,
+          "gz_to_ros_tight_control": true,
+          "ros_to_gz_padded_pixels_preserved": false,
+          "ros_to_gz_tight_control": true
+        },
+        "controls_pass": true,
+        "gz_to_ros": {
+          "baseline": {
+            "data": [
+              31,
+              32,
+              33,
+              34
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "baseline_pixels": [
+            31,
+            32,
+            33,
+            34
+          ],
+          "bridge_exit_after_padded": null,
+          "padded": {
+            "data": [
+              41,
+              42,
+              211,
+              212
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "padded_pixels": [
+            41,
+            42,
+            211,
+            212
+          ]
+        },
+        "ros_to_gz": {
+          "baseline": {
+            "data": [
+              11,
+              12,
+              13,
+              14
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "baseline_pixels": [
+            11,
+            12,
+            13,
+            14
+          ],
+          "padded": {
+            "data": [
+              21,
+              22,
+              201,
+              202
+            ],
+            "height": 2,
+            "step": 2,
+            "width": 2
+          },
+          "padded_pixels": [
+            21,
+            22,
+            201,
+            202
+          ]
+        },
+        "violations": [
+          "ros_to_gz_padded_pixels_preserved",
+          "gz_to_ros_padded_pixels_preserved"
+        ]
+      },
+      "repeat": 2,
+      "status": "observed"
+    }
+  ],
+  "ros_to_gz_padded_violations": 3
+}

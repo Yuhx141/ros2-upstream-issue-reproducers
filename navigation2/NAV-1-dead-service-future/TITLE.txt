@@ -1,0 +1,1 @@
+[nav2_lifecycle_manager] Lifecycle manager can wait indefinitely for a crashed node response

@@ -1,0 +1,622 @@
+{
+  "completed": 3,
+  "execution_errors": 0,
+  "manifest": {
+    "git_head": "66a20dc816b99ec4bf8aeea72693c8fc09c47369",
+    "package": "ros-jazzy-ros-gz-sim 1.0.24-1noble.20260905.085151",
+    "repetitions": 3,
+    "ros_gz_source_head": "5912bfe7976a79d2cc9f373b2d40a8a3a3e33da2",
+    "schema": 1,
+    "script_sha256": "ba5264bc3bd3be8daa89a81f652e40fa956db9679c0fd9ae226992c9eb43582b",
+    "source_sha256": {
+      "ros_gz_sim/src/gz_simulation_interfaces/actions/simulate_steps.cpp": "032f6424e9c2db71a967975c1240cdc599bee10be49d282d50a911a630c9602b",
+      "ros_gz_sim/src/gz_simulation_interfaces/services/reset_simulation.cpp": "95fc9b9d8d4991b46cc0543edcd61988cac39fcdfa1736c9bfaf5354e688a252",
+      "ros_gz_sim/src/gz_simulation_interfaces/services/step_simulation.cpp": "4a2897252890fcd4ed553b81c9152fb5a04ad7445de6d8732cff52c910239aaa"
+    },
+    "started_at": "2026-09-28T03:50:29.544857+00:00",
+    "step_size_s": 0.001,
+    "world_sha256": "8a545ca1867eaf91e33d121a42973bb7a1bdb2e3c237c470505524f4490d6db8"
+  },
+  "reset_atomicity_violations": 3,
+  "reset_control_failures": 0,
+  "reset_unsupported_latency_risks": 3,
+  "results": [
+    {
+      "repeat": 0,
+      "reset": {
+        "checks": {
+          "equal_timestamps_have_equal_state": false,
+          "paused_after_reset": true,
+          "paused_baseline_stable": true,
+          "reset_all_accepted": true,
+          "unsupported_scope_preserves_state": true,
+          "unsupported_scope_reports_feature_unsupported": true,
+          "unsupported_scope_returns_promptly": false
+        },
+        "reset_all": {
+          "baseline": [
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78494
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0482
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78494
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0482
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78494
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0482
+              ]
+            }
+          ],
+          "code": 1,
+          "duplicate_timestamp_max_state_delta": 0.33320000000000005,
+          "post": [
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.99832
+              ],
+              "time": 0.002,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.1764
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.99383
+              ],
+              "time": 0.002,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.343
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.9865
+              ],
+              "time": 0.002,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.5096
+              ]
+            }
+          ],
+          "state_after": 2,
+          "wall_s": 0.0030974520000199846
+        },
+        "unsupported": {
+          "after": {
+            "position": [
+              0.0,
+              0.0,
+              1.78494
+            ],
+            "time": 0.21,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.0482
+            ]
+          },
+          "before": {
+            "position": [
+              0.0,
+              0.0,
+              1.78494
+            ],
+            "time": 0.21,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.0482
+            ]
+          },
+          "code": 0,
+          "message": "Only reset scopes SCOPE_DEFAULT and SCOPE_ALL are supported",
+          "wall_s": 5.001272115000006
+        },
+        "unsupported_latency_source_risk": true
+      },
+      "status": "observed",
+      "step": {
+        "checks": {
+          "paused_after_steps": true,
+          "paused_request_accepted": true,
+          "playing_request_rejected": false,
+          "steps_complete_before_response": false,
+          "steps_eventually_complete": true,
+          "uint32_overflow_rejected": true
+        },
+        "completion": {
+          "before": {
+            "position": [
+              0.0,
+              0.0,
+              1.85588
+            ],
+            "time": 0.173,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.6758
+            ]
+          },
+          "final": {
+            "position": [
+              0.0,
+              0.0,
+              1.6751
+            ],
+            "time": 0.273,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.5186
+            ]
+          },
+          "first": {
+            "position": [
+              0.0,
+              0.0,
+              1.82404
+            ],
+            "time": 0.173,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.8522
+            ]
+          },
+          "response_code": 1,
+          "response_wall_s": 0.028848300999925414,
+          "state_after": 2,
+          "target": 0.273
+        },
+        "overflow": {
+          "code": 4,
+          "wall_s": 0.03397921799989945
+        },
+        "playing": {
+          "code": 1,
+          "wall_s": 0.016930612000010115
+        }
+      }
+    },
+    {
+      "repeat": 1,
+      "reset": {
+        "checks": {
+          "equal_timestamps_have_equal_state": false,
+          "paused_after_reset": true,
+          "paused_baseline_stable": true,
+          "reset_all_accepted": true,
+          "unsupported_scope_preserves_state": true,
+          "unsupported_scope_reports_feature_unsupported": true,
+          "unsupported_scope_returns_promptly": false
+        },
+        "reset_all": {
+          "baseline": [
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78288
+              ],
+              "time": 0.211,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.058
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78288
+              ],
+              "time": 0.211,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.058
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78288
+              ],
+              "time": 0.211,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.058
+              ]
+            }
+          ],
+          "code": 1,
+          "duplicate_timestamp_max_state_delta": 0.33320000000000005,
+          "post": [
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.9985
+              ],
+              "time": 0.014,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.1666
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.99417
+              ],
+              "time": 0.014,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.3332
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.98701
+              ],
+              "time": 0.014,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.4998
+              ]
+            }
+          ],
+          "state_after": 2,
+          "wall_s": 0.0027904300000045623
+        },
+        "unsupported": {
+          "after": {
+            "position": [
+              0.0,
+              0.0,
+              1.78288
+            ],
+            "time": 0.211,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.058
+            ]
+          },
+          "before": {
+            "position": [
+              0.0,
+              0.0,
+              1.78288
+            ],
+            "time": 0.211,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.058
+            ]
+          },
+          "code": 0,
+          "message": "Only reset scopes SCOPE_DEFAULT and SCOPE_ALL are supported",
+          "wall_s": 5.000983051000048
+        },
+        "unsupported_latency_source_risk": true
+      },
+      "status": "observed",
+      "step": {
+        "checks": {
+          "paused_after_steps": true,
+          "paused_request_accepted": true,
+          "playing_request_rejected": false,
+          "steps_complete_before_response": false,
+          "steps_eventually_complete": true,
+          "uint32_overflow_rejected": true
+        },
+        "completion": {
+          "before": {
+            "position": [
+              0.0,
+              0.0,
+              1.92405
+            ],
+            "time": 0.126,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.2152
+            ]
+          },
+          "final": {
+            "position": [
+              0.0,
+              0.0,
+              1.78288
+            ],
+            "time": 0.226,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.058
+            ]
+          },
+          "first": {
+            "position": [
+              0.0,
+              0.0,
+              1.9005
+            ],
+            "time": 0.126,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.3916
+            ]
+          },
+          "response_code": 1,
+          "response_wall_s": 0.03362973499997679,
+          "state_after": 2,
+          "target": 0.226
+        },
+        "overflow": {
+          "code": 4,
+          "wall_s": 0.033922504999964076
+        },
+        "playing": {
+          "code": 1,
+          "wall_s": 0.017029328000035093
+        }
+      }
+    },
+    {
+      "repeat": 2,
+      "reset": {
+        "checks": {
+          "equal_timestamps_have_equal_state": false,
+          "paused_after_reset": true,
+          "paused_baseline_stable": true,
+          "reset_all_accepted": true,
+          "unsupported_scope_preserves_state": true,
+          "unsupported_scope_reports_feature_unsupported": true,
+          "unsupported_scope_returns_promptly": false
+        },
+        "reset_all": {
+          "baseline": [
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78494
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0482
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78494
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0482
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.78494
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -2.0482
+              ]
+            }
+          ],
+          "code": 1,
+          "duplicate_timestamp_max_state_delta": 0.16660000000000003,
+          "post": [
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.9985
+              ],
+              "time": 0.21,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.1666
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.99417
+              ],
+              "time": 0.025,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.3332
+              ]
+            },
+            {
+              "position": [
+                0.0,
+                0.0,
+                1.98701
+              ],
+              "time": 0.025,
+              "velocity": [
+                0.0,
+                0.0,
+                -0.4998
+              ]
+            }
+          ],
+          "state_after": 2,
+          "wall_s": 0.00268733500001872
+        },
+        "unsupported": {
+          "after": {
+            "position": [
+              0.0,
+              0.0,
+              1.78494
+            ],
+            "time": 0.21,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.0482
+            ]
+          },
+          "before": {
+            "position": [
+              0.0,
+              0.0,
+              1.78494
+            ],
+            "time": 0.21,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.0482
+            ]
+          },
+          "code": 0,
+          "message": "Only reset scopes SCOPE_DEFAULT and SCOPE_ALL are supported",
+          "wall_s": 5.001264375000005
+        },
+        "unsupported_latency_source_risk": true
+      },
+      "status": "observed",
+      "step": {
+        "checks": {
+          "paused_after_steps": true,
+          "paused_request_accepted": true,
+          "playing_request_rejected": false,
+          "steps_complete_before_response": false,
+          "steps_eventually_complete": true,
+          "uint32_overflow_rejected": true
+        },
+        "completion": {
+          "before": {
+            "position": [
+              0.0,
+              0.0,
+              1.92283
+            ],
+            "time": 0.126,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.225
+            ]
+          },
+          "final": {
+            "position": [
+              0.0,
+              0.0,
+              1.78081
+            ],
+            "time": 0.226,
+            "velocity": [
+              0.0,
+              0.0,
+              -2.0678
+            ]
+          },
+          "first": {
+            "position": [
+              0.0,
+              0.0,
+              1.8991
+            ],
+            "time": 0.126,
+            "velocity": [
+              0.0,
+              0.0,
+              -1.4014
+            ]
+          },
+          "response_code": 1,
+          "response_wall_s": 0.03347269100004269,
+          "state_after": 2,
+          "target": 0.226
+        },
+        "overflow": {
+          "code": 4,
+          "wall_s": 0.03400688099998206
+        },
+        "playing": {
+          "code": 1,
+          "wall_s": 0.017031384000006256
+        }
+      }
+    }
+  ],
+  "step_completion_violations": 3,
+  "step_control_failures": 0,
+  "step_playing_violations": 3
+}

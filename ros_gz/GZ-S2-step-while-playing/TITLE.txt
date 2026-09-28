@@ -1,0 +1,1 @@
+[ros_gz_sim] StepSimulation accepts requests while simulation is playing

@@ -1,0 +1,1 @@
+[ros_gz_sim] SetEntityState ignores pose frame_id, including missing frames

@@ -1,0 +1,1 @@
+[ros_gz_bridge] ROS-to-Gazebo LaserScan conversion drops the endpoint sample

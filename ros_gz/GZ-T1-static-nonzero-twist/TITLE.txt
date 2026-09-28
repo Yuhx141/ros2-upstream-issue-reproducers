@@ -1,0 +1,1 @@
+[ros_gz_sim] SetEntityState accepts non-zero twist for a static entity

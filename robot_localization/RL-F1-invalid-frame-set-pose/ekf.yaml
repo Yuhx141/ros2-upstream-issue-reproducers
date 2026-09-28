@@ -1,0 +1,15 @@
+ekf_filter_node:
+  ros__parameters:
+    frequency: 20.0
+    sensor_timeout: 0.1
+    two_d_mode: true
+    publish_tf: false
+    world_frame: odom
+    odom_frame: odom
+    base_link_frame: base_link
+    pose0: /p3/pose
+    pose0_config: [true, false, false, false, false, false,
+                   false, false, false, false, false, false,
+                   false, false, false]
+    pose0_differential: false
+    pose0_relative: false
