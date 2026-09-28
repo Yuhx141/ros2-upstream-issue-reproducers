@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "results": [
+    {
+      "id": "GZ-S1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] StepSimulation returns before requested iterations complete",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/960"
+    },
+    {
+      "id": "GZ-S2",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] StepSimulation accepts requests while simulation is playing",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/961"
+    },
+    {
+      "id": "GZ-N1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] SpawnEntity reports the requested name after creating a renamed entity",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/962"
+    },
+    {
+      "id": "GZ-E1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] SetEntityState returns RESULT_OK for a missing entity",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/963"
+    },
+    {
+      "id": "GZ-F1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] SetEntityState ignores pose frame_id, including missing frames",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/964"
+    },
+    {
+      "id": "GZ-T1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] SetEntityState accepts non-zero twist for a static entity",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/965"
+    },
+    {
+      "id": "GZ-C1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_sim] SpawnEntity duplicate-name rejection loses NAME_NOT_UNIQUE",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/966"
+    },
+    {
+      "id": "BR-I1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_bridge] Image bridge ignores legal row padding in both directions",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/967"
+    },
+    {
+      "id": "BR-L1",
+      "repo": "gazebosim/ros_gz",
+      "title": "[ros_gz_bridge] ROS-to-Gazebo LaserScan conversion drops the endpoint sample",
+      "status": "created",
+      "url": "https://github.com/gazebosim/ros_gz/issues/968"
+    },
+    {
+      "id": "NAV-M2",
+      "repo": "ros-navigation/navigation2",
+      "title": "[nav2_map_server] Scale map save/load changes intermediate occupancy values",
+      "status": "created",
+      "url": "https://github.com/ros-navigation/navigation2/issues/6561"
+    },
+    {
+      "id": "NAV-C1",
+      "repo": "ros-navigation/navigation2",
+      "title": "[nav2_costmap_2d] GetCostmap can return a partially updated master costmap",
+      "status": "created",
+      "url": "https://github.com/ros-navigation/navigation2/issues/6562"
+    },
+    {
+      "id": "NAV-V1",
+      "repo": "ros-navigation/navigation2",
+      "title": "[nav2_velocity_smoother] scale_velocities reads back true but behavior remains false",
+      "status": "created",
+      "url": "https://github.com/ros-navigation/navigation2/issues/6563"
+    },
+    {
+      "id": "NAV-W1",
+      "repo": "ros-navigation/navigation2",
+      "title": "[nav2_waypoint_follower] InputAtWaypoint truncates fractional timeout above one second",
+      "status": "created",
+      "url": "https://github.com/ros-navigation/navigation2/issues/6564"
+    },
+    {
+      "id": "NAV-1",
+      "repo": "ros-navigation/navigation2",
+      "title": "[nav2_lifecycle_manager] Lifecycle manager can wait indefinitely for a crashed node response",
+      "status": "created",
+      "url": "https://github.com/ros-navigation/navigation2/issues/6565"
+    },
+    {
+      "id": "RL-F1",
+      "repo": "cra-ros-pkg/robot_localization",
+      "title": "[robot_localization] set_pose transform failure overwrites valid filter state",
+      "status": "created",
+      "url": "https://github.com/cra-ros-pkg/robot_localization/issues/981"
+    },
+    {
+      "id": "RL-N1",
+      "repo": "cra-ros-pkg/robot_localization",
+      "title": "[robot_localization] set_pose NaN permanently contaminates odometry",
+      "status": "created",
+      "url": "https://github.com/cra-ros-pkg/robot_localization/issues/982"
+    },
+    {
+      "id": "MVI-T1",
+      "repo": "moveit/moveit2",
+      "title": "[moveit_core] Direct ApplyPlanningScene with empty touch_links causes self-collision",
+      "status": "created",
+      "url": "https://github.com/moveit/moveit2/issues/3885"
+    }
+  ]
+}
