@@ -1,0 +1,24 @@
+--- a/controller_manager/test/test_controller_manager_srvs.cpp
++++ b/controller_manager/test/test_controller_manager_srvs.cpp
+@@ -2558,8 +2558,8 @@
+   {
+     auto res = cm_->switch_controller(
+       {test_ctrl_3_name}, {}, controller_manager_msgs::srv::SwitchController::Request::STRICT, true,
+-      rclcpp::Duration(0, 0));
+-    ASSERT_EQ(res, controller_interface::return_type::OK);
++      rclcpp::Duration::from_seconds(0.5));
++    EXPECT_EQ(res, controller_interface::return_type::ERROR);
+   }
+ 
+   ASSERT_EQ(
+@@ -2605,8 +2605,8 @@
+   {
+     auto res = cm_->switch_controller(
+       {test_ctrl_3_name}, {}, controller_manager_msgs::srv::SwitchController::Request::STRICT,
+-      false, rclcpp::Duration(0, 0));
+-    ASSERT_EQ(res, controller_interface::return_type::OK);
++      false, rclcpp::Duration::from_seconds(0.5));
++    EXPECT_EQ(res, controller_interface::return_type::ERROR);
+   }
+   const auto ideal_cycles =
+     cm_->get_update_rate() *
