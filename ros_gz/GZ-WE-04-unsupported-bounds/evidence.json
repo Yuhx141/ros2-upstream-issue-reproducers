@@ -1,0 +1,367 @@
+{
+  "counts": {
+    "execution_error": 0,
+    "pass": 3,
+    "violation": 15
+  },
+  "records": [
+    {
+      "case": "valid_dynamic",
+      "checks": {
+        "pose_round_trip": true,
+        "result_ok": true,
+        "server_healthy": true,
+        "twist_round_trip": true
+      },
+      "observed": {
+        "code": 1,
+        "state": {
+          "position": [
+            1.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.18,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "valid_dynamic",
+      "checks": {
+        "pose_round_trip": true,
+        "result_ok": true,
+        "server_healthy": true,
+        "twist_round_trip": true
+      },
+      "observed": {
+        "code": 1,
+        "state": {
+          "position": [
+            1.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.075,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "repeat": 2,
+      "status": "pass"
+    },
+    {
+      "case": "valid_dynamic",
+      "checks": {
+        "pose_round_trip": true,
+        "result_ok": true,
+        "server_healthy": true,
+        "twist_round_trip": true
+      },
+      "observed": {
+        "code": 1,
+        "state": {
+          "position": [
+            1.0,
+            0.0,
+            2.0
+          ],
+          "time": 0.099,
+          "velocity": [
+            0.25,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "repeat": 3,
+      "status": "pass"
+    },
+    {
+      "case": "missing_set",
+      "checks": {
+        "reports_not_found": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "code": 1,
+        "health": {
+          "code": 1,
+          "ok": true,
+          "state": 2
+        },
+        "server_returncode": null,
+        "service_error": ""
+      },
+      "repeat": 1,
+      "status": "violation"
+    },
+    {
+      "case": "missing_set",
+      "checks": {
+        "reports_not_found": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "code": 1,
+        "health": {
+          "code": 1,
+          "ok": true,
+          "state": 2
+        },
+        "server_returncode": null,
+        "service_error": ""
+      },
+      "repeat": 2,
+      "status": "violation"
+    },
+    {
+      "case": "missing_set",
+      "checks": {
+        "reports_not_found": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "code": 1,
+        "health": {
+          "code": 1,
+          "ok": true,
+          "state": 2
+        },
+        "server_returncode": null,
+        "service_error": ""
+      },
+      "repeat": 3,
+      "status": "violation"
+    },
+    {
+      "case": "static_twist",
+      "checks": {
+        "fixture_spawned": true,
+        "server_healthy": true,
+        "static_nonzero_twist_rejected": false
+      },
+      "observed": {
+        "after_code": 1,
+        "after_position_x": 7.0,
+        "after_velocity_x": 0.0,
+        "set_code": 1,
+        "spawn_code": 1
+      },
+      "repeat": 1,
+      "status": "violation"
+    },
+    {
+      "case": "static_twist",
+      "checks": {
+        "fixture_spawned": true,
+        "server_healthy": true,
+        "static_nonzero_twist_rejected": false
+      },
+      "observed": {
+        "after_code": 1,
+        "after_position_x": 7.0,
+        "after_velocity_x": 0.0,
+        "set_code": 1,
+        "spawn_code": 1
+      },
+      "repeat": 2,
+      "status": "violation"
+    },
+    {
+      "case": "static_twist",
+      "checks": {
+        "fixture_spawned": true,
+        "server_healthy": true,
+        "static_nonzero_twist_rejected": false
+      },
+      "observed": {
+        "after_code": 1,
+        "after_position_x": 7.0,
+        "after_velocity_x": 0.0,
+        "set_code": 1,
+        "spawn_code": 1
+      },
+      "repeat": 3,
+      "status": "violation"
+    },
+    {
+      "case": "invalid_pose",
+      "checks": {
+        "invalid_quaternion_reports_101": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "code": 1,
+        "health": {
+          "code": 1,
+          "ok": true,
+          "state": 2
+        },
+        "message": ""
+      },
+      "repeat": 1,
+      "status": "violation"
+    },
+    {
+      "case": "invalid_pose",
+      "checks": {
+        "invalid_quaternion_reports_101": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "code": 1,
+        "health": {
+          "code": 1,
+          "ok": true,
+          "state": 2
+        },
+        "message": ""
+      },
+      "repeat": 2,
+      "status": "violation"
+    },
+    {
+      "case": "invalid_pose",
+      "checks": {
+        "invalid_quaternion_reports_101": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "code": 1,
+        "health": {
+          "code": 1,
+          "ok": true,
+          "state": 2
+        },
+        "message": ""
+      },
+      "repeat": 3,
+      "status": "violation"
+    },
+    {
+      "case": "unsupported_bounds",
+      "checks": {
+        "bounds_not_advertised": true,
+        "get_entities_reports_unsupported": false,
+        "get_entities_states_reports_unsupported": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "advertised": false,
+        "get_entities_code": 1,
+        "get_entities_names": [
+          "sphere"
+        ],
+        "get_states_code": 1,
+        "get_states_names": [
+          "sphere"
+        ]
+      },
+      "repeat": 1,
+      "status": "violation"
+    },
+    {
+      "case": "unsupported_bounds",
+      "checks": {
+        "bounds_not_advertised": true,
+        "get_entities_reports_unsupported": false,
+        "get_entities_states_reports_unsupported": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "advertised": false,
+        "get_entities_code": 1,
+        "get_entities_names": [
+          "sphere"
+        ],
+        "get_states_code": 1,
+        "get_states_names": [
+          "sphere"
+        ]
+      },
+      "repeat": 2,
+      "status": "violation"
+    },
+    {
+      "case": "unsupported_bounds",
+      "checks": {
+        "bounds_not_advertised": true,
+        "get_entities_reports_unsupported": false,
+        "get_entities_states_reports_unsupported": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "advertised": false,
+        "get_entities_code": 1,
+        "get_entities_names": [
+          "sphere"
+        ],
+        "get_states_code": 1,
+        "get_states_names": [
+          "sphere"
+        ]
+      },
+      "repeat": 3,
+      "status": "violation"
+    },
+    {
+      "case": "missing_read",
+      "checks": {
+        "get_info_reports_not_found": false,
+        "get_state_reports_not_found": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "get_info_code": 4,
+        "get_info_message": "Specified entity was not found",
+        "get_state_code": 4,
+        "get_state_message": "Requested entity not found"
+      },
+      "repeat": 1,
+      "status": "violation"
+    },
+    {
+      "case": "missing_read",
+      "checks": {
+        "get_info_reports_not_found": false,
+        "get_state_reports_not_found": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "get_info_code": 4,
+        "get_info_message": "Specified entity was not found",
+        "get_state_code": 4,
+        "get_state_message": "Requested entity not found"
+      },
+      "repeat": 2,
+      "status": "violation"
+    },
+    {
+      "case": "missing_read",
+      "checks": {
+        "get_info_reports_not_found": false,
+        "get_state_reports_not_found": false,
+        "server_healthy": true
+      },
+      "observed": {
+        "get_info_code": 4,
+        "get_info_message": "Specified entity was not found",
+        "get_state_code": 4,
+        "get_state_message": "Requested entity not found"
+      },
+      "repeat": 3,
+      "status": "violation"
+    }
+  ],
+  "schema": "p3-ros-gz-world-entity-contract-v1"
+}
