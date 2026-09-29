@@ -1,0 +1,162 @@
+{
+  "schema": "p3-moveit-psm-stop-world-v1",
+  "counts": {
+    "total": 6,
+    "pass": 3,
+    "violation": 3,
+    "execution_error": 0
+  },
+  "records": [
+    {
+      "repetition": 0,
+      "arm": "single_stop",
+      "classification": "violation",
+      "pass": false,
+      "expected": "both world-geometry subscriptions removed and both inputs silent after stop",
+      "actual": {
+        "double_stop": 0,
+        "harness_valid": 1,
+        "discovered": 1,
+        "collision_before": 1,
+        "world_before": 1,
+        "collision_subscriptions_after": 0,
+        "world_subscriptions_after": 1,
+        "topics_after": "/p3_psm_world",
+        "collision_before_ids": "collision_before",
+        "world_before_ids": "world_before",
+        "collision_updated_after_stop": 0,
+        "collision_after_ids": "world_before",
+        "world_updated_after_stop": 1,
+        "world_after_ids": "world_after"
+      },
+      "stdout": "P3_RESULT {\"double_stop\":0,\"harness_valid\":1,\"discovered\":1,\"collision_before\":1,\"world_before\":1,\"collision_subscriptions_after\":0,\"world_subscriptions_after\":1,\"topics_after\":\"/p3_psm_world\",\"collision_before_ids\":\"collision_before\",\"world_before_ids\":\"world_before\",\"collision_updated_after_stop\":0,\"collision_after_ids\":\"world_before\",\"world_updated_after_stop\":1,\"world_after_ids\":\"world_after\"}\n",
+      "stderr": "[INFO] [1790655603.901281669] [moveit_3623979118.moveit.ros.rdf_loader]: Loaded robot model in 0.00113894 seconds\n[INFO] [1790655603.901354827] [moveit_3623979118.moveit.core.robot_model]: Loading robot model 'p3_psm'...\n[INFO] [1790655603.911140739] [moveit_3623979118.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.\n[INFO] [1790655603.911304793] [moveit_3623979118.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_collision'\n[INFO] [1790655603.911429295] [moveit_3623979118.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_world' for planning scene world geometry\n[INFO] [1790655603.911640269] [moveit_3623979118.moveit.ros.planning_scene_monitor]: Published update collision object\n[INFO] [1790655603.931836568] [moveit_3623979118.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n[INFO] [1790655604.164566061] [moveit_3623979118.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n"
+    },
+    {
+      "repetition": 0,
+      "arm": "double_stop",
+      "classification": "pass",
+      "pass": true,
+      "expected": "both world-geometry subscriptions removed and both inputs silent after stop",
+      "actual": {
+        "double_stop": 1,
+        "harness_valid": 1,
+        "discovered": 1,
+        "collision_before": 1,
+        "world_before": 1,
+        "collision_subscriptions_after": 0,
+        "world_subscriptions_after": 0,
+        "topics_after": "",
+        "collision_before_ids": "collision_before",
+        "world_before_ids": "world_before",
+        "collision_updated_after_stop": 0,
+        "collision_after_ids": "world_before",
+        "world_updated_after_stop": 0,
+        "world_after_ids": "world_before"
+      },
+      "stdout": "P3_RESULT {\"double_stop\":1,\"harness_valid\":1,\"discovered\":1,\"collision_before\":1,\"world_before\":1,\"collision_subscriptions_after\":0,\"world_subscriptions_after\":0,\"topics_after\":\"\",\"collision_before_ids\":\"collision_before\",\"world_before_ids\":\"world_before\",\"collision_updated_after_stop\":0,\"collision_after_ids\":\"world_before\",\"world_updated_after_stop\":0,\"world_after_ids\":\"world_before\"}\n",
+      "stderr": "[INFO] [1790655604.313296251] [moveit_3603381910.moveit.ros.rdf_loader]: Loaded robot model in 0.00110276 seconds\n[INFO] [1790655604.313367724] [moveit_3603381910.moveit.core.robot_model]: Loading robot model 'p3_psm'...\n[INFO] [1790655604.323243075] [moveit_3603381910.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.\n[INFO] [1790655604.323411128] [moveit_3603381910.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_collision'\n[INFO] [1790655604.323536214] [moveit_3603381910.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_world' for planning scene world geometry\n[INFO] [1790655604.323747638] [moveit_3603381910.moveit.ros.planning_scene_monitor]: Published update collision object\n[INFO] [1790655604.343766059] [moveit_3603381910.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n[INFO] [1790655604.343776563] [moveit_3603381910.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n"
+    },
+    {
+      "repetition": 1,
+      "arm": "single_stop",
+      "classification": "violation",
+      "pass": false,
+      "expected": "both world-geometry subscriptions removed and both inputs silent after stop",
+      "actual": {
+        "double_stop": 0,
+        "harness_valid": 1,
+        "discovered": 1,
+        "collision_before": 1,
+        "world_before": 1,
+        "collision_subscriptions_after": 0,
+        "world_subscriptions_after": 1,
+        "topics_after": "/p3_psm_world",
+        "collision_before_ids": "collision_before",
+        "world_before_ids": "world_before",
+        "collision_updated_after_stop": 0,
+        "collision_after_ids": "world_before",
+        "world_updated_after_stop": 1,
+        "world_after_ids": "world_after"
+      },
+      "stdout": "P3_RESULT {\"double_stop\":0,\"harness_valid\":1,\"discovered\":1,\"collision_before\":1,\"world_before\":1,\"collision_subscriptions_after\":0,\"world_subscriptions_after\":1,\"topics_after\":\"/p3_psm_world\",\"collision_before_ids\":\"collision_before\",\"world_before_ids\":\"world_before\",\"collision_updated_after_stop\":0,\"collision_after_ids\":\"world_before\",\"world_updated_after_stop\":1,\"world_after_ids\":\"world_after\"}\n",
+      "stderr": "[INFO] [1790655605.408828663] [moveit_1274809726.moveit.ros.rdf_loader]: Loaded robot model in 0.00109269 seconds\n[INFO] [1790655605.408904525] [moveit_1274809726.moveit.core.robot_model]: Loading robot model 'p3_psm'...\n[INFO] [1790655605.418928581] [moveit_1274809726.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.\n[INFO] [1790655605.419087068] [moveit_1274809726.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_collision'\n[INFO] [1790655605.419193464] [moveit_1274809726.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_world' for planning scene world geometry\n[INFO] [1790655605.419394537] [moveit_1274809726.moveit.ros.planning_scene_monitor]: Published update collision object\n[INFO] [1790655605.439625074] [moveit_1274809726.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n[INFO] [1790655605.672037019] [moveit_1274809726.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n"
+    },
+    {
+      "repetition": 1,
+      "arm": "double_stop",
+      "classification": "pass",
+      "pass": true,
+      "expected": "both world-geometry subscriptions removed and both inputs silent after stop",
+      "actual": {
+        "double_stop": 1,
+        "harness_valid": 1,
+        "discovered": 1,
+        "collision_before": 1,
+        "world_before": 1,
+        "collision_subscriptions_after": 0,
+        "world_subscriptions_after": 0,
+        "topics_after": "",
+        "collision_before_ids": "collision_before",
+        "world_before_ids": "world_before",
+        "collision_updated_after_stop": 0,
+        "collision_after_ids": "world_before",
+        "world_updated_after_stop": 0,
+        "world_after_ids": "world_before"
+      },
+      "stdout": "P3_RESULT {\"double_stop\":1,\"harness_valid\":1,\"discovered\":1,\"collision_before\":1,\"world_before\":1,\"collision_subscriptions_after\":0,\"world_subscriptions_after\":0,\"topics_after\":\"\",\"collision_before_ids\":\"collision_before\",\"world_before_ids\":\"world_before\",\"collision_updated_after_stop\":0,\"collision_after_ids\":\"world_before\",\"world_updated_after_stop\":0,\"world_after_ids\":\"world_before\"}\n",
+      "stderr": "[INFO] [1790655605.819529029] [moveit_6324079.moveit.ros.rdf_loader]: Loaded robot model in 0.00108635 seconds\n[INFO] [1790655605.819610539] [moveit_6324079.moveit.core.robot_model]: Loading robot model 'p3_psm'...\n[INFO] [1790655605.828869728] [moveit_6324079.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.\n[INFO] [1790655605.829006344] [moveit_6324079.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_collision'\n[INFO] [1790655605.829106425] [moveit_6324079.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_world' for planning scene world geometry\n[INFO] [1790655605.829294993] [moveit_6324079.moveit.ros.planning_scene_monitor]: Published update collision object\n[INFO] [1790655605.849460335] [moveit_6324079.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n[INFO] [1790655605.849492815] [moveit_6324079.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n"
+    },
+    {
+      "repetition": 2,
+      "arm": "single_stop",
+      "classification": "violation",
+      "pass": false,
+      "expected": "both world-geometry subscriptions removed and both inputs silent after stop",
+      "actual": {
+        "double_stop": 0,
+        "harness_valid": 1,
+        "discovered": 1,
+        "collision_before": 1,
+        "world_before": 1,
+        "collision_subscriptions_after": 0,
+        "world_subscriptions_after": 1,
+        "topics_after": "/p3_psm_world",
+        "collision_before_ids": "collision_before",
+        "world_before_ids": "world_before",
+        "collision_updated_after_stop": 0,
+        "collision_after_ids": "world_before",
+        "world_updated_after_stop": 1,
+        "world_after_ids": "world_after"
+      },
+      "stdout": "P3_RESULT {\"double_stop\":0,\"harness_valid\":1,\"discovered\":1,\"collision_before\":1,\"world_before\":1,\"collision_subscriptions_after\":0,\"world_subscriptions_after\":1,\"topics_after\":\"/p3_psm_world\",\"collision_before_ids\":\"collision_before\",\"world_before_ids\":\"world_before\",\"collision_updated_after_stop\":0,\"collision_after_ids\":\"world_before\",\"world_updated_after_stop\":1,\"world_after_ids\":\"world_after\"}\n",
+      "stderr": "[INFO] [1790655606.920667725] [moveit_2913785788.moveit.ros.rdf_loader]: Loaded robot model in 0.0011175 seconds\n[INFO] [1790655606.920741662] [moveit_2913785788.moveit.core.robot_model]: Loading robot model 'p3_psm'...\n[INFO] [1790655606.930612585] [moveit_2913785788.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.\n[INFO] [1790655606.930779840] [moveit_2913785788.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_collision'\n[INFO] [1790655606.930904890] [moveit_2913785788.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_world' for planning scene world geometry\n[INFO] [1790655606.931111262] [moveit_2913785788.moveit.ros.planning_scene_monitor]: Published update collision object\n[INFO] [1790655606.951201616] [moveit_2913785788.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n[INFO] [1790655607.183997383] [moveit_2913785788.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n"
+    },
+    {
+      "repetition": 2,
+      "arm": "double_stop",
+      "classification": "pass",
+      "pass": true,
+      "expected": "both world-geometry subscriptions removed and both inputs silent after stop",
+      "actual": {
+        "double_stop": 1,
+        "harness_valid": 1,
+        "discovered": 1,
+        "collision_before": 1,
+        "world_before": 1,
+        "collision_subscriptions_after": 0,
+        "world_subscriptions_after": 0,
+        "topics_after": "",
+        "collision_before_ids": "collision_before",
+        "world_before_ids": "world_before",
+        "collision_updated_after_stop": 0,
+        "collision_after_ids": "world_before",
+        "world_updated_after_stop": 0,
+        "world_after_ids": "world_before"
+      },
+      "stdout": "P3_RESULT {\"double_stop\":1,\"harness_valid\":1,\"discovered\":1,\"collision_before\":1,\"world_before\":1,\"collision_subscriptions_after\":0,\"world_subscriptions_after\":0,\"topics_after\":\"\",\"collision_before_ids\":\"collision_before\",\"world_before_ids\":\"world_before\",\"collision_updated_after_stop\":0,\"collision_after_ids\":\"world_before\",\"world_updated_after_stop\":0,\"world_after_ids\":\"world_before\"}\n",
+      "stderr": "[INFO] [1790655607.332244433] [moveit_4187490078.moveit.ros.rdf_loader]: Loaded robot model in 0.00110412 seconds\n[INFO] [1790655607.332318808] [moveit_4187490078.moveit.core.robot_model]: Loading robot model 'p3_psm'...\n[INFO] [1790655607.341097709] [moveit_4187490078.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.\n[INFO] [1790655607.341230526] [moveit_4187490078.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_collision'\n[INFO] [1790655607.341330358] [moveit_4187490078.moveit.ros.planning_scene_monitor]: Listening to '/p3_psm_world' for planning scene world geometry\n[INFO] [1790655607.341511992] [moveit_4187490078.moveit.ros.planning_scene_monitor]: Published update collision object\n[INFO] [1790655607.361713679] [moveit_4187490078.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n[INFO] [1790655607.361745362] [moveit_4187490078.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor\n"
+    }
+  ],
+  "completed_at": "2026-09-29T12:20:08+0800"
+}
