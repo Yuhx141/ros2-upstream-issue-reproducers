@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(transmission_header_composition)
+find_package(ament_cmake REQUIRED)
+find_package(transmission_interface REQUIRED)
+add_executable(include_composability include_composability.cpp)
+ament_target_dependencies(include_composability transmission_interface)
