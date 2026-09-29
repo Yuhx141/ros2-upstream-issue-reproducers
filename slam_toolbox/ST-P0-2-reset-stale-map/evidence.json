@@ -1,0 +1,532 @@
+{
+  "counts": {
+    "execution_error": 0,
+    "pass": 6,
+    "violation": 9
+  },
+  "records": [
+    {
+      "case": "scan_control",
+      "checks": {
+        "map_created": true,
+        "server_healthy": true
+      },
+      "domain": 210,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "map": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "process_returncode": 0,
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "scan_control",
+      "checks": {
+        "map_created": true,
+        "server_healthy": true
+      },
+      "domain": 211,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "map": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "process_returncode": 0,
+      "repeat": 2,
+      "status": "pass"
+    },
+    {
+      "case": "scan_control",
+      "checks": {
+        "map_created": true,
+        "server_healthy": true
+      },
+      "domain": 212,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "map": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "process_returncode": 0,
+      "repeat": 3,
+      "status": "pass"
+    },
+    {
+      "case": "pause_before_first",
+      "checks": {
+        "no_map_after_pause": false,
+        "pause_established": true,
+        "server_healthy": true
+      },
+      "domain": 213,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "map": {
+        "data_sha256": "9dfe8212c816080dd33de062e38e001c408040e64b145bc6b928a9fa93efa8e0",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -1.9999808557172143,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "pause_call": "done",
+      "pause_status": true,
+      "paused_parameter": true,
+      "process_returncode": 0,
+      "repeat": 1,
+      "status": "violation"
+    },
+    {
+      "case": "pause_before_first",
+      "checks": {
+        "no_map_after_pause": false,
+        "pause_established": true,
+        "server_healthy": true
+      },
+      "domain": 214,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "map": {
+        "data_sha256": "9dfe8212c816080dd33de062e38e001c408040e64b145bc6b928a9fa93efa8e0",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -1.9999808557172143,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "pause_call": "done",
+      "pause_status": true,
+      "paused_parameter": true,
+      "process_returncode": 0,
+      "repeat": 2,
+      "status": "violation"
+    },
+    {
+      "case": "pause_before_first",
+      "checks": {
+        "no_map_after_pause": false,
+        "pause_established": true,
+        "server_healthy": true
+      },
+      "domain": 215,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "map": {
+        "data_sha256": "9dfe8212c816080dd33de062e38e001c408040e64b145bc6b928a9fa93efa8e0",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -1.9999808557172143,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "pause_call": "done",
+      "pause_status": true,
+      "paused_parameter": true,
+      "process_returncode": 0,
+      "repeat": 3,
+      "status": "violation"
+    },
+    {
+      "after": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "before": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "case": "reset_stale_map",
+      "checks": {
+        "fixture_created": true,
+        "old_map_not_returned": false,
+        "reset_succeeded": true,
+        "server_healthy": true
+      },
+      "domain": 216,
+      "dynamic_map_call": "done",
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": 0,
+      "repeat": 1,
+      "reset_call": "done",
+      "reset_result": 0,
+      "status": "violation"
+    },
+    {
+      "after": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "before": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "case": "reset_stale_map",
+      "checks": {
+        "fixture_created": true,
+        "old_map_not_returned": false,
+        "reset_succeeded": true,
+        "server_healthy": true
+      },
+      "domain": 217,
+      "dynamic_map_call": "done",
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": 0,
+      "repeat": 2,
+      "reset_call": "done",
+      "reset_result": 0,
+      "status": "violation"
+    },
+    {
+      "after": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "before": {
+        "data_sha256": "c593c9ee3be4712643b933ba6b77dcd0ac23f23ca383cad2bf2fca81b4a17bb6",
+        "height": 80,
+        "origin": [
+          -1.9999999999999984,
+          -2.009980855717214,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "resolution": 0.05000000074505806,
+        "width": 80
+      },
+      "case": "reset_stale_map",
+      "checks": {
+        "fixture_created": true,
+        "old_map_not_returned": false,
+        "reset_succeeded": true,
+        "server_healthy": true
+      },
+      "domain": 218,
+      "dynamic_map_call": "done",
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": 0,
+      "repeat": 3,
+      "reset_call": "done",
+      "reset_result": 0,
+      "status": "violation"
+    },
+    {
+      "case": "empty_roundtrip",
+      "checks": {
+        "deserializer_survived": false,
+        "serialize_success": true
+      },
+      "deserialize_call": "process_exit",
+      "domain": 219,
+      "files": {
+        "data": true,
+        "posegraph": true
+      },
+      "health": {
+        "call": "process_exit",
+        "ok": false,
+        "returncode": -11,
+        "state": null
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": -11,
+      "repeat": 1,
+      "serialize_call": "done",
+      "serialize_result": 0,
+      "status": "violation"
+    },
+    {
+      "case": "empty_roundtrip",
+      "checks": {
+        "deserializer_survived": false,
+        "serialize_success": true
+      },
+      "deserialize_call": "process_exit",
+      "domain": 220,
+      "files": {
+        "data": true,
+        "posegraph": true
+      },
+      "health": {
+        "call": "process_exit",
+        "ok": false,
+        "returncode": -11,
+        "state": null
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": -11,
+      "repeat": 2,
+      "serialize_call": "done",
+      "serialize_result": 0,
+      "status": "violation"
+    },
+    {
+      "case": "empty_roundtrip",
+      "checks": {
+        "deserializer_survived": false,
+        "serialize_success": true
+      },
+      "deserialize_call": "process_exit",
+      "domain": 221,
+      "files": {
+        "data": true,
+        "posegraph": true
+      },
+      "health": {
+        "call": "process_exit",
+        "ok": false,
+        "returncode": -11,
+        "state": null
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": -11,
+      "repeat": 3,
+      "serialize_call": "done",
+      "serialize_result": 0,
+      "status": "violation"
+    },
+    {
+      "case": "missing_deserialize",
+      "checks": {
+        "request_completed": true,
+        "server_healthy": true
+      },
+      "deserialize_call": "done",
+      "domain": 222,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": 0,
+      "repeat": 1,
+      "status": "pass"
+    },
+    {
+      "case": "missing_deserialize",
+      "checks": {
+        "request_completed": true,
+        "server_healthy": true
+      },
+      "deserialize_call": "done",
+      "domain": 223,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": 0,
+      "repeat": 2,
+      "status": "pass"
+    },
+    {
+      "case": "missing_deserialize",
+      "checks": {
+        "request_completed": true,
+        "server_healthy": true
+      },
+      "deserialize_call": "done",
+      "domain": 224,
+      "health": {
+        "call": "done",
+        "ok": true,
+        "returncode": null,
+        "state": 3
+      },
+      "lifecycle": {
+        "activated": true,
+        "configured": true
+      },
+      "process_returncode": 0,
+      "repeat": 3,
+      "status": "pass"
+    }
+  ],
+  "schema": "p3-slam-toolbox-contract-v1"
+}
