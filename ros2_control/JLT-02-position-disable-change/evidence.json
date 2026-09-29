@@ -1,0 +1,74 @@
+{
+  "apparatus_ok": true,
+  "binary": "<local>/桌面/research/ROS2/.deps/joint-transmission-current-build-20260929/install/joint_transmission_p0/lib/joint_transmission_p0/joint_transmission_p0_test",
+  "case_counts": {
+    "atomic_change_then_same": {
+      "execution_error": 0,
+      "pass": 0,
+      "violation": 3
+    },
+    "differential_formula_power": {
+      "execution_error": 0,
+      "pass": 3,
+      "violation": 0
+    },
+    "disable_position_runtime": {
+      "execution_error": 0,
+      "pass": 0,
+      "violation": 3
+    },
+    "disabled_jerk_retained_range": {
+      "execution_error": 0,
+      "pass": 0,
+      "violation": 3
+    },
+    "disabled_jerk_retained_soft": {
+      "execution_error": 0,
+      "pass": 0,
+      "violation": 3
+    },
+    "disabled_position_keeps_velocity_limit": {
+      "execution_error": 0,
+      "pass": 3,
+      "violation": 0
+    },
+    "disabled_position_retained_range": {
+      "execution_error": 0,
+      "pass": 0,
+      "violation": 3
+    },
+    "disabled_position_retained_soft": {
+      "execution_error": 0,
+      "pass": 0,
+      "violation": 3
+    },
+    "enabled_limit_controls": {
+      "execution_error": 0,
+      "pass": 3,
+      "violation": 0
+    },
+    "four_bar_formula_power": {
+      "execution_error": 0,
+      "pass": 3,
+      "violation": 0
+    },
+    "simple_formula_power": {
+      "execution_error": 0,
+      "pass": 3,
+      "violation": 0
+    },
+    "single_dynamic_update": {
+      "execution_error": 0,
+      "pass": 3,
+      "violation": 0
+    }
+  },
+  "counts": {
+    "execution_error": 0,
+    "pass": 18,
+    "violation": 18
+  },
+  "created_at": "2026-09-29T07:55:18.730788+00:00",
+  "repetitions": 3,
+  "schema": "p3-joint-transmission-p0-summary-v1"
+}
