@@ -1,0 +1,216 @@
+{
+  "completed_at": "2026-09-29T17:48:49+0800",
+  "counts": {
+    "execution_error": 0,
+    "pass": 3,
+    "total": 9,
+    "violation": 6
+  },
+  "records": [
+    {
+      "actual": {
+        "arm": "always_success",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": true,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "always_success",
+      "checks": {
+        "success_control_starts": true
+      },
+      "classification": "pass",
+      "controls_pass": true,
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"always_success\",\"params_set\":true,\"init_result\":true,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "requires_params",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": false,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "requires_params",
+      "checks": {
+        "configured_initialize_succeeds": false,
+        "params_precede_initialize": false,
+        "successful_updater_starts": true
+      },
+      "classification": "violation",
+      "controls_pass": true,
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"requires_params\",\"params_set\":true,\"init_result\":false,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "always_fail",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": false,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "always_fail",
+      "checks": {
+        "failed_initialize_does_not_start": false
+      },
+      "classification": "violation",
+      "controls_pass": true,
+      "repeat": 1,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"always_fail\",\"params_set\":true,\"init_result\":false,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "always_success",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": true,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "always_success",
+      "checks": {
+        "success_control_starts": true
+      },
+      "classification": "pass",
+      "controls_pass": true,
+      "repeat": 2,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"always_success\",\"params_set\":true,\"init_result\":true,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "requires_params",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": false,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "requires_params",
+      "checks": {
+        "configured_initialize_succeeds": false,
+        "params_precede_initialize": false,
+        "successful_updater_starts": true
+      },
+      "classification": "violation",
+      "controls_pass": true,
+      "repeat": 2,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"requires_params\",\"params_set\":true,\"init_result\":false,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "always_fail",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": false,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "always_fail",
+      "checks": {
+        "failed_initialize_does_not_start": false
+      },
+      "classification": "violation",
+      "controls_pass": true,
+      "repeat": 2,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"always_fail\",\"params_set\":true,\"init_result\":false,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "always_success",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": true,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "always_success",
+      "checks": {
+        "success_control_starts": true
+      },
+      "classification": "pass",
+      "controls_pass": true,
+      "repeat": 3,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"always_success\",\"params_set\":true,\"init_result\":true,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "requires_params",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": false,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "requires_params",
+      "checks": {
+        "configured_initialize_succeeds": false,
+        "params_precede_initialize": false,
+        "successful_updater_starts": true
+      },
+      "classification": "violation",
+      "controls_pass": true,
+      "repeat": 3,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"requires_params\",\"params_set\":true,\"init_result\":false,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    },
+    {
+      "actual": {
+        "arm": "always_fail",
+        "calls": [
+          "initialize",
+          "set_params",
+          "start"
+        ],
+        "init_result": false,
+        "params_set": true,
+        "started": true
+      },
+      "arm": "always_fail",
+      "checks": {
+        "failed_initialize_does_not_start": false
+      },
+      "classification": "violation",
+      "controls_pass": true,
+      "repeat": 3,
+      "stderr": "",
+      "stdout": "P3_RESULT {\"arm\":\"always_fail\",\"params_set\":true,\"init_result\":false,\"started\":true,\"calls\":[\"initialize\",\"set_params\",\"start\"]}\n"
+    }
+  ],
+  "schema": "p3-moveit-occupancy-init-v1"
+}

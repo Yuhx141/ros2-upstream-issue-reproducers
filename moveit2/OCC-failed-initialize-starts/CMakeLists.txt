@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8)
+project(p3_moveit_occupancy_probe)
+
+find_package(ament_cmake REQUIRED)
+find_package(moveit_ros_occupancy_map_monitor REQUIRED)
+
+add_executable(occupancy_init_probe occupancy_init_probe.cpp)
+ament_target_dependencies(occupancy_init_probe moveit_ros_occupancy_map_monitor)
