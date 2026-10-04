@@ -1,0 +1,16 @@
+{
+  "id": "FT-P1",
+  "classification": "confirmed_product_defect",
+  "original_processes": 3,
+  "original_failures": 3,
+  "parameter_set_success": true,
+  "parameter_readback_new_value": true,
+  "wrench_data_failures": 0,
+  "fix_processes": 3,
+  "fix_failures": 0,
+  "combined_fix_suite": {
+    "tests": 44,
+    "failures": 0
+  },
+  "duplicate_search": "no_same_root_found"
+}

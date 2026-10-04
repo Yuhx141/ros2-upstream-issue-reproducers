@@ -1,0 +1,21 @@
+{
+  "id": "IMU-E1",
+  "classification": "confirmed_product_defect",
+  "component": "ros2_controllers/imu_sensor_broadcaster",
+  "tested_ref": "6.9.0@78d6508ebc82fb1692cfed6e9840b6ebfc0c6756",
+  "current_master": "2520ae5b6d18c01f44083491cd9a285b1e2cdfe0",
+  "master_source_byte_identical": true,
+  "oracle": "retained exported state handles equal the transformed values published for each update",
+  "original_runs": [
+    {"process": 1, "exit_code": 1, "published_field_failures": 0, "exported_field_failures": 20},
+    {"process": 2, "exit_code": 1, "published_field_failures": 0, "exported_field_failures": 20},
+    {"process": 3, "exit_code": 1, "published_field_failures": 0, "exported_field_failures": 20}
+  ],
+  "fix_runs": [
+    {"process": 1, "exit_code": 0},
+    {"process": 2, "exit_code": 0},
+    {"process": 3, "exit_code": 0}
+  ],
+  "fixed_package_suite": {"tests": 14, "errors": 0, "failures": 0, "skipped": 0},
+  "dedup": {"matching_open_or_closed_issues": 0, "checked_at": "2026-09-28"}
+}

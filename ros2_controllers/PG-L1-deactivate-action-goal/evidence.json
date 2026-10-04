@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "confirmed_independent_roots": 1,
+  "root_id": "PG-L1",
+  "component": "parallel_gripper_controller",
+  "symptoms": [
+    "executing goal has no terminal result after deactivate",
+    "inactive controller action server accepts a new goal"
+  ],
+  "original_counts": {
+    "pass": 9,
+    "violation": 6,
+    "uncertain": 0,
+    "execution_error": 0
+  },
+  "fixcheck_counts": {
+    "pass": 15,
+    "violation": 0,
+    "uncertain": 0,
+    "execution_error": 0
+  },
+  "excluded": [
+    "preemption returns terminal CANCELED in 3/3 runs"
+  ],
+  "source_risks": [
+    "PG-R2: uninitialized computed_command_ reaches success/stall result effort"
+  ],
+  "original": {
+    "schema_version": 1,
+    "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+    "records": [
+      {
+        "test": "ActionCancelControl",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.289,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "ActionCancelControl",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.29,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "ActionCancelControl",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.288,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "DeactivateTerminatesExecutingGoal",
+        "run": 1,
+        "returncode": 1,
+        "duration_seconds": 1.238,
+        "result_effort_line": null,
+        "classification": "violation"
+      },
+      {
+        "test": "DeactivateTerminatesExecutingGoal",
+        "run": 2,
+        "returncode": 1,
+        "duration_seconds": 1.239,
+        "result_effort_line": null,
+        "classification": "violation"
+      },
+      {
+        "test": "DeactivateTerminatesExecutingGoal",
+        "run": 3,
+        "returncode": 1,
+        "duration_seconds": 1.238,
+        "result_effort_line": null,
+        "classification": "violation"
+      },
+      {
+        "test": "InactiveRejectsNewGoal",
+        "run": 1,
+        "returncode": 1,
+        "duration_seconds": 0.137,
+        "result_effort_line": null,
+        "classification": "violation"
+      },
+      {
+        "test": "InactiveRejectsNewGoal",
+        "run": 2,
+        "returncode": 1,
+        "duration_seconds": 0.137,
+        "result_effort_line": null,
+        "classification": "violation"
+      },
+      {
+        "test": "InactiveRejectsNewGoal",
+        "run": 3,
+        "returncode": 1,
+        "duration_seconds": 0.137,
+        "result_effort_line": null,
+        "classification": "violation"
+      },
+      {
+        "test": "PreemptTerminatesOldGoal",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.288,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "PreemptTerminatesOldGoal",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.289,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "PreemptTerminatesOldGoal",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.289,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "result_effort_line": "RESULT_EFFORT=0",
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "result_effort_line": "RESULT_EFFORT=0",
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.189,
+        "result_effort_line": "RESULT_EFFORT=0",
+        "classification": "pass"
+      }
+    ]
+  },
+  "fixcheck": {
+    "schema_version": 1,
+    "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+    "records": [
+      {
+        "test": "ActionCancelControl",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.29,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "ActionCancelControl",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.29,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "ActionCancelControl",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.29,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "DeactivateTerminatesExecutingGoal",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.239,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "DeactivateTerminatesExecutingGoal",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.238,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "DeactivateTerminatesExecutingGoal",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.24,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "InactiveRejectsNewGoal",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.341,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "InactiveRejectsNewGoal",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.339,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "InactiveRejectsNewGoal",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.338,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "PreemptTerminatesOldGoal",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.29,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "PreemptTerminatesOldGoal",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.291,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "PreemptTerminatesOldGoal",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.29,
+        "result_effort_line": null,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.189,
+        "result_effort_line": "RESULT_EFFORT=0",
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.189,
+        "result_effort_line": "RESULT_EFFORT=0",
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.189,
+        "result_effort_line": "RESULT_EFFORT=0",
+        "classification": "pass"
+      }
+    ]
+  }
+}

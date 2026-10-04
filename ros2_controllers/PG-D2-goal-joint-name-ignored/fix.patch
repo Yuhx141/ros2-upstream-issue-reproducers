@@ -1,0 +1,18 @@
+--- a/parallel_gripper_controller/include/parallel_gripper_controller/parallel_gripper_action_controller_impl.hpp
++++ b/parallel_gripper_controller/include/parallel_gripper_controller/parallel_gripper_action_controller_impl.hpp
+@@ -122,6 +122,15 @@
+       goal_handle->command.position.size());
+     return rclcpp_action::GoalResponse::REJECT;
+   }
++  if (
++    !goal_handle->command.name.empty() &&
++    (goal_handle->command.name.size() != 1 || goal_handle->command.name[0] != params_.joint))
++  {
++    RCLCPP_ERROR(
++      get_node()->get_logger(), "Received action goal for a different joint; expected `%s`",
++      params_.joint.c_str());
++    return rclcpp_action::GoalResponse::REJECT;
++  }
+
+   RCLCPP_INFO(get_node()->get_logger(), "Received & accepted new action goal");
+   return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;

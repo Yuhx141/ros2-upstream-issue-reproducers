@@ -1,0 +1,1 @@
+[joint_state_broadcaster][Jazzy] custom mapping renames and can collapse interfaces in DynamicJointState

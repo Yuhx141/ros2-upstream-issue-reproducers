@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "confirmed_independent_roots": 1,
+  "root_id": "PG-D1",
+  "component": "parallel_gripper_controller",
+  "symptoms": [
+    "success result effort equals uninitialized object storage",
+    "stall result effort equals uninitialized object storage"
+  ],
+  "original_counts": {
+    "violation": 18,
+    "pass": 0,
+    "uncertain": 0,
+    "execution_error": 0
+  },
+  "fixcheck_counts": {
+    "pass": 18,
+    "violation": 0,
+    "uncertain": 0,
+    "execution_error": 0
+  },
+  "regression": {
+    "tests": 15,
+    "failures": 0,
+    "excluded_known_pg_l1_tests": 2
+  },
+  "original": {
+    "schema_version": 1,
+    "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+    "records": [
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "00",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "0",
+        "effort_bits": "0x0000000000000000",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "00",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "0",
+        "effort_bits": "0x0000000000000000",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "00",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "0",
+        "effort_bits": "0x0000000000000000",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "A5",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "-2.49834e-127",
+        "effort_bits": "0xa5a5a5a5a5a5a5a5",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "A5",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "-2.49834e-127",
+        "effort_bits": "0xa5a5a5a5a5a5a5a5",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "A5",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.189,
+        "effort": "-2.49834e-127",
+        "effort_bits": "0xa5a5a5a5a5a5a5a5",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "5A",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "1.78389e+127",
+        "effort_bits": "0x5a5a5a5a5a5a5a5a",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "5A",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "1.78389e+127",
+        "effort_bits": "0x5a5a5a5a5a5a5a5a",
+        "classification": "violation"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "5A",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "1.78389e+127",
+        "effort_bits": "0x5a5a5a5a5a5a5a5a",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "00",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.19,
+        "effort": "0",
+        "effort_bits": "0x0000000000000000",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "00",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "0",
+        "effort_bits": "0x0000000000000000",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "00",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "0",
+        "effort_bits": "0x0000000000000000",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "A5",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "-2.49834e-127",
+        "effort_bits": "0xa5a5a5a5a5a5a5a5",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "A5",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "-2.49834e-127",
+        "effort_bits": "0xa5a5a5a5a5a5a5a5",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "A5",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.188,
+        "effort": "-2.49834e-127",
+        "effort_bits": "0xa5a5a5a5a5a5a5a5",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "5A",
+        "run": 1,
+        "returncode": 0,
+        "duration_seconds": 0.189,
+        "effort": "1.78389e+127",
+        "effort_bits": "0x5a5a5a5a5a5a5a5a",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "5A",
+        "run": 2,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "1.78389e+127",
+        "effort_bits": "0x5a5a5a5a5a5a5a5a",
+        "classification": "violation"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "5A",
+        "run": 3,
+        "returncode": 0,
+        "duration_seconds": 0.187,
+        "effort": "1.78389e+127",
+        "effort_bits": "0x5a5a5a5a5a5a5a5a",
+        "classification": "violation"
+      }
+    ]
+  },
+  "fixcheck": {
+    "schema_version": 1,
+    "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+    "records": [
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "00",
+        "run": 1,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.189,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "00",
+        "run": 2,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "00",
+        "run": 3,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "A5",
+        "run": 1,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "A5",
+        "run": 2,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "A5",
+        "run": 3,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "5A",
+        "run": 1,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "5A",
+        "run": 2,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "ImmediateSuccessControl",
+        "pattern": "5A",
+        "run": 3,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "00",
+        "run": 1,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "00",
+        "run": 2,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "00",
+        "run": 3,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "A5",
+        "run": 1,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "A5",
+        "run": 2,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.188,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "A5",
+        "run": 3,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "5A",
+        "run": 1,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "5A",
+        "run": 2,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.19,
+        "classification": "pass"
+      },
+      {
+        "test": "StallResultControl",
+        "pattern": "5A",
+        "run": 3,
+        "returncode": 0,
+        "empty_effort": true,
+        "duration_seconds": 0.187,
+        "classification": "pass"
+      }
+    ]
+  }
+}

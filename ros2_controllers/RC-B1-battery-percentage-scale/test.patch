@@ -1,0 +1,68 @@
+--- a/battery_state_broadcaster/test/test_battery_state_broadcaster.cpp
++++ b/battery_state_broadcaster/test/test_battery_state_broadcaster.cpp
+@@ -314,6 +314,65 @@
+   EXPECT_TRUE(battery_state_msg.present);
+ }
+
++// Independent oracle: sensor_msgs/msg/BatteryState defines percentage on [0, 1].
++TEST_F(BatteryStateBroadcasterTest, empty_charge_is_zero_control)
++{
++  SetUpBatteryStateBroadcaster();
++  ASSERT_TRUE(configure_succeeds(battery_state_broadcaster_));
++  ASSERT_TRUE(activate_succeeds(battery_state_broadcaster_));
++  ASSERT_TRUE(battery0_voltage_itf_->set_value(0.0));
++  ASSERT_TRUE(battery1_percentage_itf_->set_value(0.0));
++
++  RawBatteryStatesMsg raw;
++  BatteryStateMsg aggregate;
++  subscribe_and_get_messages(raw, aggregate);
++
++  ASSERT_EQ(raw.battery_states.size(), 2u);
++  EXPECT_DOUBLE_EQ(raw.battery_states[0].percentage, 0.0);
++  EXPECT_DOUBLE_EQ(raw.battery_states[1].percentage, 0.0);
++  EXPECT_DOUBLE_EQ(aggregate.percentage, 0.0);
++}
++
++TEST_F(BatteryStateBroadcasterTest, percentage_matches_sensor_msgs_contract)
++{
++  SetUpBatteryStateBroadcaster();
++  ASSERT_TRUE(configure_succeeds(battery_state_broadcaster_));
++  ASSERT_TRUE(activate_succeeds(battery_state_broadcaster_));
++
++  RawBatteryStatesMsg raw;
++  BatteryStateMsg aggregate;
++  subscribe_and_get_messages(raw, aggregate);
++
++  ASSERT_EQ(raw.battery_states.size(), 2u);
++  EXPECT_NEAR(raw.battery_states[0].percentage, 0.50, 1e-6);  // derived from 5 V in [0, 10]
++  EXPECT_NEAR(raw.battery_states[1].percentage, 0.66, 1e-6);  // direct 66 percent interface
++  EXPECT_NEAR(aggregate.percentage, 0.58, 1e-6);
++  EXPECT_GE(raw.battery_states[0].percentage, 0.0);
++  EXPECT_LE(raw.battery_states[0].percentage, 1.0);
++  EXPECT_GE(raw.battery_states[1].percentage, 0.0);
++  EXPECT_LE(raw.battery_states[1].percentage, 1.0);
++  EXPECT_GE(aggregate.percentage, 0.0);
++  EXPECT_LE(aggregate.percentage, 1.0);
++}
++
++TEST_F(BatteryStateBroadcasterTest, full_charge_is_one_in_sensor_msgs_contract)
++{
++  SetUpBatteryStateBroadcaster();
++  ASSERT_TRUE(configure_succeeds(battery_state_broadcaster_));
++  ASSERT_TRUE(activate_succeeds(battery_state_broadcaster_));
++  ASSERT_TRUE(battery0_voltage_itf_->set_value(10.0));
++  ASSERT_TRUE(battery1_percentage_itf_->set_value(100.0));
++
++  RawBatteryStatesMsg raw;
++  BatteryStateMsg aggregate;
++  subscribe_and_get_messages(raw, aggregate);
++
++  ASSERT_EQ(raw.battery_states.size(), 2u);
++  EXPECT_NEAR(raw.battery_states[0].percentage, 1.0, 1e-6);
++  EXPECT_NEAR(raw.battery_states[1].percentage, 1.0, 1e-6);
++  EXPECT_NEAR(aggregate.percentage, 1.0, 1e-6);
++}
++
+ int main(int argc, char ** argv)
+ {
+   ::testing::InitGoogleTest(&argc, argv);

@@ -1,0 +1,11 @@
+{
+  "id": "JSB-U1",
+  "classification": "confirmed_product_defect",
+  "affected": ["6.9.0", "master@2520ae5b6d18c01f44083491cd9a285b1e2cdfe0"],
+  "original_no_urdf": {"processes": 3, "failures": 3},
+  "original_valid_urdf_false_filter": {"processes": 3, "failures": 3},
+  "fix_no_urdf": {"processes": 3, "failures": 0},
+  "fix_valid_urdf_false_filter": {"processes": 3, "failures": 0},
+  "fix_regression": {"tests": 27, "failures": 0},
+  "duplicate_search": "no_same_root_found"
+}

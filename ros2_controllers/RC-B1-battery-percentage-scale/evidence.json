@@ -1,0 +1,10 @@
+{
+  "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+  "repetitions": 3,
+  "control": {"expected": 0.0, "actual": 0.0, "result": "3/3 pass"},
+  "derived_midpoint": {"expected": 0.5, "actual": 50.0, "result": "3/3 violation"},
+  "direct_percentage": {"expected": 0.66, "actual": 66.0, "result": "3/3 violation"},
+  "aggregate": {"expected": 0.58, "actual": 58.0, "result": "3/3 violation"},
+  "full_charge": {"expected": 1.0, "actual": 100.0, "result": "3/3 violation"},
+  "fixcheck": "3/3 tests pass"
+}

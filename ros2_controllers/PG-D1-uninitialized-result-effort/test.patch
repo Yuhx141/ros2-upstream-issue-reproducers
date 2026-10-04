@@ -1,0 +1,188 @@
+--- a/parallel_gripper_controller/test/test_parallel_gripper_controller.hpp
++++ b/parallel_gripper_controller/test/test_parallel_gripper_controller.hpp
+@@ -13,7 +13,11 @@
+ // limitations under the License.
+ #ifndef TEST_PARALLEL_GRIPPER_CONTROLLER_HPP_
+ #define TEST_PARALLEL_GRIPPER_CONTROLLER_HPP_
++#include <cstddef>
++#include <cstdlib>
++#include <cstring>
+ #include <memory>
++#include <new>
+ #include <string>
+ #include <vector>
+ #include "controller_interface/test_utils.hpp"
+@@ -29,6 +33,25 @@
+ // subclassing and friending so we can access member variables
+ class FriendGripperController : public parallel_gripper_action_controller::GripperActionController
+ {
++public:
++  FriendGripperController()
++  : parallel_gripper_action_controller::GripperActionController()
++  {
++  }
++
++  static void * operator new(std::size_t size)
++  {
++    void * memory = ::operator new(size);
++    if (const char * poison = std::getenv("PG_CONTROLLER_POISON"))
++    {
++      std::memset(memory, static_cast<unsigned char>(std::strtoul(poison, nullptr, 16)), size);
++    }
++    return memory;
++  }
++
++  static void operator delete(void * memory) noexcept { ::operator delete(memory); }
++
++private:
+   FRIEND_TEST(GripperControllerTest, CommandSuccessTest);
+ };
+ class GripperControllerTest : public ::testing::Test
+--- a/parallel_gripper_controller/test/test_parallel_gripper_controller.cpp
++++ b/parallel_gripper_controller/test/test_parallel_gripper_controller.cpp
+@@ -12,13 +12,18 @@
+ // See the License for the specific language governing permissions and
+ // limitations under the License.
+
++#include <chrono>
++#include <cstdint>
+ #include <functional>
++#include <iomanip>
+ #include <memory>
++#include <stdexcept>
+ #include <string>
+ #include <utility>
+ #include <vector>
+
+ #include "gmock/gmock.h"
++#include "rclcpp_action/rclcpp_action.hpp"
+
+ #include "test_parallel_gripper_controller.hpp"
+
+@@ -31,8 +36,49 @@
+ using hardware_interface::LoanedStateInterface;
+ using GripperCommandAction = control_msgs::action::ParallelGripperCommand;
+ using GoalHandle = rclcpp_action::ServerGoalHandle<GripperCommandAction>;
++using ClientGoalHandle = rclcpp_action::ClientGoalHandle<GripperCommandAction>;
+ using testing::SizeIs;
+ using testing::UnorderedElementsAre;
++
++namespace
++{
++class ActionHarness
++{
++public:
++  explicit ActionHarness(
++    const rclcpp::node_interfaces::NodeBaseInterface::SharedPtr & controller,
++    const std::string & action_name =
++      "/test_gripper_action_position_controller/gripper_cmd")
++  {
++    client_node = std::make_shared<rclcpp::Node>("parallel_gripper_test_client");
++    executor.add_node(controller);
++    executor.add_node(client_node);
++    client = rclcpp_action::create_client<GripperCommandAction>(client_node, action_name);
++  }
++
++  ClientGoalHandle::SharedPtr send(double position)
++  {
++    if (!client->wait_for_action_server(std::chrono::milliseconds(500)))
++    {
++      throw std::runtime_error("action server unavailable");
++    }
++    GripperCommandAction::Goal goal;
++    goal.command.position = {position};
++    auto future = client->async_send_goal(goal);
++    if (
++      executor.spin_until_future_complete(future, std::chrono::seconds(1)) !=
++      rclcpp::FutureReturnCode::SUCCESS)
++    {
++      throw std::runtime_error("goal response timed out");
++    }
++    return future.get();
++  }
++
++  rclcpp::executors::SingleThreadedExecutor executor;
++  rclcpp::Node::SharedPtr client_node;
++  rclcpp_action::Client<GripperCommandAction>::SharedPtr client;
++};
++}  // namespace
+
+ void GripperControllerTest::SetUpTestCase() {}
+
+@@ -250,6 +296,76 @@
+     controller_interface::CallbackReturn::FAILURE);
+ }
+
++TEST_F(GripperControllerTest, ImmediateSuccessControl)
++{
++  this->SetUpController();
++  this->controller_->get_node()->set_parameter({"joint", "joint1"});
++  ASSERT_TRUE(configure_succeeds(controller_));
++  ASSERT_TRUE(activate_succeeds(controller_));
++
++  ActionHarness action(controller_->get_node()->get_node_base_interface());
++  auto goal_handle = action.send(joint_states_[0]);
++  ASSERT_TRUE(goal_handle);
++  auto result = action.client->async_get_result(goal_handle);
++
++  ASSERT_EQ(
++    controller_->update(controller_->get_node()->now(), rclcpp::Duration::from_seconds(0.01)),
++    controller_interface::return_type::OK);
++  ASSERT_EQ(
++    action.executor.spin_until_future_complete(result, std::chrono::seconds(1)),
++    rclcpp::FutureReturnCode::SUCCESS);
++  ASSERT_EQ(result.get().code, rclcpp_action::ResultCode::SUCCEEDED);
++  EXPECT_TRUE(result.get().result->reached_goal);
++  EXPECT_FALSE(result.get().result->stalled);
++  ASSERT_THAT(result.get().result->state.position, SizeIs(1lu));
++  EXPECT_DOUBLE_EQ(result.get().result->state.position[0], joint_states_[0]);
++  if (!result.get().result->state.effort.empty())
++  {
++    const double effort = result.get().result->state.effort[0];
++    uint64_t effort_bits = 0;
++    std::memcpy(&effort_bits, &effort, sizeof(effort));
++    std::cout << "RESULT_EFFORT=" << effort << " RESULT_EFFORT_BITS=0x" << std::hex
++              << std::setw(16) << std::setfill('0') << effort_bits << std::dec << std::endl;
++  }
++  EXPECT_TRUE(result.get().result->state.effort.empty());
++}
++
++TEST_F(GripperControllerTest, StallResultControl)
++{
++  this->SetUpController();
++  this->controller_->get_node()->set_parameter({"joint", "joint1"});
++  this->controller_->get_node()->set_parameter({"stall_velocity_threshold", 3.0});
++  this->controller_->get_node()->set_parameter({"stall_timeout", 0.0});
++  ASSERT_TRUE(configure_succeeds(controller_));
++  ASSERT_TRUE(activate_succeeds(controller_));
++
++  ActionHarness action(controller_->get_node()->get_node_base_interface());
++  auto goal_handle = action.send(2.0);
++  ASSERT_TRUE(goal_handle);
++  auto result = action.client->async_get_result(goal_handle);
++
++  ASSERT_EQ(
++    controller_->update(controller_->get_node()->now(), rclcpp::Duration::from_seconds(0.01)),
++    controller_interface::return_type::OK);
++  ASSERT_EQ(
++    action.executor.spin_until_future_complete(result, std::chrono::seconds(1)),
++    rclcpp::FutureReturnCode::SUCCESS);
++  ASSERT_EQ(result.get().code, rclcpp_action::ResultCode::ABORTED);
++  EXPECT_FALSE(result.get().result->reached_goal);
++  EXPECT_TRUE(result.get().result->stalled);
++  ASSERT_THAT(result.get().result->state.position, SizeIs(1lu));
++  EXPECT_DOUBLE_EQ(result.get().result->state.position[0], joint_states_[0]);
++  if (!result.get().result->state.effort.empty())
++  {
++    const double effort = result.get().result->state.effort[0];
++    uint64_t effort_bits = 0;
++    std::memcpy(&effort_bits, &effort, sizeof(effort));
++    std::cout << "STALL_RESULT_EFFORT=" << effort << " STALL_RESULT_EFFORT_BITS=0x" << std::hex
++              << std::setw(16) << std::setfill('0') << effort_bits << std::dec << std::endl;
++  }
++  EXPECT_TRUE(result.get().result->state.effort.empty());
++}
++
+ int main(int argc, char ** argv)
+ {
+   ::testing::InitGoogleMock(&argc, argv);

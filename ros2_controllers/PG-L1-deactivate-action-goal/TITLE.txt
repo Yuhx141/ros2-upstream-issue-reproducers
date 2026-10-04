@@ -1,0 +1,1 @@
+[parallel_gripper_controller] Deactivation leaves action goals executing and accepts new goals

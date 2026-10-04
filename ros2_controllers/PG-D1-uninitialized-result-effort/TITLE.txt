@@ -1,0 +1,1 @@
+[parallel_gripper_controller] Action result effort reads an uninitialized member

@@ -1,0 +1,20 @@
+--- a/parallel_gripper_controller/include/parallel_gripper_controller/parallel_gripper_action_controller_impl.hpp
++++ b/parallel_gripper_controller/include/parallel_gripper_controller/parallel_gripper_action_controller_impl.hpp
+@@ -410,6 +410,17 @@
+ controller_interface::CallbackReturn GripperActionController::on_deactivate(
+   const rclcpp_lifecycle::State &)
+ {
++  RealtimeGoalHandlePtr active_goal;
++  rt_active_goal_.get([&](const RealtimeGoalHandlePtr & goal) { active_goal = goal; });
++  if (active_goal)
++  {
++    active_goal->setAborted(std::make_shared<GripperCommandAction::Result>());
++    active_goal->runNonRealtime();
++    rt_active_goal_.set([](RealtimeGoalHandlePtr & stored_value)
++                        { stored_value = RealtimeGoalHandlePtr(); });
++  }
++  goal_handle_timer_.reset();
++  action_server_.reset();
+   joint_position_command_interface_ = std::nullopt;
+   joint_position_state_interface_ = std::nullopt;
+   joint_velocity_state_interface_ = std::nullopt;

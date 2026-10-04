@@ -1,0 +1,1 @@
+[parallel_gripper_controller] Goal joint names are ignored and can command a different joint

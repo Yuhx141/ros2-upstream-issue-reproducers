@@ -1,0 +1,91 @@
+--- a/controller_interface/test/test_magnetic_field_sensor.cpp
++++ b/controller_interface/test/test_magnetic_field_sensor.cpp
+@@ -14,13 +14,31 @@
+
+ #include "test_magnetic_field_sensor.hpp"
+
++#include <cmath>
+ #include <memory>
++#include <mutex>
++#include <shared_mutex>
+ #include <string>
++#include <tuple>
+ #include <vector>
+ #include "sensor_msgs/msg/magnetic_field.hpp"
+
+ void MagneticFieldSensorTest::TearDown() { magnetic_field_sensor_.reset(nullptr); }
+
++namespace
++{
++class LockableStateInterface : public hardware_interface::StateInterface
++{
++public:
++  using StateInterface::StateInterface;
++
++  std::unique_lock<std::shared_mutex> lock_for_test()
++  {
++    return std::unique_lock<std::shared_mutex>(get_mutex());
++  }
++};
++}  // namespace
++
+ TEST_F(MagneticFieldSensorTest, validate_all)
+ {
+   // Create the magnetic field sensor
+@@ -80,3 +98,56 @@
+   // validate the count of state_interfaces_
+   ASSERT_EQ(magnetic_field_sensor_->state_interfaces_.size(), 0u);
+ }
++
++TEST(MagneticFieldSensorAvailabilityTest, unavailableFirstReadIsReportedAsNan)
++{
++  semantic_components::MagneticFieldSensor sensor("magnetometer");
++  auto x = std::make_shared<LockableStateInterface>("magnetometer", "magnetic_field.x");
++  auto y = std::make_shared<LockableStateInterface>("magnetometer", "magnetic_field.y");
++  auto z = std::make_shared<LockableStateInterface>("magnetometer", "magnetic_field.z");
++  std::ignore = x->set_value(1.0);
++  std::ignore = y->set_value(2.0);
++  std::ignore = z->set_value(3.0);
++  std::vector<hardware_interface::LoanedStateInterface> interfaces;
++  interfaces.emplace_back(x);
++  interfaces.emplace_back(y);
++  interfaces.emplace_back(z);
++  ASSERT_TRUE(sensor.assign_loaned_state_interfaces(interfaces));
++
++  auto x_lock = x->lock_for_test();
++  auto y_lock = y->lock_for_test();
++  auto z_lock = z->lock_for_test();
++  sensor_msgs::msg::MagneticField message;
++  ASSERT_TRUE(sensor.get_values_as_message(message));
++  EXPECT_TRUE(std::isnan(message.magnetic_field.x));
++  EXPECT_TRUE(std::isnan(message.magnetic_field.y));
++  EXPECT_TRUE(std::isnan(message.magnetic_field.z));
++}
++
++TEST(MagneticFieldSensorAvailabilityTest, unavailableAxisIsNotReusedFromPreviousSample)
++{
++  semantic_components::MagneticFieldSensor sensor("magnetometer");
++  auto x = std::make_shared<LockableStateInterface>("magnetometer", "magnetic_field.x");
++  auto y = std::make_shared<LockableStateInterface>("magnetometer", "magnetic_field.y");
++  auto z = std::make_shared<LockableStateInterface>("magnetometer", "magnetic_field.z");
++  std::ignore = x->set_value(1.0);
++  std::ignore = y->set_value(2.0);
++  std::ignore = z->set_value(3.0);
++  std::vector<hardware_interface::LoanedStateInterface> interfaces;
++  interfaces.emplace_back(x);
++  interfaces.emplace_back(y);
++  interfaces.emplace_back(z);
++  ASSERT_TRUE(sensor.assign_loaned_state_interfaces(interfaces));
++
++  sensor_msgs::msg::MagneticField message;
++  ASSERT_TRUE(sensor.get_values_as_message(message));
++  std::ignore = x->set_value(10.0);
++  std::ignore = y->set_value(20.0);
++  std::ignore = z->set_value(30.0);
++  auto y_lock = y->lock_for_test();
++  ASSERT_TRUE(sensor.get_values_as_message(message));
++
++  EXPECT_DOUBLE_EQ(message.magnetic_field.x, 10.0);
++  EXPECT_TRUE(std::isnan(message.magnetic_field.y));
++  EXPECT_DOUBLE_EQ(message.magnetic_field.z, 30.0);
++}

@@ -1,0 +1,1 @@
+[joint_state_broadcaster] use_urdf_to_filter=false still requires and filters by URDF

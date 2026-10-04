@@ -1,0 +1,41 @@
+--- a/controller_interface/test/test_gps_sensor.cpp
++++ b/controller_interface/test/test_gps_sensor.cpp
+@@ -14,6 +14,7 @@
+
+ #include <algorithm>
+ #include <array>
++#include <mutex>
+ #include <string>
+ #include <vector>
+
+@@ -120,6 +121,30 @@
+   EXPECT_DOUBLE_EQ(gps_states.at(2), message.latitude);
+   EXPECT_DOUBLE_EQ(gps_states.at(3), message.longitude);
+   EXPECT_DOUBLE_EQ(gps_states.at(4), message.altitude);
++}
++
++
++TEST_F(GPSSensorTest, failed_status_and_service_reads_should_use_unknown_enums)
++{
++  gps_states = {{1.0, 13.0, 48.1, 11.6, 231.0}};
++  ASSERT_TRUE(sut.assign_loaned_state_interfaces(state_interface));
++
++  sensor_msgs::msg::NavSatFix message;
++  ASSERT_TRUE(sut.get_values_as_message(message));
++  ASSERT_EQ(message.status.status, sensor_msgs::msg::NavSatStatus::STATUS_SBAS_FIX);
++  ASSERT_EQ(message.status.service, 13u);
++
++  std::unique_lock<std::shared_mutex> status_lock(gps_state->get_mutex());
++  std::unique_lock<std::shared_mutex> service_lock(gps_service->get_mutex());
++  ASSERT_TRUE(sut.get_values_as_message(message));
++  status_lock.unlock();
++  service_lock.unlock();
++
++  EXPECT_EQ(message.status.status, sensor_msgs::msg::NavSatStatus::STATUS_UNKNOWN);
++  EXPECT_EQ(message.status.service, sensor_msgs::msg::NavSatStatus::SERVICE_UNKNOWN);
++  EXPECT_DOUBLE_EQ(message.latitude, gps_states[2]);
++  EXPECT_DOUBLE_EQ(message.longitude, gps_states[3]);
++  EXPECT_DOUBLE_EQ(message.altitude, gps_states[4]);
+ }
+
+ struct GPSSensorWithCovarianceTest : public testing::Test

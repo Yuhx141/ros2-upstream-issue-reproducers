@@ -1,0 +1,1 @@
+GPSSensor returns invalid NavSatStatus values when state-interface reads fail

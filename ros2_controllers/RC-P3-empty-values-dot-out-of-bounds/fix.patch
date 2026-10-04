@@ -1,0 +1,14 @@
+--- a/pid_controller/src/pid_controller.cpp
++++ b/pid_controller/src/pid_controller.cpp
+@@ -224,6 +224,11 @@
+           return;
+         }
+       }
++      else if (params_.reference_and_state_interfaces.size() == 2)
++      {
++        state_msg->values_dot.resize(
++          reference_and_state_dof_names_.size(), std::numeric_limits<double>::quiet_NaN());
++      }
+       // TODO(destogl): Sort the input values based on joint and interface names
+       measured_state_.set(*state_msg);
+     };

@@ -1,0 +1,14 @@
+{
+  "id": "RNG-D1",
+  "classification": "confirmed_product_defect",
+  "upstream_repo": "ros-controls/ros2_controllers",
+  "release": "6.9.0",
+  "release_commit": "78d6508ebc82fb1692cfed6e9840b6ebfc0c6756",
+  "master_commit_checked": "2520ae5b6d18c01f44083491cd9a285b1e2cdfe0",
+  "original_repetitions": "3/3",
+  "fix_repetitions": "3/3",
+  "package_ctest": "2/2 passed",
+  "upstream_dedup": "no same-root open or closed report found",
+  "submission_status": "created",
+  "upstream_url": "https://github.com/ros-controls/ros2_controllers/issues/2661"
+}

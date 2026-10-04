@@ -1,0 +1,1 @@
+[parallel_gripper_controller] goal_tolerance=0 makes exact goals unreachable

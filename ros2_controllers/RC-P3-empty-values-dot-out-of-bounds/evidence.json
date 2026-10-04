@@ -1,0 +1,11 @@
+{
+  "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+  "ordinary_build": "3/3 surface pass with stale-capacity NaN; not correctness evidence",
+  "diagnostic_build": {
+    "cxx_flag": "-D_GLIBCXX_ASSERTIONS",
+    "result": "3/3 abort in std::vector<double>::operator[]",
+    "python_subprocess_return_code": -6
+  },
+  "mapping_only_fixcheck": "empty-dot test still aborts",
+  "complete_fixcheck": "8/8 external measured-state tests pass"
+}

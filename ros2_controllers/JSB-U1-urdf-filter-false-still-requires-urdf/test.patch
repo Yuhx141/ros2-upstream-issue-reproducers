@@ -1,0 +1,19 @@
+diff --git a/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp b/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp
+index 7fd96e5..d3ca4f2 100644
+--- a/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp
++++ b/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp
+@@ -1236,3 +1236,14 @@ TEST_F(JointStateBroadcasterTest, CorrectMappingWhenInterfaceReadFailsTest)
+   EXPECT_DOUBLE_EQ(pos[2], INIT_POS[2])
+     << "joint3's position slot has wrong value — map_index was shifted by the nullopt";
+ }
++
++
++TEST_F(JointStateBroadcasterTest, use_urdf_filter_false_without_urdf_contract_probe)
++{
++  init_broadcaster_and_set_parameters(
++    "", {}, {}, {rclcpp::Parameter("use_urdf_to_filter", false)});
++  ASSERT_TRUE(configure_succeeds(state_broadcaster_));
++  const auto config = state_broadcaster_->state_interface_configuration();
++  EXPECT_EQ(config.type, controller_interface::interface_configuration_type::ALL);
++  EXPECT_TRUE(config.names.empty());
++}

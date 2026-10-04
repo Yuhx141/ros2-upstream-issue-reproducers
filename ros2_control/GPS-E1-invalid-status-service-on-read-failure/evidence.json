@@ -1,0 +1,19 @@
+{
+  "id": "GPS-E1",
+  "classification": "confirmed_product_defect",
+  "repository": "ros-controls/ros2_control",
+  "commit": "a0f133d921e043aa2cfec8bd7c61effbb8ac132c",
+  "original_processes": 3,
+  "original_failures": 3,
+  "actual_status": 127,
+  "expected_status": -2,
+  "actual_service": 65535,
+  "expected_service": 0,
+  "fix_processes": 3,
+  "fix_failures": 0,
+  "fix_suite": {
+    "tests": 7,
+    "failures": 0
+  },
+  "duplicate_search": "no_same_root_found"
+}

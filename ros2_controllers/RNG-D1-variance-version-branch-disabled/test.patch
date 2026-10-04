@@ -1,0 +1,29 @@
+--- a/range_sensor_broadcaster/test/test_range_sensor_broadcaster.cpp
++++ b/range_sensor_broadcaster/test/test_range_sensor_broadcaster.cpp
+@@ -215,7 +215,7 @@
+   EXPECT_THAT(range_msg.min_range, ::testing::FloatEq(static_cast<float>(min_range_)));
+   EXPECT_THAT(range_msg.max_range, ::testing::FloatEq(static_cast<float>(max_range_)));
+ #if SENSOR_MSGS_VERSION_MAJOR >= 5
+-  EXPECT_THAT(range_msg.variance, ::testing::FloatEq(variance_));
++  EXPECT_THAT(range_msg.variance, ::testing::FloatEq(static_cast<float>(variance_)));
+ #endif
+ }
+
+@@ -295,6 +295,17 @@
+ #if SENSOR_MSGS_VERSION_MAJOR >= 5
+   EXPECT_THAT(range_msg.variance, ::testing::FloatEq(static_cast<float>(variance_)));
+ #endif
++}
++
++TEST_F(RangeSensorBroadcasterTest, ConfiguredVarianceIsPublished)
++{
++  init_broadcaster("test_range_sensor_broadcaster");
++  ASSERT_TRUE(configure_succeeds(range_broadcaster_));
++  ASSERT_TRUE(activate_succeeds(range_broadcaster_));
++
++  sensor_msgs::msg::Range msg;
++  subscribe_and_get_message(msg);
++  EXPECT_FLOAT_EQ(msg.variance, static_cast<float>(variance_));
+ }
+
+ int main(int argc, char ** argv)

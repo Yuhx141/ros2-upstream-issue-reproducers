@@ -1,0 +1,42 @@
+--- a/force_torque_sensor_broadcaster/test/test_force_torque_sensor_broadcaster.cpp
++++ b/force_torque_sensor_broadcaster/test/test_force_torque_sensor_broadcaster.cpp
+@@ -620,6 +620,39 @@
+   ASSERT_EQ(wrench_msg_filtered.wrench.torque.z, sensor_values_[5] + 1.0);
+ }
+
++
++TEST_F(ForceTorqueSensorBroadcasterTest, retained_exported_state_interfaces_track_updates)
++{
++  SetUpFTSBroadcaster("test_force_torque_sensor_broadcaster");
++  fts_broadcaster_->get_node()->set_parameter({"sensor_name", sensor_name_});
++  fts_broadcaster_->get_node()->set_parameter({"frame_id", frame_id_});
++  ASSERT_TRUE(configure_succeeds(fts_broadcaster_));
++  const auto exported = fts_broadcaster_->export_state_interfaces();
++  ASSERT_EQ(exported.size(), 6u);
++  ASSERT_TRUE(activate_succeeds(fts_broadcaster_));
++  const std::array<hardware_interface::StateInterface::SharedPtr, 6> source = {{
++    fts_force_x_, fts_force_y_, fts_force_z_, fts_torque_x_, fts_torque_y_, fts_torque_z_}};
++  const std::array<std::array<double, 6>, 2> samples = {{
++    {{11.0, 12.0, 13.0, 14.0, 15.0, 16.0}},
++    {{-21.0, -22.0, -23.0, -24.0, -25.0, -26.0}}}};
++  for (const auto & sample : samples)
++  {
++    for (size_t i = 0; i < source.size(); ++i) ASSERT_TRUE(source[i]->set_value(sample[i]));
++    geometry_msgs::msg::WrenchStamped message;
++    std::string topic = "/test_force_torque_sensor_broadcaster/wrench";
++    subscribe_and_get_message(message, topic);
++    const std::array<double, 6> published = {{
++      message.wrench.force.x, message.wrench.force.y, message.wrench.force.z,
++      message.wrench.torque.x, message.wrench.torque.y, message.wrench.torque.z}};
++    for (size_t i = 0; i < sample.size(); ++i)
++    {
++      EXPECT_DOUBLE_EQ(published[i], sample[i]) << "published[" << i << "]";
++      ASSERT_TRUE(exported[i]->get_optional().has_value());
++      EXPECT_DOUBLE_EQ(exported[i]->get_optional().value(), sample[i]) << "exported[" << i << "]";
++    }
++  }
++}
++
+ int main(int argc, char ** argv)
+ {
+   ::testing::InitGoogleMock(&argc, argv);

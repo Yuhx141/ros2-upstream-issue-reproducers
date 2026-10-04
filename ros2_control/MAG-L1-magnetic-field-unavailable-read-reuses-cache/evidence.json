@@ -1,0 +1,22 @@
+{
+  "id": "MAG-L1",
+  "root_cause_count": 1,
+  "root_cause": "MagneticFieldSensor leaves each cached axis unchanged when nonblocking get_optional() returns nullopt",
+  "latest_ros2_control_commit": "a0f133d921e043aa2cfec8bd7c61effbb8ac132c",
+  "ros2_controllers_release_commit": "78d6508ebc82fb1692cfed6e9840b6ebfc0c6756",
+  "original_integration": {
+    "positive_controls": "12/12 pass",
+    "first_unavailable_read": "3/3 violation",
+    "partial_unavailable_read": "3/3 violation"
+  },
+  "latest_master": {
+    "baseline": "3/3 pass",
+    "availability_reproducer": "3/3 failed as expected"
+  },
+  "causal_fix": {
+    "integration": "18/18 pass",
+    "broadcaster_package": "2/2 CTest targets; 14 tests; 0 failures",
+    "latest_master": "3/3 pass; focused CTest 1/1 pass"
+  },
+  "upstream_dedup": "no same-root issue or PR found"
+}

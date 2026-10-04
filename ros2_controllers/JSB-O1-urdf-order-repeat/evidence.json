@@ -1,0 +1,9 @@
+{
+  "id": "JSB-O1",
+  "classification": "confirmed_repeat_or_incomplete_fix",
+  "same_root": ["#159", "#1572"],
+  "jazzy_urdf_order": {"processes": 3, "failures": 3, "declared": ["z_joint", "a_joint"], "actual": ["a_joint", "z_joint"]},
+  "v6_urdf_order": {"processes": 3, "failures": 3, "declared": ["z_joint", "a_joint"], "actual": ["a_joint", "z_joint"]},
+  "explicit_parameter_control_jazzy": {"processes": 3, "failures": 0},
+  "explicit_parameter_control_v6": {"processes": 3, "failures": 0}
+}

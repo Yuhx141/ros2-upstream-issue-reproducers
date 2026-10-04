@@ -1,0 +1,10 @@
+{
+  "id": "FT-E1",
+  "classification": "repeat_family_IMU-E1",
+  "original_processes": 3,
+  "topic_failures_per_process": 0,
+  "exported_failures_per_process": 12,
+  "fix_processes": 3,
+  "fix_failures": 0,
+  "parent_issue": "https://github.com/ros-controls/ros2_controllers/issues/2654"
+}

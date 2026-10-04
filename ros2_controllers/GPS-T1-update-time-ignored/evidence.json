@@ -1,0 +1,23 @@
+{
+  "id": "GPS-T1",
+  "classification": "confirmed_product_defect",
+  "repository": "ros-controls/ros2_controllers",
+  "tag": "6.9.0",
+  "commit": "78d6508ebc82fb1692cfed6e9840b6ebfc0c6756",
+  "master_checked": "2520ae5b6d18c01f44083491cd9a285b1e2cdfe0",
+  "original_processes": 3,
+  "original_failures": 3,
+  "data_failures_per_process": 0,
+  "timestamp_failures_per_process": 2,
+  "fix_processes": 3,
+  "fix_failures": 0,
+  "fix_suite": {
+    "tests": 14,
+    "failures": 0
+  },
+  "related_not_duplicate": [
+    "https://github.com/ros-controls/ros2_controllers/issues/289",
+    "https://github.com/ros-controls/ros2_controllers/issues/290"
+  ],
+  "duplicate_search": "no_same_gps_root_found"
+}

@@ -1,0 +1,31 @@
+--- a/force_torque_sensor_broadcaster/test/test_force_torque_sensor_broadcaster.cpp
++++ b/force_torque_sensor_broadcaster/test/test_force_torque_sensor_broadcaster.cpp
+@@ -620,6 +620,13 @@
+   ASSERT_EQ(wrench_msg_filtered.wrench.torque.z, sensor_values_[5] + 1.0);
+ }
+
++
++TEST_F(ForceTorqueSensorBroadcasterTest, invalid_filter_configuration_rejects_configure)
++{
++  SetUpFTSBroadcaster("test_force_torque_sensor_broadcaster_bad_chain");
++  EXPECT_FALSE(configure_succeeds(fts_broadcaster_));
++}
++
+ int main(int argc, char ** argv)
+ {
+   ::testing::InitGoogleMock(&argc, argv);
+--- a/force_torque_sensor_broadcaster/test/force_torque_sensor_broadcaster_params.yaml
++++ b/force_torque_sensor_broadcaster/test/force_torque_sensor_broadcaster_params.yaml
+@@ -9,3 +9,12 @@
+       filter1:
+         name: dummy
+         type: filters/IncrementFilterWrench
++
++test_force_torque_sensor_broadcaster_bad_chain:
++  ros__parameters:
++    frame_id: "fts_sensor_frame"
++    sensor_name: "fts_sensor"
++    sensor_filter_chain:
++      filter1:
++        name: broken
++        type: filters/ThisWrenchFilterDoesNotExist

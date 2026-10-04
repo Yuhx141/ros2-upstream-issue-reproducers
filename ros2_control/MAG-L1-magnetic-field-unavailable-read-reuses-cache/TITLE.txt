@@ -1,0 +1,1 @@
+MagneticFieldSensor reuses zero or stale axes when state reads time out

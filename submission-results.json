@@ -119,6 +119,160 @@
       "title": "[moveit_core] Direct ApplyPlanningScene with empty touch_links causes self-collision",
       "status": "created",
       "url": "https://github.com/moveit/moveit2/issues/3885"
+    },
+    {
+      "id": "RC-B1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[battery_state_broadcaster] BatteryState.percentage is published on a 0-100 scale",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2646"
+    },
+    {
+      "id": "RC-P1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[pid_controller] ~/reference does not preserve MultiDOFCommand name/value mapping",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2647"
+    },
+    {
+      "id": "RC-P2",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[pid_controller] ~/measured_state ignores MultiDOFCommand dof_names order",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2648"
+    },
+    {
+      "id": "RC-P3",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[pid_controller] Empty measured_state values_dot causes an out-of-bounds read",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2649"
+    },
+    {
+      "id": "PG-L1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[parallel_gripper_controller] Deactivation leaves action goals executing and accepts new goals",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2650"
+    },
+    {
+      "id": "PG-D1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[parallel_gripper_controller] Action result effort reads an uninitialized member",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2651"
+    },
+    {
+      "id": "PG-D2",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[parallel_gripper_controller] Goal joint names are ignored and can command a different joint",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2652"
+    },
+    {
+      "id": "PG-B1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[parallel_gripper_controller] goal_tolerance=0 makes exact goals unreachable",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2653"
+    },
+    {
+      "id": "IMU-E1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "imu_sensor_broadcaster exported state interfaces remain stale after updates",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2654"
+    },
+    {
+      "id": "GPS-E1",
+      "repo": "ros-controls/ros2_control",
+      "title": "GPSSensor returns invalid NavSatStatus values when state-interface reads fail",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_control/issues/3643"
+    },
+    {
+      "id": "GPS-T1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "gps_sensor_broadcaster ignores the update time when stamping NavSatFix",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2655"
+    },
+    {
+      "id": "FT-E1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "force_torque_sensor_broadcaster retained exported states remain stale after updates",
+      "status": "deduplicated_into_existing",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2654#issuecomment-5868951906"
+    },
+    {
+      "id": "FT-F1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "force_torque_sensor_broadcaster silently accepts invalid filter-chain configuration",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2656"
+    },
+    {
+      "id": "FT-P1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "force_torque_sensor_broadcaster accepts frame_id updates but keeps publishing the old frame",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2657"
+    },
+    {
+      "id": "JSB-U1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[joint_state_broadcaster] use_urdf_to_filter=false still requires and filters by URDF",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2658"
+    },
+    {
+      "id": "JSB-E1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[joint_state_broadcaster] extra_joints entry is omitted when the joint has only a custom interface",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2659"
+    },
+    {
+      "id": "JSB-D1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "[joint_state_broadcaster][Jazzy] custom mapping renames and can collapse interfaces in DynamicJointState",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2660"
+    },
+    {
+      "id": "JSB-O1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "URDF file order remains lexical after #1572",
+      "status": "deduplicated_into_existing",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/159#issuecomment-5869524444"
+    },
+    {
+      "id": "RNG-D1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "range_sensor_broadcaster always publishes zero variance because the sensor_msgs version branch is disabled",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2661"
+    },
+    {
+      "id": "RNG-P1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "range_sensor_broadcaster accepts parameter updates but keeps using the configured values",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2662"
+    },
+    {
+      "id": "RNG-V1",
+      "repo": "ros-controls/ros2_controllers",
+      "title": "range_sensor_broadcaster accepts invalid Range message metadata",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_controllers/issues/2663"
+    },
+    {
+      "id": "MAG-L1",
+      "repo": "ros-controls/ros2_control",
+      "title": "MagneticFieldSensor reuses zero or stale axes when state reads time out",
+      "status": "created",
+      "url": "https://github.com/ros-controls/ros2_control/issues/3644"
     }
   ]
 }

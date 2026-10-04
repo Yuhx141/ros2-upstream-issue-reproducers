@@ -1,0 +1,20 @@
+--- a/pid_controller/src/pid_controller.cpp
++++ b/pid_controller/src/pid_controller.cpp
+@@ -298,7 +298,7 @@
+     msg->dof_names.size() == reference_and_state_dof_names_.size() &&
+     msg->values.size() == reference_and_state_dof_names_.size())
+   {
+-    auto ref_msg = msg;  // simple initialization
++    auto ref_msg = std::make_shared<ControllerReferenceMsg>(*msg);
+
+     // sort values in the ref_msg
+     reset_controller_reference_msg(*msg, reference_and_state_dof_names_);
+@@ -308,7 +308,7 @@
+     {
+       auto found_it =
+         std::find(ref_msg->dof_names.begin(), ref_msg->dof_names.end(), msg->dof_names[i]);
+-      if (found_it == msg->dof_names.end())
++      if (found_it == ref_msg->dof_names.end())
+       {
+         all_found = false;
+         RCLCPP_WARN(

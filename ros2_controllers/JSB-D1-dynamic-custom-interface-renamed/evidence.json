@@ -1,0 +1,10 @@
+{
+  "id": "JSB-D1",
+  "classification": "confirmed_jazzy_product_contract_defect",
+  "affected": ["jazzy-4.42.1", "jazzy@1bc19b63e82a7c04c8ba7c2741b47674c2a6c635"],
+  "not_applicable": ["6.9.0", "master (DynamicJointState removed by #2187)"],
+  "original": {"processes": 3, "failures": 3, "expected_interface": "measured_position", "actual_interface": "position"},
+  "fix": {"processes": 3, "failures": 0},
+  "fix_valid_regression": {"tests": 29, "failures": 0},
+  "duplicate_search": "no_same_root_found"
+}

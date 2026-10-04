@@ -1,0 +1,1 @@
+[pid_controller] ~/reference does not preserve MultiDOFCommand name/value mapping

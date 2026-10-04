@@ -1,0 +1,45 @@
+diff --git a/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp b/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp
+index 7e7569b..e99252e 100644
+--- a/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp
++++ b/joint_state_broadcaster/test/test_joint_state_broadcaster.cpp
+@@ -1569,3 +1569,28 @@ TEST_F(JointStateBroadcasterTest, CorrectMappingWhenInterfaceReadFailsTest)
+   EXPECT_DOUBLE_EQ(pos[2], joint_values_[2])
+     << "joint3's position slot has wrong value — map_index was shifted by the nullopt";
+ }
++
++
++TEST_F(JointStateBroadcasterTest, dynamic_custom_mapping_preserves_source_interface_probe)
++{
++  SetUpStateBroadcaster(
++    {joint_names_[0]}, {custom_interface_name_},
++    {rclcpp::Parameter(
++      std::string("map_interface_to_joint_state.") + HW_IF_POSITION, custom_interface_name_)});
++  ASSERT_TRUE(configure_succeeds(state_broadcaster_));
++  ASSERT_TRUE(activate_succeeds(state_broadcaster_));
++  ASSERT_EQ(
++    state_broadcaster_->update(rclcpp::Time(19), rclcpp::Duration::from_seconds(0.01)),
++    controller_interface::return_type::OK);
++  ASSERT_THAT(
++    state_broadcaster_->joint_state_msg_.position,
++    ElementsAreArray(std::vector<double>{custom_joint_value_}));
++  const auto & dynamic = state_broadcaster_->dynamic_joint_state_msg_;
++  ASSERT_EQ(dynamic.interface_values.size(), 1u);
++  EXPECT_THAT(
++    dynamic.interface_values[0].interface_names,
++    ElementsAreArray(std::vector<std::string>{custom_interface_name_}));
++  EXPECT_THAT(
++    dynamic.interface_values[0].values,
++    ElementsAreArray(std::vector<double>{custom_joint_value_}));
++}
+diff --git a/joint_state_broadcaster/test/test_joint_state_broadcaster.hpp b/joint_state_broadcaster/test/test_joint_state_broadcaster.hpp
+index 5bc22cd..732d690 100644
+--- a/joint_state_broadcaster/test/test_joint_state_broadcaster.hpp
++++ b/joint_state_broadcaster/test/test_joint_state_broadcaster.hpp
+@@ -61,6 +61,7 @@ class FriendJointStateBroadcaster : public joint_state_broadcaster::JointStateBr
+   FRIEND_TEST(JointStateBroadcasterTest, NoThrowWithBooleanInterfaceTest);
+   FRIEND_TEST(JointStateBroadcasterTest, NoThrowWithBooleanAndDoubleInterfaceTest);
+   FRIEND_TEST(JointStateBroadcasterTest, CorrectMappingWhenInterfaceReadFailsTest);
++  FRIEND_TEST(JointStateBroadcasterTest, dynamic_custom_mapping_preserves_source_interface_probe);
+ };
+
+ class JointStateBroadcasterTest : public ::testing::Test

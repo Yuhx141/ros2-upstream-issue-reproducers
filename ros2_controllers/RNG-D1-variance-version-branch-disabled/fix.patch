@@ -1,0 +1,21 @@
+--- a/range_sensor_broadcaster/CMakeLists.txt
++++ b/range_sensor_broadcaster/CMakeLists.txt
+@@ -22,6 +22,7 @@
+ foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
+   find_package(${Dependency} REQUIRED)
+ endforeach()
++add_compile_definitions(SENSOR_MSGS_VERSION_MAJOR=${sensor_msgs_VERSION_MAJOR})
+
+
+ generate_parameter_library(range_sensor_broadcaster_parameters
+--- a/range_sensor_broadcaster/src/range_sensor_broadcaster.cpp
++++ b/range_sensor_broadcaster/src/range_sensor_broadcaster.cpp
+@@ -79,7 +79,7 @@
+   range_msg_.max_range = static_cast<float>(params_.max_range);
+ // \note The versions conditioning is added here to support the source-compatibility with Humble
+ #if SENSOR_MSGS_VERSION_MAJOR >= 5
+-  range_msg_.variance = params_.variance;
++  range_msg_.variance = static_cast<float>(params_.variance);
+ #endif
+
+   RCLCPP_DEBUG(get_node()->get_logger(), "configure successful");

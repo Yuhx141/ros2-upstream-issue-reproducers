@@ -1,0 +1,87 @@
+--- a/force_torque_sensor_broadcaster/src/force_torque_sensor_broadcaster.cpp
++++ b/force_torque_sensor_broadcaster/src/force_torque_sensor_broadcaster.cpp
+@@ -18,6 +18,7 @@
+
+ #include "force_torque_sensor_broadcaster/force_torque_sensor_broadcaster.hpp"
+
++#include <array>
+ #include <limits>
+ #include <memory>
+ #include <string>
+@@ -181,6 +182,15 @@
+   force_torque_sensor_->get_values_as_message(wrench_raw_.wrench);
+   this->apply_sensor_offset(params_, wrench_raw_);
+   this->apply_sensor_multiplier(params_, wrench_raw_);
++
++  const std::array<double, 6> exported_values = {{
++    wrench_raw_.wrench.force.x, wrench_raw_.wrench.force.y, wrench_raw_.wrench.force.z,
++    wrench_raw_.wrench.torque.x, wrench_raw_.wrench.torque.y, wrench_raw_.wrench.torque.z}};
++  for (size_t i = 0; i < exported_state_axis_indices_.size(); ++i)
++  {
++    std::ignore = ordered_exported_state_interfaces_[i]->set_value(
++      exported_values[exported_state_axis_indices_[i]]);
++  }
+
+   if (realtime_raw_publisher_)
+   {
+@@ -211,6 +221,7 @@
+ ForceTorqueSensorBroadcaster::on_export_state_interfaces_list()
+ {
+   std::vector<hardware_interface::StateInterface::SharedPtr> exported_state_interfaces;
++  exported_state_axis_indices_.clear();
+
+   std::vector<std::string> force_names(
+     {params_.interface_names.force.x, params_.interface_names.force.y,
+@@ -243,36 +254,42 @@
+     auto si = std::make_shared<hardware_interface::StateInterface>(export_prefix, force_names[0]);
+     si->set_value(wrench_raw_.wrench.force.x);
+     exported_state_interfaces.push_back(si);
++    exported_state_axis_indices_.push_back(0);
+   }
+   if (!force_names[1].empty())
+   {
+     auto si = std::make_shared<hardware_interface::StateInterface>(export_prefix, force_names[1]);
+     si->set_value(wrench_raw_.wrench.force.y);
+     exported_state_interfaces.push_back(si);
++    exported_state_axis_indices_.push_back(1);
+   }
+   if (!force_names[2].empty())
+   {
+     auto si = std::make_shared<hardware_interface::StateInterface>(export_prefix, force_names[2]);
+     si->set_value(wrench_raw_.wrench.force.z);
+     exported_state_interfaces.push_back(si);
++    exported_state_axis_indices_.push_back(2);
+   }
+   if (!torque_names[0].empty())
+   {
+     auto si = std::make_shared<hardware_interface::StateInterface>(export_prefix, torque_names[0]);
+     si->set_value(wrench_raw_.wrench.torque.x);
+     exported_state_interfaces.push_back(si);
++    exported_state_axis_indices_.push_back(3);
+   }
+   if (!torque_names[1].empty())
+   {
+     auto si = std::make_shared<hardware_interface::StateInterface>(export_prefix, torque_names[1]);
+     si->set_value(wrench_raw_.wrench.torque.y);
+     exported_state_interfaces.push_back(si);
++    exported_state_axis_indices_.push_back(4);
+   }
+   if (!torque_names[2].empty())
+   {
+     auto si = std::make_shared<hardware_interface::StateInterface>(export_prefix, torque_names[2]);
+     si->set_value(wrench_raw_.wrench.torque.z);
+     exported_state_interfaces.push_back(si);
++    exported_state_axis_indices_.push_back(5);
+   }
+   return exported_state_interfaces;
+ }
+--- a/force_torque_sensor_broadcaster/include/force_torque_sensor_broadcaster/force_torque_sensor_broadcaster.hpp
++++ b/force_torque_sensor_broadcaster/include/force_torque_sensor_broadcaster/force_torque_sensor_broadcaster.hpp
+@@ -84,6 +84,7 @@
+
+   WrenchMsgType wrench_raw_;
+   WrenchMsgType wrench_filtered_;
++  std::vector<size_t> exported_state_axis_indices_;
+   std::unique_ptr<filters::FilterChain<WrenchMsgType>> filter_chain_;
+
+   using StatePublisher = rclcpp::Publisher<WrenchMsgType>::SharedPtr;

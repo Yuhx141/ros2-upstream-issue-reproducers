@@ -1,0 +1,1 @@
+range_sensor_broadcaster accepts parameter updates but keeps using the configured values

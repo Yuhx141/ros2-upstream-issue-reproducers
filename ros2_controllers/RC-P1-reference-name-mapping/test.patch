@@ -1,0 +1,95 @@
+--- a/pid_controller/test/test_pid_controller.hpp
++++ b/pid_controller/test/test_pid_controller.hpp
+@@ -122,6 +122,18 @@
+     msg.values_dot.resize(msg.dof_names.size(), std::numeric_limits<double>::quiet_NaN());
+     input_ref_.set(msg);
+   }
++
++  std::vector<double> reference_values()
++  {
++    std::vector<double> values;
++    values.reserve(ordered_exported_reference_interfaces_.size());
++    for (const auto & interface : ordered_exported_reference_interfaces_)
++    {
++      values.push_back(interface->get_optional<double>().value_or(
++        std::numeric_limits<double>::quiet_NaN()));
++    }
++    return values;
++  }
+ };
+
+ // We are using template class here for easier reuse of Fixture in specializations of controllers
+--- a/pid_controller/test/test_pid_controller_dual_interface.cpp
++++ b/pid_controller/test/test_pid_controller_dual_interface.cpp
+@@ -47,7 +47,71 @@
+   double get_joint2_reference_position() const { return 16.0; }
+   double get_joint1_reference_velocity() const { return 6.0; }
+   double get_joint2_reference_velocity() const { return 7.0; }
++
++  void activate_topic_mode()
++  {
++    SetUpController("test_pid_controller_with_feedforward_gain_dual_interface");
++    ASSERT_TRUE(configure_succeeds(controller_));
++    ASSERT_TRUE(activate_succeeds(controller_));
++    ASSERT_FALSE(controller_->is_in_chained_mode());
++  }
++
++  void publish_named_reference(
++    const std::vector<std::string> & names, const std::vector<double> & values,
++    const std::vector<double> & values_dot)
++  {
++    rclcpp::executors::SingleThreadedExecutor executor;
++    executor.add_node(controller_->get_node()->get_node_base_interface());
++    for (size_t attempt = 0;
++      command_publisher_->get_subscription_count() == 0 && attempt < 100; ++attempt)
++    {
++      executor.spin_some();
++      std::this_thread::sleep_for(std::chrono::milliseconds(5));
++    }
++    ASSERT_GT(command_publisher_->get_subscription_count(), 0u);
++
++    ControllerCommandMsg msg;
++    msg.dof_names = names;
++    msg.values = values;
++    msg.values_dot = values_dot;
++    command_publisher_->publish(msg);
++    controller_->wait_for_command(executor, std::chrono::milliseconds(100));
++    ASSERT_EQ(
++      controller_->update_reference_from_subscribers(
++        rclcpp::Time(0), rclcpp::Duration::from_seconds(0.01)),
++      controller_interface::return_type::OK);
++  }
+ };
++
++TEST_F(PidControllerDualInterfaceTest, topic_reference_configured_order_control)
++{
++  activate_topic_mode();
++  publish_named_reference({"joint1", "joint2"}, {15.0, 16.0}, {6.0, 7.0});
++  EXPECT_THAT(controller_->reference_values(), testing::ElementsAre(15.0, 16.0, 6.0, 7.0));
++}
++
++TEST_F(PidControllerDualInterfaceTest, topic_reference_permutation_preserves_name_value_mapping)
++{
++  activate_topic_mode();
++  publish_named_reference({"joint2", "joint1"}, {16.0, 15.0}, {7.0, 6.0});
++  EXPECT_THAT(controller_->reference_values(), testing::ElementsAre(15.0, 16.0, 6.0, 7.0));
++}
++
++TEST_F(PidControllerDualInterfaceTest, topic_reference_unknown_name_rejects_whole_message)
++{
++  activate_topic_mode();
++  const auto before = controller_->reference_values();
++  publish_named_reference({"joint1", "unknown"}, {15.0, 999.0}, {6.0, 999.0});
++  EXPECT_THAT(controller_->reference_values(), testing::ElementsAreArray(before));
++}
++
++TEST_F(PidControllerDualInterfaceTest, topic_reference_duplicate_name_rejects_whole_message)
++{
++  activate_topic_mode();
++  const auto before = controller_->reference_values();
++  publish_named_reference({"joint1", "joint1"}, {15.0, 999.0}, {6.0, 999.0});
++  EXPECT_THAT(controller_->reference_values(), testing::ElementsAreArray(before));
++}
+
+ /**
+  * @brief Test the feedforward gain with chained mode with two interfaces

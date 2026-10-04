@@ -1,0 +1,1 @@
+[joint_state_broadcaster] extra_joints entry is omitted when the joint has only a custom interface

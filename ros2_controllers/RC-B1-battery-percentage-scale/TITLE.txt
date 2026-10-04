@@ -1,0 +1,1 @@
+[battery_state_broadcaster] BatteryState.percentage is published on a 0-100 scale

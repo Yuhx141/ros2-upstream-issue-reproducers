@@ -1,0 +1,1 @@
+range_sensor_broadcaster always publishes zero variance because the sensor_msgs version branch is disabled

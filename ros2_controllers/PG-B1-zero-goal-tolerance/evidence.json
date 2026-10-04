@@ -1,0 +1,9 @@
+{
+  "id": "PG-B1",
+  "source_commit": "1bc19b63e82a7c04c8ba7c2741b47674c2a6c635",
+  "master_checked": "2520ae5b6d18c01f44083491cd9a285b1e2cdfe0",
+  "original_repeats": 3,
+  "original_result": "violation 3/3",
+  "fix_result": "pass 3/3",
+  "nonconflicting_regression": "19/19 pass"
+}

@@ -1,0 +1,28 @@
+--- a/range_sensor_broadcaster/src/range_sensor_broadcaster_parameters.yaml
++++ b/range_sensor_broadcaster/src/range_sensor_broadcaster_parameters.yaml
+@@ -9,8 +9,8 @@
+     default_value: "",
+     description: "Sensor's frame_id in which values are published.",
+   }
+-  radiation_type: {type: int, default_value: 0, description: "The type of radiation used by the sensor / 0 = Ultrason / 1 = Infrared",}
+-  field_of_view: {type: double, default_value: 0.52, description: "The size of the arc that the distance reading is valid for [rad]",}
++  radiation_type: {type: int, default_value: 0, validation: {bounds<>: [0, 1]}, description: "The type of radiation used by the sensor / 0 = Ultrason / 1 = Infrared",}
++  field_of_view: {type: double, default_value: 0.52, validation: {gt<>: 0.0}, description: "The size of the arc that the distance reading is valid for [rad]",}
+   min_range: {type: double, default_value: 0.52, description: "Minimum range value [m]",}
+   max_range: {type: double, default_value: 4.0, description: "Maximum range value [m]",}
+-  variance: {type: double, default_value: 0.0, description: "Variance of the range value",}
++  variance: {type: double, default_value: 0.0, validation: {gt_eq<>: 0.0}, description: "Variance of the range value",}
+--- a/range_sensor_broadcaster/src/range_sensor_broadcaster.cpp
++++ b/range_sensor_broadcaster/src/range_sensor_broadcaster.cpp
+@@ -53,6 +53,12 @@
+   if (params_.frame_id.empty())
+   {
+     RCLCPP_ERROR(get_node()->get_logger(), "'frame_id' parameter has to be provided.");
++    return CallbackReturn::ERROR;
++  }
++
++  if (params_.min_range > params_.max_range)
++  {
++    RCLCPP_ERROR(get_node()->get_logger(), "'min_range' must not exceed 'max_range'.");
+     return CallbackReturn::ERROR;
+   }

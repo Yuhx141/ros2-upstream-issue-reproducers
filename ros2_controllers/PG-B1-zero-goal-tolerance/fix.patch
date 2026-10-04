@@ -1,0 +1,11 @@
+--- a/parallel_gripper_controller/include/parallel_gripper_controller/parallel_gripper_action_controller_impl.hpp
++++ b/parallel_gripper_controller/include/parallel_gripper_controller/parallel_gripper_action_controller_impl.hpp
+@@ -222,7 +222,7 @@
+     return;
+   }
+
+-  if (fabs(error_position) < params_.goal_tolerance)
++  if (fabs(error_position) <= params_.goal_tolerance)
+   {
+     pre_alloc_result_->state.effort[0] = computed_command_;
+     pre_alloc_result_->state.position[0] = current_position;
